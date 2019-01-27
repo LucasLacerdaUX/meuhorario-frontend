@@ -1,3 +1,7 @@
 {
-  "extends": ["plugin:prettier/recommended", "plugin:shopify/react"]
+  "extends": ["plugin:shopify/react", "plugin:shopify/prettier"],
+  "env": {
+    "browser": true,
+    "node": true
+  }
 }
