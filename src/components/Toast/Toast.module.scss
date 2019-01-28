@@ -1,0 +1,24 @@
+@import '../../style/shared.scss';
+
+.Toast {
+  background: $grey-dark;
+  color: $text-light;
+  border-radius: $radius-m $radius-m 0 0;
+  padding: $spacing-xs;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: $size-9-xl;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+span {
+  flex: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0 $spacing-xs;
+}

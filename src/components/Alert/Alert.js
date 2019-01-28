@@ -5,16 +5,11 @@ import * as styles from './Alert.module.scss';
 const classNames = require('classnames');
 
 const Alert = (props) => {
-  const {red, blue, green, yellow, grey, sky, children} = props;
+  const {color, children} = props;
 
   const className = classNames(
     styles.Alert,
-    red && styles.red,
-    blue && styles.blue,
-    green && styles.green,
-    yellow && styles.yellow,
-    grey && styles.grey,
-    sky && styles.sky,
+    color ? styles[color] : styles.sky,
   );
 
   return (
@@ -25,12 +20,7 @@ const Alert = (props) => {
 };
 
 Alert.propTypes = {
-  red: PropTypes.bool,
-  green: PropTypes.bool,
-  blue: PropTypes.bool,
-  yellow: PropTypes.bool,
-  grey: PropTypes.bool,
-  sky: PropTypes.bool,
+  color: PropTypes.oneOf(['red', 'green', 'blue', 'yellow', 'grey', 'sky']),
   children: PropTypes.node,
 };
 

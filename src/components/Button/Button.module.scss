@@ -88,6 +88,10 @@ button {
     $text-dark,
     $green-dark
   );
+
+  &.darkBG {
+    @include recolor-button($green-default, $green-darker, $text-dark);
+  }
 }
 
 .blue {
@@ -101,6 +105,9 @@ button {
     $text-dark,
     $yellow-dark
   );
+  &.darkBG {
+    @include recolor-button($yellow-light, $yellow-dark, $text-dark);
+  }
 }
 
 .sky {

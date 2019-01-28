@@ -3,89 +3,89 @@ import {storiesOf} from '@storybook/react';
 import Button from '.';
 
 storiesOf('Button', module)
-  .add('red', () => <Button red>Hello Button</Button>)
+  .add('red', () => <Button color="red">Hello Button</Button>)
   .add('red outline', () => (
-    <Button red outline>
+    <Button color="red" outline>
       Hello Button
     </Button>
   ))
   .add('red outline onlyText', () => (
-    <Button red outline onlyText>
+    <Button color="red" outline onlyText>
       Hello Button
     </Button>
   ))
-  .add('green', () => <Button green>Hello Button</Button>)
+  .add('green', () => <Button color="green">Hello Button</Button>)
   .add('green outline', () => (
-    <Button green outline>
+    <Button color="green" outline>
       Hello Button
     </Button>
   ))
   .add('green outline onlyText', () => (
-    <Button green outline onlyText>
+    <Button color="green" outline onlyText>
       Hello Button
     </Button>
   ))
-  .add('blue', () => <Button blue>Hello Button</Button>)
+  .add('blue', () => <Button color="blue">Hello Button</Button>)
   .add('blue outline', () => (
-    <Button blue outline>
+    <Button color="blue" outline>
       Hello Button
     </Button>
   ))
   .add('blue outline onlyText', () => (
-    <Button blue outline onlyText>
+    <Button color="blue" outline onlyText>
       Hello Button
     </Button>
   ))
-  .add('yellow', () => <Button yellow>Hello Button</Button>)
+  .add('yellow', () => <Button color="yellow">Hello Button</Button>)
   .add('yellow outline', () => (
-    <Button yellow outline>
+    <Button color="yellow" outline>
       Hello Button
     </Button>
   ))
   .add('yellow outline onlyText', () => (
-    <Button yellow outline onlyText>
+    <Button color="yellow" outline onlyText>
       Hello Button
     </Button>
   ))
-  .add('grey', () => <Button grey>Hello Button</Button>)
+  .add('grey', () => <Button color="grey">Hello Button</Button>)
   .add('grey outline', () => (
-    <Button grey outline>
+    <Button color="grey" outline>
       Hello Button
     </Button>
   ))
   .add('grey outline onlyText', () => (
-    <Button grey outline onlyText>
+    <Button color="grey" outline onlyText>
       Hello Button
     </Button>
   ))
-  .add('sky', () => <Button sky>Hello Button</Button>)
+  .add('sky', () => <Button color="sky">Hello Button</Button>)
   .add('sky outline', () => (
-    <Button sky outline>
+    <Button color="sky" outline>
       Hello Button
     </Button>
   ))
   .add('sky outline onlyText', () => (
-    <Button sky outline onlyText>
+    <Button color="sky" outline onlyText>
       Hello Button
     </Button>
   ))
   .add('full width', () => (
-    <Button red fullWidth>
+    <Button color="red" fullWidth>
       Hello Button
     </Button>
   ))
   .add('small', () => (
-    <Button red small>
+    <Button color="red" small>
       Hello Button
     </Button>
   ))
   .add('large', () => (
-    <Button red large>
+    <Button color="red" large>
       Hello Button
     </Button>
   ))
   .add('icon', () => (
-    <Button red onlyIcon>
+    <Button color="red" onlyIcon>
       ic
     </Button>
   ));
