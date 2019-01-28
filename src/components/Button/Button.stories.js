@@ -73,4 +73,19 @@ storiesOf('Button', module)
     <Button red fullWidth>
       Hello Button
     </Button>
+  ))
+  .add('small', () => (
+    <Button red small>
+      Hello Button
+    </Button>
+  ))
+  .add('large', () => (
+    <Button red large>
+      Hello Button
+    </Button>
+  ))
+  .add('icon', () => (
+    <Button red onlyIcon>
+      ic
+    </Button>
   ));

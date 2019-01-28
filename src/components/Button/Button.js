@@ -13,6 +13,8 @@ const Button = (props) => {
     ariaPressed,
     onClick,
     submit,
+    small,
+    large,
     red,
     blue,
     green,
@@ -21,11 +23,14 @@ const Button = (props) => {
     sky,
     outline,
     onlyText,
+    onlyIcon,
     fullWidth,
     children,
   } = props;
 
   const className = classNames(
+    small && styles.small,
+    large && styles.large,
     red && styles.red,
     blue && styles.blue,
     green && styles.green,
@@ -34,6 +39,7 @@ const Button = (props) => {
     sky && styles.sky,
     outline && styles.outline,
     onlyText && styles.onlyText,
+    onlyIcon && [styles.onlyText, styles.onlyIcon],
     fullWidth && styles.fullWidth,
   );
 
@@ -63,6 +69,8 @@ Button.propTypes = {
   ariaPressed: PropTypes.bool,
   onClick: PropTypes.func,
   submit: PropTypes.bool,
+  small: PropTypes.bool,
+  large: PropTypes.bool,
   red: PropTypes.bool,
   green: PropTypes.bool,
   blue: PropTypes.bool,
@@ -71,6 +79,7 @@ Button.propTypes = {
   sky: PropTypes.bool,
   outline: PropTypes.bool,
   onlyText: PropTypes.bool,
+  onlyIcon: PropTypes.bool,
   children: PropTypes.node,
   fullWidth: PropTypes.bool,
 };

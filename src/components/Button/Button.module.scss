@@ -6,9 +6,22 @@ button {
   padding: $spacing-s;
   font-size: $font-size-m;
   font-weight: bold;
-  border-radius: $radius-s;
+  border-radius: $radius-m;
   transition: $animation-duration-s ease-out;
   outline: none;
+}
+
+.onlyIcon {
+  border-radius: $radius-circle;
+}
+.small {
+  font-size: $font-size-s;
+  padding: $spacing-xs;
+}
+
+.large {
+  font-size: $font-size-xl;
+  padding: $spacing-m;
 }
 
 .fullWidth {
@@ -96,7 +109,4 @@ button {
 
 .grey {
   @include recolor-button($grey-dark, $grey-darker, $text-light);
-}
-
-.red-full {
 }
