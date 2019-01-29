@@ -3,7 +3,7 @@ import {storiesOf} from '@storybook/react';
 import Card from '.';
 
 storiesOf('Card', module)
-  .add('with badge', () => (
+  .add('main card', () => (
     <Card
       badge="Test"
       cardTitle="Action Card Title"
@@ -11,7 +11,7 @@ storiesOf('Card', module)
       complementaryInfo="INFO HERE"
     />
   ))
-  .add('without badge', () => (
+  .add('action card', () => (
     <Card
       cardTitle="Action Card Title"
       cardSubtitle="This is the subtitle"
@@ -19,7 +19,7 @@ storiesOf('Card', module)
       icon="icon"
     />
   ))
-  .add('with arrow', () => (
+  .add('navigation card', () => (
     <Card
       cardTitle="Action Card Title"
       cardSubtitle="This is the subtitle"

@@ -1,3 +1,11 @@
+/*
+TODOs: 
+
+* Adapt the card to make it more accessible.
+  * https://inclusive-components.design/cards/
+* Add clickable property to make it role="button" and tabIndexable only when this is true.
+
+*/
 import React from 'react';
 import PropTypes from 'prop-types';
 import Badge from '../Badge';
