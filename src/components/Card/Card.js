@@ -38,6 +38,7 @@ const Card = (props) => {
     onKeyPress: onCardClick,
   };
 
+  if (pressed) clickableProps['aria-pressed'] = true;
   if (!clickable) clickableProps = {};
 
   return (

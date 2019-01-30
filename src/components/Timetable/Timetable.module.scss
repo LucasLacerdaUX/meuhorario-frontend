@@ -6,16 +6,37 @@
   text-align: center;
   cursor: pointer;
   transition: $animation-duration-m ease-out;
+  position: relative;
+  overflow: hidden;
+
+  .deleteIcon {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, 100%, 0);
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    transition: all $animation-duration-m ease-out;
+  }
+
+  &::after {
+    content: ' ';
+    transition: background $animation-duration-m ease-out;
+  }
 
   &:hover,
   &:focus {
     box-shadow: $shadow-l rgba($main-color, $opacity-8);
     z-index: 1;
-    position: relative;
-    // transform: scale(1.05);
 
-    /*&::after {
-      content: 'delete';
+    .deleteIcon {
+      opacity: 1;
+      transform: translate3d(-50%, -50%, 0);
+    }
+    // transform: scale(1.05);
+    &::after {
+      content: ' ';
+      background: rgba($main-color, 0.8);
       width: 100%;
       display: flex;
       height: 100%;
@@ -24,7 +45,7 @@
       position: absolute;
       border-radius: $radius-m;
       top: 0;
-    }*/
+    }
   }
 }
 
@@ -45,6 +66,12 @@
     border-radius: $radius-m;
     width: 100px;
   }
+}
+
+.classContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 td.red {

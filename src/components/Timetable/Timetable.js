@@ -1,15 +1,14 @@
 /*
  *
  * TODO:
- * Delete Icon on hover
  * Accessibility improvements (study to see what is possible)
- * Define the "daysOfWeek" somewhere else.
  *
  */
 
 import React from 'react';
 import PropTypes from 'prop-types';
 import {daysOfWeek} from '../../utils/constants';
+import Icon from '../Icon';
 import * as styles from './Timetable.module.scss';
 
 const classNames = require('classnames');
@@ -48,7 +47,16 @@ const Timetable = (props) => {
           rowSpan={duration}
           onClick={onClick}
         >
-          {aula.shortName}
+          <Icon
+            name="deleteIcon"
+            accessibilityLabel="Remove class from table"
+            customClass={styles.deleteIcon}
+            color="white"
+          />
+          <div class={styles.classContent}>
+            <span>{aula.name}</span>
+            <span>{aula.shortName}</span>
+          </div>
         </td>
       );
 

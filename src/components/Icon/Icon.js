@@ -7,7 +7,7 @@ import * as styles from './Icon.module.scss';
 const classNames = require('classnames');
 
 const Icon = (props) => {
-  const {name, color, size, pointer, customClass} = props;
+  const {name, color, size, pointer, accessibilityLabel, customClass} = props;
   const IconToRender = iconList[name];
   const className = classNames(
     styles.Icon,
@@ -17,11 +17,17 @@ const Icon = (props) => {
     customClass,
   );
 
-  return <IconToRender className={className} />;
+  return (
+    <>
+      <IconToRender className={className} />
+      <span className={styles['visually-hidden']}>{accessibilityLabel}</span>
+    </>
+  );
 };
 
 Icon.propTypes = {
   name: PropTypes.oneOf(icons),
+  accessibilityLabel: PropTypes.string,
   color: PropTypes.oneOf(colors),
   pointer: PropTypes.bool,
   size: PropTypes.oneOf(['small', 'medium', 'large']),

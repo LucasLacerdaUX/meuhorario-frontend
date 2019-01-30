@@ -14,7 +14,7 @@ const Input = (props) => {
     changeText,
     changeFocus,
     isInvalid,
-    labelText,
+    accessibilityLabel,
     customClass,
     ...otherProps
   } = props;
@@ -41,7 +41,7 @@ const Input = (props) => {
         {...otherProps}
       />
       <label id={`${inputName}-label`} htmlFor={inputName}>
-        {labelText}
+        {accessibilityLabel}
       </label>
       {inputDesc && (
         <span className="visually-hidden" id={`${inputName}-hint`}>
@@ -74,7 +74,7 @@ Input.propTypes = {
   changeText: PropTypes.func,
   changeFocus: PropTypes.func,
   isInvalid: PropTypes.bool,
-  labelText: PropTypes.string.isRequired,
+  accessibilityLabel: PropTypes.string.isRequired,
   customClass: PropTypes.arrayOf(PropTypes.string),
 };
 

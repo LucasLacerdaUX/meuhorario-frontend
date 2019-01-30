@@ -8,7 +8,7 @@ storiesOf('Input', module)
       inputName="teste"
       inputType="text"
       inputPlaceholder="Search"
-      labelText="Search"
+      accessibilityLabel="Search"
     />
   ))
   .add('invalid input', () => (
@@ -16,7 +16,7 @@ storiesOf('Input', module)
       inputName="teste"
       inputType="text"
       inputPlaceholder="Username"
-      labelText="Username"
+      accessibilityLabel="Username"
       isInvalid
     />
   ));
