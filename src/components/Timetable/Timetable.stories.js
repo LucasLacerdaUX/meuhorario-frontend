@@ -4,6 +4,7 @@ import Timetable from '.';
 
 const aulas = [
   {
+    code: 'GDSC02574',
     name: 'Cálculo Vetorial e Geometria Analítica',
     shortName: 'CVGA',
     color: 'red',
@@ -14,6 +15,7 @@ const aulas = [
     ],
   },
   {
+    code: 'GDSC02573',
     name: 'Cálculo Vetorial e Geometria Analítica',
     shortName: 'CALC 1',
     color: 'blue',

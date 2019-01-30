@@ -19,9 +19,13 @@ const Timetable = (props) => {
   let {days} = props;
   days = days > 6 || days < 1 ? 6 : days;
 
-  const timetable = Array.from(Array(endingHour - startingHour + 1), () =>
-    new Array(days).fill(<td />),
-  );
+  const timetable = Array.from(Array(endingHour - startingHour + 1), () => [
+    ...Array(days).keys(),
+  ]);
+
+  for (let i = 0; i < timetable.length; i++) {
+    timetable[i] = timetable[i].map((value) => <td key={`${i}-${value}`} />);
+  }
 
   aulas.forEach((aula) => {
     aula.timeslots.forEach((timeslot) => {
@@ -37,6 +41,7 @@ const Timetable = (props) => {
       );
       timetable[startsAt][timeslot.day] = (
         <td
+          key={`${aula.code}-${timeslot.day}-${startsAt}`}
           role="gridcell"
           tabIndex="0"
           className={className}
@@ -54,6 +59,8 @@ const Timetable = (props) => {
       }
     });
   });
+
+  console.log(timetable);
 
   const daysColumnHead = [];
   for (let i = 0; i < days; i++) {
@@ -90,7 +97,7 @@ const Timetable = (props) => {
 Timetable.propTypes = {
   startingHour: PropTypes.number,
   endingHour: PropTypes.number,
-  aulas: PropTypes.object,
+  aulas: PropTypes.arrayOf(PropTypes.object),
   days: PropTypes.number,
   onClick: PropTypes.func,
 };
