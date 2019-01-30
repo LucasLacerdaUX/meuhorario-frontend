@@ -4,6 +4,8 @@ TODOs:
 * Adapt the card to make it more accessible.
   * https://inclusive-components.design/cards/
 * Add clickable property to make it role="button" and tabIndexable only when this is true.
+* Make it possible to color cards when you click
+* Focus styles
 
 */
 import React from 'react';

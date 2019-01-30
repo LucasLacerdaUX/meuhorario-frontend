@@ -1,0 +1,67 @@
+@import '../../style/shared.scss';
+
+@mixin color-td($main-color, $text-color) {
+  background: $main-color;
+  color: $text-color;
+  text-align: center;
+  cursor: pointer;
+  transition: $animation-duration-m ease-out;
+
+  &:hover,
+  &:focus {
+    box-shadow: $shadow-l rgba($main-color, $opacity-8);
+    z-index: 1;
+    position: relative;
+    // transform: scale(1.05);
+
+    /*&::after {
+      content: 'delete';
+      width: 100%;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      border-radius: $radius-m;
+      top: 0;
+    }*/
+  }
+}
+
+.Timetable {
+  //table-layout: fixed;
+  border-spacing: $spacing-xs;
+  width: 100%;
+
+  tbody tr {
+    height: $size-3-xl;
+  }
+  th[scope='row'] {
+    text-align: right;
+    width: $size-2-xl;
+  }
+  td {
+    background: $sky-light;
+    border-radius: $radius-m;
+    width: 100px;
+  }
+}
+
+td.red {
+  @include color-td($red-default, $text-light);
+}
+td.blue {
+  @include color-td($blue-default, $text-light);
+}
+td.green {
+  @include color-td($green-default, $text-dark);
+}
+td.yellow {
+  @include color-td($yellow-default, $text-dark);
+}
+td.grey {
+  @include color-td($grey-default, $text-light);
+}
+td.sky {
+  @include color-td($green-default, $text-dark);
+}
