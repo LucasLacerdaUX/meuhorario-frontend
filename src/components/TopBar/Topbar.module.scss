@@ -1,0 +1,33 @@
+@import '../../style/shared.scss';
+
+.TopBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: $size-3-xl;
+  padding: $spacing-xs $spacing-l;
+  position: relative;
+
+  &::after {
+    content: ' ';
+    height: $border-width-m;
+    background: $sky-light;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - #{$spacing-2-xl});
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .IconList {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: $size-6-xl;
+  }
+  .Button {
+    width: $size-6-xl;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
