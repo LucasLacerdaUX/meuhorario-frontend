@@ -1,0 +1,11 @@
+@import '../../style/shared.scss';
+
+.Collapse {
+  [aria-hidden] {
+    display: none;
+  }
+
+  [aria-hidden='false'] {
+    display: block;
+  }
+}
