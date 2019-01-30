@@ -19,21 +19,27 @@ const Input = (props) => {
   } = props;
 
   const className = classNames(isInvalid && styles.invalid);
+
+  let valueProps = {
+    value: inputValue,
+  };
+  if (inputValue === undefined) valueProps = {};
   return (
-    <div className="Input">
-      <label htmlFor={inputName}>
-        <input
-          className={className}
-          type={inputType}
-          name={inputName}
-          id={inputName}
-          placeholder={inputPlaceholder}
-          value={inputValue}
-          onChange={changeText}
-          onBlur={changeFocus}
-          aria-describedby={`${inputName}-hint`}
-          {...otherProps}
-        />
+    <div className={styles.Input}>
+      <input
+        className={className}
+        type={inputType}
+        name={inputName}
+        id={inputName}
+        placeholder={inputPlaceholder}
+        {...valueProps}
+        onChange={changeText}
+        onBlur={changeFocus}
+        aria-labelledby={`${inputName}-label`}
+        aria-describedby={`${inputName}-hint`}
+        {...otherProps}
+      />
+      <label id={`${inputName}-label`} htmlFor={inputName}>
         {labelText}
       </label>
       {inputDesc && (
@@ -72,7 +78,6 @@ Input.propTypes = {
 
 Input.defaultProps = {
   inputType: 'text',
-  inputValue: '',
   inputPlaceholder: '',
   inputDesc: '',
   isInvalid: false,

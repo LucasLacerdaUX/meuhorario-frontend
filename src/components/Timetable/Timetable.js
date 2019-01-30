@@ -1,20 +1,20 @@
 /*
  *
  * TODO:
- * Add unique key for elements
  * Delete Icon on hover
  * Accessibility improvements (study to see what is possible)
+ * Define the "daysOfWeek" somewhere else.
  *
  */
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import {daysOfWeek} from '../../utils/constants';
 import * as styles from './Timetable.module.scss';
 
 const classNames = require('classnames');
 
 const Timetable = (props) => {
-  const daysOfWeek = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
   const {startingHour, endingHour, onClick, aulas} = props;
   let {days} = props;
   days = days > 6 || days < 1 ? 6 : days;
@@ -59,8 +59,6 @@ const Timetable = (props) => {
       }
     });
   });
-
-  console.log(timetable);
 
   const daysColumnHead = [];
   for (let i = 0; i < days; i++) {

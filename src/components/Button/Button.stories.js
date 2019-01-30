@@ -1,5 +1,6 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react';
+import Icon from '../Icon';
 import Button from '.';
 
 storiesOf('Button', module)
@@ -86,6 +87,6 @@ storiesOf('Button', module)
   ))
   .add('icon', () => (
     <Button color="red" onlyIcon>
-      ic
+      <Icon name="deleteIcon" color="red" size="small" />
     </Button>
   ));

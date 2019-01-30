@@ -1,0 +1,62 @@
+@import '../../style/shared.scss';
+
+@mixin icon-color($default-color, $hover-color) {
+  fill: $default-color;
+
+  &:hover,
+  &:focus {
+    fill: $hover-color;
+  }
+}
+
+.small {
+  width: $size-m;
+}
+
+.medium {
+  width: $size-l;
+}
+
+.large {
+  width: $size-2-xl;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.Icon {
+  @include icon-color($text-dark, $red-default);
+}
+
+.red {
+  @include icon-color($red-default, $red-dark);
+}
+
+.blue {
+  @include icon-color($blue-default, $blue-darker);
+}
+
+.green {
+  @include icon-color($green-dark, $green-darker);
+}
+
+.yellow {
+  @include icon-color($yellow-dark, $yellow-darker);
+}
+
+.grey {
+  @include icon-color($grey-dark, $grey-darker);
+}
+
+.sky {
+  @include icon-color($sky-dark, $sky-darker);
+}
+
+.white {
+  @include icon-color($text-light, $text-light);
+}
+
+.black {
+  @include icon-color($text-dark, $text-dark);
+}

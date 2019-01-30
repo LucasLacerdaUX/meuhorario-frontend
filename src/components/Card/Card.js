@@ -1,13 +1,7 @@
 /*
-TODOs: 
+ * TODO: Add aria-pressed state when props.pressed=true.
+ */
 
-* Adapt the card to make it more accessible.
-  * https://inclusive-components.design/cards/
-* Add clickable property to make it role="button" and tabIndexable only when this is true.
-* Make it possible to color cards when you click
-* Focus styles
-
-*/
 import React from 'react';
 import PropTypes from 'prop-types';
 import Badge from '../Badge';
@@ -24,24 +18,37 @@ const Card = (props) => {
     cardSubtitle,
     complementaryInfo,
     icon,
+    pressed,
+    clickable,
     onCardClick,
   } = props;
 
-  const className = classNames(styles.Card, color ? styles[color] : styles.red);
+  const className = classNames(
+    styles.Card,
+    pressed && styles.pressed,
+    color ? styles[color] : styles.red,
+  );
+
+  let clickableProps = {
+    role: 'button',
+    tabIndex: '0',
+    onClick: onCardClick,
+    onKeyPress: onCardClick,
+  };
+
+  if (!clickable) clickableProps = {};
 
   return (
-    <div
-      className={className}
-      role="button"
-      tabIndex="0"
-      onClick={onCardClick}
-      onKeyPress={onCardClick}
-    >
+    <div className={className} {...clickableProps}>
       <div className={styles.cardBody}>
         <div className={styles.cardBodyText}>
           {badge && (
             <div className={styles.cardBadge}>
-              <Badge color={color} outline={badgeOutline}>
+              <Badge
+                color={color}
+                customClass={pressed && styles.pressedBadge}
+                outline={badgeOutline}
+              >
                 {badge}
               </Badge>
             </div>
@@ -72,12 +79,15 @@ Card.propTypes = {
   cardSubtitle: PropTypes.string,
   complementaryInfo: PropTypes.string,
   onCardClick: PropTypes.func,
+  clickable: PropTypes.bool,
+  pressed: PropTypes.bool,
   icon: PropTypes.node,
 };
 
 Card.defaultProps = {
   color: 'red',
   badgeOutline: false,
+  onCardClick: null,
 };
 
 export default Card;

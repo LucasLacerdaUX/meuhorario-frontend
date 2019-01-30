@@ -13,6 +13,8 @@ button {
 
 .onlyIcon {
   border-radius: $radius-circle;
+  height: $min-touch-target;
+  width: $min-touch-target;
 }
 .small {
   font-size: $font-size-s;

@@ -1,0 +1,50 @@
+@import '../../style/shared.scss';
+
+.Input {
+  position: relative;
+  padding-top: $spacing-xs;
+
+  input {
+    padding: $spacing-s;
+    border-radius: $radius-m;
+    border: $border-width-m solid $sky-light;
+    font-size: $font-size-m;
+
+    &:focus {
+      outline: 0;
+      border-color: $sky-dark;
+
+      & + label {
+        color: $sky-darker;
+      }
+    }
+
+    &.invalid {
+      border-color: $red-default;
+      color: $red-default;
+      & + label {
+        color: $red-default;
+      }
+    }
+  }
+
+  label {
+    position: absolute;
+    background: $text-light;
+    padding: 0 $spacing-2-xs;
+    top: 0;
+    left: $spacing-xs;
+    color: $sky-dark;
+    font-size: $font-size-s;
+    font-weight: bold;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all $animation-duration-s ease-out;
+  }
+
+  input:placeholder-shown + label {
+    opacity: 0;
+    font-size: $font-size-m;
+    transform: translateY($spacing-m);
+  }
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 20">
+  <g id="delete" transform="translate(-2)">
+    <path id="Path_13" data-name="Path 13" d="M17,2H13V0H7V2H3A.945.945,0,0,0,2,3,.945.945,0,0,0,3,4V18a2.006,2.006,0,0,0,2,2H15a2.006,2.006,0,0,0,2-2V4a.945.945,0,0,0,1-1A.945.945,0,0,0,17,2ZM15,18H5V4H15Z" />
+    <rect id="Rectangle_19" data-name="Rectangle 19" width="2" height="10" transform="translate(7 6)" />
+    <rect id="Rectangle_20" data-name="Rectangle 20" width="2" height="10" transform="translate(11 6)" />
+  </g>
+</svg>
