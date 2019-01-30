@@ -21,6 +21,7 @@ const Button = (props) => {
     onlyIcon,
     darkBG,
     fullWidth,
+    customClass,
     children,
   } = props;
 
@@ -33,6 +34,7 @@ const Button = (props) => {
     onlyIcon && [styles.onlyText, styles.onlyIcon],
     darkBG && styles.darkBG,
     fullWidth && styles.fullWidth,
+    customClass,
   );
 
   const buttonType = submit ? 'submit' : 'button';
@@ -70,6 +72,7 @@ Button.propTypes = {
   darkBG: PropTypes.bool,
   children: PropTypes.node,
   fullWidth: PropTypes.bool,
+  customClass: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Button;

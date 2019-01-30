@@ -21,12 +21,14 @@ const Card = (props) => {
     pressed,
     clickable,
     onCardClick,
+    customClass,
   } = props;
 
   const className = classNames(
     styles.Card,
     pressed && styles.pressed,
     color ? styles[color] : styles.red,
+    customClass,
   );
 
   let clickableProps = {
@@ -82,6 +84,7 @@ Card.propTypes = {
   clickable: PropTypes.bool,
   pressed: PropTypes.bool,
   icon: PropTypes.node,
+  customClass: PropTypes.arrayOf(PropTypes.string),
 };
 
 Card.defaultProps = {

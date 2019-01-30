@@ -15,10 +15,11 @@ const Input = (props) => {
     changeFocus,
     isInvalid,
     labelText,
+    customClass,
     ...otherProps
   } = props;
 
-  const className = classNames(isInvalid && styles.invalid);
+  const className = classNames(isInvalid && styles.invalid, customClass);
 
   let valueProps = {
     value: inputValue,
@@ -74,6 +75,7 @@ Input.propTypes = {
   changeFocus: PropTypes.func,
   isInvalid: PropTypes.bool,
   labelText: PropTypes.string.isRequired,
+  customClass: PropTypes.arrayOf(PropTypes.string),
 };
 
 Input.defaultProps = {

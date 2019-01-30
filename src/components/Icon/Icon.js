@@ -7,13 +7,14 @@ import * as styles from './Icon.module.scss';
 const classNames = require('classnames');
 
 const Icon = (props) => {
-  const {name, color, size, pointer} = props;
+  const {name, color, size, pointer, customClass} = props;
   const IconToRender = iconList[name];
   const className = classNames(
     styles.Icon,
     color ? styles[color] : styles.black,
     size ? styles[size] : styles.small,
     pointer && styles.pointer,
+    customClass,
   );
 
   return <IconToRender className={className} />;
@@ -24,6 +25,7 @@ Icon.propTypes = {
   color: PropTypes.oneOf(colors),
   pointer: PropTypes.bool,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
+  customClass: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Icon;
