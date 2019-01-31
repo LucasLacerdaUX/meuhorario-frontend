@@ -16,7 +16,7 @@ import * as styles from './Topbar.module.scss';
 const Topbar = (props) => {
   return (
     <nav className={styles.TopBar}>
-      <Button small onlyText customClass={styles.Button}>
+      <Button small onlyText customClass={[styles.Button]}>
         UFPB - Engenharia de Computação
       </Button>
       <Logo />

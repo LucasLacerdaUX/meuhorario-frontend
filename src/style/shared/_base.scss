@@ -8,12 +8,12 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-/*html,
+html,
 body {
   height: 100%;
-  min-height: 100%;
   width: 100%;
-}*/
+  overflow: hidden;
+}
 
 body {
   font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,

@@ -7,7 +7,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import {daysOfWeek} from '../../utils/constants';
+import {daysOfWeek, colors} from '../../utils/constants';
 import Icon from '../Icon';
 import * as styles from './Timetable.module.scss';
 
@@ -31,13 +31,14 @@ const Timetable = (props) => {
       const duration = timeslot.endingHour - timeslot.startingHour;
       const startsAt = timeslot.startingHour - startingHour;
 
-      if (startsAt < 0 || startsAt > endingHour) return;
+      if (startsAt < 0 || timeslot.startingHour > endingHour) return;
       if (duration < 1) return;
       if (timeslot.day >= days) return;
 
       const className = classNames(
         aula.color ? styles[aula.color] : styles.red,
       );
+
       timetable[startsAt][timeslot.day] = (
         <td
           key={`${aula.code}-${timeslot.day}-${startsAt}`}
@@ -45,17 +46,19 @@ const Timetable = (props) => {
           tabIndex="0"
           className={className}
           rowSpan={duration}
-          onClick={onClick}
+          onClick={() => onClick(aula)}
         >
           <Icon
             name="deleteIcon"
             accessibilityLabel="Remove class from table"
-            customClass={styles.deleteIcon}
+            customClass={[styles.deleteIcon]}
             color="white"
           />
-          <div class={styles.classContent}>
-            <span>{aula.name}</span>
-            <span>{aula.shortName}</span>
+          <div className={styles.classContent}>
+            <span className={styles.contentTitle}>
+              {aula.name.toLowerCase()}
+            </span>
+            <span className={styles.contentSubtitle}>Turma {aula.classId}</span>
           </div>
         </td>
       );

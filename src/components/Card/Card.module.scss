@@ -4,24 +4,38 @@
   border: $border-width-m solid $sky-light;
   border-radius: $radius-m;
   padding: $spacing-m;
+  margin: $spacing-m 0;
+  transition: $animation-duration-s ease-out;
 
   h3 {
     margin-block-start: 0;
     margin-block-end: 0;
+    font-size: $font-size-s;
   }
 
   &:focus {
-    border-color: $sky-dark;
     outline: 0;
   }
 }
 
+.clickable {
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    box-shadow: $shadow-m rgba($sky-default, $opacity-5);
+  }
+}
+
+.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
 .cardBadge {
   margin-bottom: $spacing-m;
 }
 
 .cardSubtitle {
-  font-size: $font-size-s;
+  font-size: $font-size-xs;
 }
 
 .cardBody {
@@ -36,6 +50,7 @@
 
 .complementaryInfo {
   display: block;
+  font-size: $font-size-s;
   margin-top: $spacing-m;
 }
 
@@ -56,6 +71,11 @@
 
     .complementaryInfo {
       color: rgba($text-color, $opacity-8);
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: $shadow-l rgba($main-color, $opacity-8);
     }
   }
 }

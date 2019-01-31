@@ -11,6 +11,7 @@ const classNames = require('classnames');
 
 const Card = (props) => {
   const {
+    id,
     badge,
     badgeOutline,
     color,
@@ -21,36 +22,40 @@ const Card = (props) => {
     pressed,
     clickable,
     onCardClick,
+    clickPayload,
     customClass,
+    disabled,
   } = props;
 
   const className = classNames(
     styles.Card,
     pressed && styles.pressed,
     color ? styles[color] : styles.red,
+    clickable && styles.clickable,
+    disabled && styles.disabled,
     customClass,
   );
 
   let clickableProps = {
     role: 'button',
     tabIndex: '0',
-    onClick: onCardClick,
-    onKeyPress: onCardClick,
+    onClick: () => onCardClick(clickPayload),
+    onKeyPress: () => onCardClick(clickPayload),
   };
 
   if (pressed) clickableProps['aria-pressed'] = true;
   if (!clickable) clickableProps = {};
 
   return (
-    <div className={className} {...clickableProps}>
+    <div id={id} className={className} {...clickableProps}>
       <div className={styles.cardBody}>
         <div className={styles.cardBodyText}>
           {badge && (
             <div className={styles.cardBadge}>
               <Badge
                 color={color}
-                customClass={pressed && styles.pressedBadge}
                 outline={badgeOutline}
+                customClass={[styles.pressedBadge]}
               >
                 {badge}
               </Badge>
@@ -75,6 +80,7 @@ const Card = (props) => {
 };
 
 Card.propTypes = {
+  id: PropTypes.string,
   badge: PropTypes.string,
   color: PropTypes.oneOf(['red', 'green', 'blue', 'yellow', 'grey', 'sky']),
   badgeOutline: PropTypes.bool,
@@ -82,9 +88,15 @@ Card.propTypes = {
   cardSubtitle: PropTypes.string,
   complementaryInfo: PropTypes.string,
   onCardClick: PropTypes.func,
+  clickPayload: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.string,
+    PropTypes.number,
+  ]),
   clickable: PropTypes.bool,
   pressed: PropTypes.bool,
   icon: PropTypes.node,
+  disabled: PropTypes.bool,
   customClass: PropTypes.arrayOf(PropTypes.string),
 };
 

@@ -72,6 +72,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .contentTitle {
+    font-size: $font-size-s;
+    text-transform: capitalize;
+  }
+  .contentSubtitle {
+    font-size: $font-size-xs;
+  }
 }
 
 td.red {
@@ -90,5 +98,5 @@ td.grey {
   @include color-td($grey-default, $text-light);
 }
 td.sky {
-  @include color-td($green-default, $text-dark);
+  @include color-td($sky-default, $text-dark);
 }
