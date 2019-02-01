@@ -29,14 +29,14 @@
 @keyframes the-animation {
   0% {
     fill-opacity: 0;
-	transform: translateY(40%);
+	  transform: translateY(40%);
   }
   50% {
-	transform: translateY(-20%);
+	  transform: translateY(-20%);
   }
   100% {
     fill-opacity: 1;
-	transform: translateY(0%);
+    transform: translateY(0%);
   }
 }
 
