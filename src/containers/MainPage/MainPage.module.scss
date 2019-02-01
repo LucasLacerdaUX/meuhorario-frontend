@@ -18,3 +18,23 @@
   height: 100%;
   overflow-y: scroll;
 }
+
+// Scrollbar
+::-webkit-scrollbar {
+  display: block;
+  width: $size-xs;
+  position: absolute;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: $radius-m;
+}
+
+:hover::-webkit-scrollbar-track {
+  background: rgba($sky-light, $opacity-5);
+}
+
+:hover::-webkit-scrollbar-thumb {
+  background: $red-default;
+}

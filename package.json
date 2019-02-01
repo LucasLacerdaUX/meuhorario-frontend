@@ -46,6 +46,8 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-shopify": "^26.1.2",
     "gh-pages": "^2.0.1",
-    "prettier": "^1.16.1"
+    "prettier": "^1.16.1",
+    "react-vivus": "0.0.2",
+    "vivus": "^0.4.4"
   }
 }

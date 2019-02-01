@@ -9,8 +9,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {ReactComponent as Logo} from '../Logo/logo.svg';
+import LogoSvg from '../Logo/logo.svg';
 import Icon from '../Icon';
 import Button from '../Button';
+import ReactVivus from 'react-vivus';
 import * as styles from './Topbar.module.scss';
 
 const Topbar = (props) => {
@@ -19,7 +21,17 @@ const Topbar = (props) => {
       <Button small onlyText customClass={[styles.Button]}>
         UFPB - Engenharia de Computação
       </Button>
-      <Logo />
+      <ReactVivus
+        id="foo"
+        option={{
+          file: LogoSvg,
+          duration: 80,
+          animTimingFunction: 'EASE_OUT',
+          type: 'oneByOne',
+        }}
+        style={{width: '220px'}}
+      />
+
       <div className={styles.IconList}>
         <Button small onlyIcon>
           <Icon name="bookmark" />
