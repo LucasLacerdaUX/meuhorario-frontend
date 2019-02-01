@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/meuhorario-frontend/static/media/add-course.bba6fa9f.svg"
   },
   {
-    "revision": "3429aabe14ad3d06be04",
-    "url": "/meuhorario-frontend/static/css/main.fc38d4a6.chunk.css"
+    "revision": "509e4973123ad87047aa",
+    "url": "/meuhorario-frontend/static/css/main.9679b82d.chunk.css"
   },
   {
     "revision": "5bc538a9eb7184d89cb9",
@@ -32,8 +32,8 @@ self.__precacheManifest = [
     "url": "/meuhorario-frontend/static/media/delete.73f3fdc7.svg"
   },
   {
-    "revision": "3429aabe14ad3d06be04",
-    "url": "/meuhorario-frontend/static/js/main.3429aabe.chunk.js"
+    "revision": "509e4973123ad87047aa",
+    "url": "/meuhorario-frontend/static/js/main.509e4973.chunk.js"
   },
   {
     "revision": "cd9842d487b672e6c3ed60e62a698ce5",
@@ -60,7 +60,7 @@ self.__precacheManifest = [
     "url": "/meuhorario-frontend/static/media/logo.a2ea4ae2.svg"
   },
   {
-    "revision": "41c4828049431b19e2e308a0a5a93283",
+    "revision": "a7fa2815ce3d38e3ab726fd3a32a3f24",
     "url": "/meuhorario-frontend/index.html"
   }
 ];
