@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/meuhorario-frontend/precache-manifest.9131c115424220bd584b6430b6400d3d.js"
+  "/meuhorario-frontend/precache-manifest.b9b68aa5fd8f3c632d3fd6bdd095cd73.js"
 );
 
 workbox.clientsClaim();
