@@ -1,7 +1,7 @@
 {
-  "main.css": "/meuhorario-frontend/static/css/main.535dcb86.chunk.css",
-  "main.js": "/meuhorario-frontend/static/js/main.1a85538b.chunk.js",
-  "main.js.map": "/meuhorario-frontend/static/js/main.1a85538b.chunk.js.map",
+  "main.css": "/meuhorario-frontend/static/css/main.fc38d4a6.chunk.css",
+  "main.js": "/meuhorario-frontend/static/js/main.3429aabe.chunk.js",
+  "main.js.map": "/meuhorario-frontend/static/js/main.3429aabe.chunk.js.map",
   "static/js/1.5bc538a9.chunk.js": "/meuhorario-frontend/static/js/1.5bc538a9.chunk.js",
   "static/js/1.5bc538a9.chunk.js.map": "/meuhorario-frontend/static/js/1.5bc538a9.chunk.js.map",
   "runtime~main.js": "/meuhorario-frontend/static/js/runtime~main.08155668.js",
@@ -17,8 +17,8 @@
   "static/media/twitter.fdd6e724.svg": "/meuhorario-frontend/static/media/twitter.fdd6e724.svg",
   "static/media/logo.a2ea4ae2.svg": "/meuhorario-frontend/static/media/logo.a2ea4ae2.svg",
   "static/media/bookmark.ecdd0df1.svg": "/meuhorario-frontend/static/media/bookmark.ecdd0df1.svg",
-  "static/css/main.535dcb86.chunk.css.map": "/meuhorario-frontend/static/css/main.535dcb86.chunk.css.map",
+  "static/css/main.fc38d4a6.chunk.css.map": "/meuhorario-frontend/static/css/main.fc38d4a6.chunk.css.map",
   "index.html": "/meuhorario-frontend/index.html",
-  "precache-manifest.1c12b98c9f3f7ad2087d3fdc647e6896.js": "/meuhorario-frontend/precache-manifest.1c12b98c9f3f7ad2087d3fdc647e6896.js",
+  "precache-manifest.4ee0c147ff7c85c0ab6f13e787d3b179.js": "/meuhorario-frontend/precache-manifest.4ee0c147ff7c85c0ab6f13e787d3b179.js",
   "service-worker.js": "/meuhorario-frontend/service-worker.js"
 }
