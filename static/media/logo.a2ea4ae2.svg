@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="226.756" height="34.712" viewBox="0 0 226.756 34.712">
-  <g id="Logo" transform="translate(-900 -369.887)">
-    <path id="rect-grn" d="M5.172,0h3.54a5.172,5.172,0,0,1,5.172,5.172v3.54a5.172,5.172,0,0,1-5.172,5.172H5.172A5.172,5.172,0,0,1,0,8.713V5.172A5.172,5.172,0,0,1,5.172,0Z" transform="translate(920.827 369.887)" fill="#02d8c1"/>
-    <path id="rect-blu" d="M5.172,0h3.54a5.172,5.172,0,0,1,5.172,5.172V29.54a5.172,5.172,0,0,1-5.172,5.172H5.172A5.172,5.172,0,0,1,0,29.54V5.172A5.172,5.172,0,0,1,5.172,0Z" transform="translate(955.54 404.599) rotate(180)" fill="#5d66e9"/>
-    <path id="rect-ylw" d="M5.172,0h3.54a5.172,5.172,0,0,1,5.172,5.172v3.54a5.172,5.172,0,0,1-5.172,5.172H5.172A5.172,5.172,0,0,1,0,8.713V5.172A5.172,5.172,0,0,1,5.172,0Z" transform="translate(920.827 390.714)" fill="#ffc400"/>
-    <path id="rect-red" d="M5.172,0h3.54a5.172,5.172,0,0,1,5.172,5.172V29.54a5.172,5.172,0,0,1-5.172,5.172H5.172A5.172,5.172,0,0,1,0,29.54V5.172A5.172,5.172,0,0,1,5.172,0Z" transform="translate(913.885 404.599) rotate(180)" fill="#e61c1c"/>
-    <text id="MEUHORÁRIO" transform="translate(967.756 395.236)" fill="#1d2126" font-size="23" font-family="Poppins-ExtraBold, Poppins" font-weight="800"><tspan x="0" y="0">MEUHORÁRIO</tspan></text>
-  </g>
-</svg>

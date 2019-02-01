@@ -1,19 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "bba6fa9f0e1c4336e0cc80badf809699",
-    "url": "/meuhorario-frontend/static/media/add-course.bba6fa9f.svg"
+    "revision": "73f3fdc7b0e1404eacd2a5b7aceaf7c6",
+    "url": "/meuhorario-frontend/static/media/delete.73f3fdc7.svg"
   },
   {
-    "revision": "509e4973123ad87047aa",
-    "url": "/meuhorario-frontend/static/css/main.9679b82d.chunk.css"
+    "revision": "45b508d3304913117bca",
+    "url": "/meuhorario-frontend/static/css/main.2a58440c.chunk.css"
   },
   {
-    "revision": "5bc538a9eb7184d89cb9",
-    "url": "/meuhorario-frontend/static/js/1.5bc538a9.chunk.js"
+    "revision": "fe39018285000c0ab949",
+    "url": "/meuhorario-frontend/static/js/1.fe390182.chunk.js"
   },
   {
     "revision": "081556680d5b1d3fc88f",
     "url": "/meuhorario-frontend/static/js/runtime~main.08155668.js"
+  },
+  {
+    "revision": "a21770edf480f5d14971951adc6a66ab",
+    "url": "/meuhorario-frontend/static/media/logo.a21770ed.svg"
   },
   {
     "revision": "41d90406ffe689ab9c295211df8b3b7f",
@@ -28,12 +32,12 @@ self.__precacheManifest = [
     "url": "/meuhorario-frontend/static/media/link.72ce94d3.svg"
   },
   {
-    "revision": "73f3fdc7b0e1404eacd2a5b7aceaf7c6",
-    "url": "/meuhorario-frontend/static/media/delete.73f3fdc7.svg"
+    "revision": "45b508d3304913117bca",
+    "url": "/meuhorario-frontend/static/js/main.45b508d3.chunk.js"
   },
   {
-    "revision": "509e4973123ad87047aa",
-    "url": "/meuhorario-frontend/static/js/main.509e4973.chunk.js"
+    "revision": "bba6fa9f0e1c4336e0cc80badf809699",
+    "url": "/meuhorario-frontend/static/media/add-course.bba6fa9f.svg"
   },
   {
     "revision": "cd9842d487b672e6c3ed60e62a698ce5",
@@ -56,11 +60,7 @@ self.__precacheManifest = [
     "url": "/meuhorario-frontend/static/media/twitter.fdd6e724.svg"
   },
   {
-    "revision": "a2ea4ae2695ff8c856d325aaed8db0a7",
-    "url": "/meuhorario-frontend/static/media/logo.a2ea4ae2.svg"
-  },
-  {
-    "revision": "a7fa2815ce3d38e3ab726fd3a32a3f24",
+    "revision": "6a574827f799f69d2f7de0da57ba5f66",
     "url": "/meuhorario-frontend/index.html"
   }
 ];
