@@ -8,6 +8,9 @@ export const colors = [
   'white',
   'black',
 ];
+
+export const classColors = ['red', 'green', 'blue', 'yellow', 'grey', 'sky'];
+
 export const icons = [
   'arrowLeft',
   'arrowUp',

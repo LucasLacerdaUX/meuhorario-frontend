@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Timetable from '../../components/Timetable';
 import Card from '../../components/Card';
 import * as styles from './MainPage.module.scss';
-import {colors} from '../../utils/constants';
+import {classColors} from '../../utils/constants';
 import sampleData from './sample.json';
 
 export class MainPage extends Component {
@@ -129,7 +129,9 @@ export class MainPage extends Component {
     const cardsToRender = [];
     aulas.forEach((element) => {
       const key = `${element.code}-${element.classId}`;
-      element.color = inTable.includes(key) && colors[insideTable.length % 6];
+      element.color =
+        inTable.includes(key) &&
+        classColors[inTable.indexOf(key) % classColors.length];
       cardsToRender.push(
         <Card
           key={key}
