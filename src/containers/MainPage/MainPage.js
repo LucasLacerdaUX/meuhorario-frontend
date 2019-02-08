@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Timetable from '../../components/Timetable';
 import Card from '../../components/Card';
 import {classColors} from '../../utils/constants';
+import {reformatData} from '../../utils/temp';
 import * as styles from './MainPage.module.scss';
 import sampleData from './sample.json';
 
@@ -83,59 +84,8 @@ export class MainPage extends Component {
     this.setState({restrictedItems: newRestrictedItems});
   }
 
-  convertToHour(time, hour) {
-    const cHour = Number(hour);
-    if (time === 'M') {
-      return cHour + 6;
-    }
-    if (time === 'T') {
-      return cHour + 12;
-    }
-    if (time === 'N') {
-      return cHour + 18;
-    }
-    return cHour;
-  }
-
-  toTimeslotArray(times) {
-    const newObj = [];
-    times.split(' ').forEach((time) => {
-      const regex = /([1-9]*)+(T|M|N)+([1-9]*)/g;
-      const myTime = regex.exec(time);
-
-      const dias = myTime[1].toString();
-      const turno = myTime[2];
-      const horas = myTime[3].toString();
-
-      [...dias].forEach((element) => {
-        newObj.push({
-          day: element - 2,
-          startingHour: this.convertToHour(turno, horas[0]),
-          endingHour: this.convertToHour(turno, horas[horas.length - 1]) + 1,
-        });
-      });
-    });
-
-    return newObj;
-  }
-
   componentDidMount() {
-    const tempState = [];
-    sampleData.curriculum.courses.forEach((element) => {
-      element.turmas.forEach((turma) => {
-        const newElement = {};
-        newElement.code = element.id;
-        newElement.name = element.name;
-        newElement.shortName = '...';
-        newElement.type = element.type;
-        newElement.professor = turma.professor;
-        newElement.time = turma.horario;
-        newElement.classId = turma.turmaid;
-        newElement.semester = element.semester;
-        newElement.timeslots = this.toTimeslotArray(turma.horario);
-        tempState.push(newElement);
-      });
-    });
+    const tempState = reformatData(sampleData);
     this.setState({aulas: tempState});
   }
 
@@ -183,7 +133,7 @@ export class MainPage extends Component {
             startingHour={7}
             endingHour={23}
             onClick={this.addToTable}
-            aulas={insideTable}
+            events={insideTable}
           />
         </div>
       </div>

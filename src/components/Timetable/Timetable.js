@@ -14,7 +14,7 @@ import * as styles from './Timetable.module.scss';
 const classNames = require('classnames');
 
 const Timetable = (props) => {
-  const {startingHour, endingHour, onClick, aulas} = props;
+  const {startingHour, endingHour, onClick, events} = props;
   let {days} = props;
   days = days > 6 || days < 1 ? 6 : days;
 
@@ -26,8 +26,8 @@ const Timetable = (props) => {
     timetable[i] = timetable[i].map((value) => <td key={`${i}-${value}`} />);
   }
 
-  aulas.forEach((aula) => {
-    aula.timeslots.forEach((timeslot) => {
+  events.forEach((event) => {
+    event.timeslots.forEach((timeslot) => {
       const duration = timeslot.endingHour - timeslot.startingHour;
       const startsAt = timeslot.startingHour - startingHour;
 
@@ -36,17 +36,17 @@ const Timetable = (props) => {
       if (timeslot.day >= days) return;
 
       const className = classNames(
-        aula.color ? styles[aula.color] : styles.red,
+        event.color ? styles[event.color] : styles.red,
       );
 
       timetable[startsAt][timeslot.day] = (
         <td
-          key={`${aula.code}-${timeslot.day}-${startsAt}`}
+          key={`${event.code}-${timeslot.day}-${startsAt}`}
           role="gridcell"
           tabIndex="0"
           className={className}
           rowSpan={duration}
-          onClick={() => onClick(aula)}
+          onClick={() => onClick(event)}
         >
           <Icon
             name="deleteIcon"
@@ -56,9 +56,11 @@ const Timetable = (props) => {
           />
           <div className={styles.classContent}>
             <span className={styles.contentTitle}>
-              {aula.name.toLowerCase()}
+              {event.name.toLowerCase()}
             </span>
-            <span className={styles.contentSubtitle}>Turma {aula.classId}</span>
+            <span className={styles.contentSubtitle}>
+              Turma {event.classId}
+            </span>
           </div>
         </td>
       );
@@ -106,7 +108,7 @@ const Timetable = (props) => {
 Timetable.propTypes = {
   startingHour: PropTypes.number,
   endingHour: PropTypes.number,
-  aulas: PropTypes.arrayOf(PropTypes.object),
+  events: PropTypes.arrayOf(PropTypes.object),
   days: PropTypes.number,
   onClick: PropTypes.func,
 };
