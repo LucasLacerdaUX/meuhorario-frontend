@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Timetable from '../../components/Timetable';
 import Card from '../../components/Card';
-import * as styles from './MainPage.module.scss';
 import {classColors} from '../../utils/constants';
+import * as styles from './MainPage.module.scss';
 import sampleData from './sample.json';
 
 export class MainPage extends Component {
@@ -11,30 +11,47 @@ export class MainPage extends Component {
     inTable: [],
     restrictedItems: [],
     restrictedTimes: [],
+    inTableColors: [],
+    availableColors: [],
   };
 
   addToTable = (element) => {
     const id = `${element.code}-${element.classId}`;
 
-    let {inTable, restrictedTimes} = this.state;
+    const {inTableColors} = this.state;
+    let {inTable, availableColors, restrictedTimes} = this.state;
     const {restrictedItems} = this.state;
 
     if (restrictedItems.includes(id)) return;
 
     if (inTable.includes(id)) {
+      const index = inTable.indexOf(id);
+
+      if (availableColors.indexOf(inTableColors[index]) === -1)
+        availableColors.unshift(inTableColors[index]);
+
+      inTableColors.splice(index, 1);
       inTable = inTable.filter((value) => value !== id);
+
       restrictedTimes = restrictedTimes.filter(
         (restri) => restri.disciplina !== id,
       );
     } else {
+      if (availableColors.length === 0) {
+        availableColors = [...classColors];
+      }
       inTable.push(id);
+      inTableColors.push(availableColors.shift());
       [...element.timeslots].map((daySlot) => (daySlot.disciplina = id));
       restrictedTimes.push(...element.timeslots);
     }
 
-    this.setState({inTable, restrictedTimes}, () => {
-      this.updateRestrictionList(id);
-    });
+    this.setState(
+      {inTable, inTableColors, availableColors, restrictedTimes},
+      () => {
+        this.updateRestrictionList(id);
+      },
+    );
   };
 
   updateRestrictionList(notThis) {
@@ -72,7 +89,7 @@ export class MainPage extends Component {
       return cHour + 6;
     }
     if (time === 'T') {
-      return cHour + 13;
+      return cHour + 12;
     }
     if (time === 'N') {
       return cHour + 18;
@@ -123,15 +140,21 @@ export class MainPage extends Component {
   }
 
   render() {
-    const {aulas, restrictedItems, inTable} = this.state;
+    const {aulas, restrictedItems, inTable, inTableColors} = this.state;
 
     const insideTable = [];
     const cardsToRender = [];
+
     aulas.forEach((element) => {
       const key = `${element.code}-${element.classId}`;
-      element.color =
-        inTable.includes(key) &&
-        classColors[inTable.indexOf(key) % classColors.length];
+
+      if (inTable.includes(key)) {
+        insideTable.push(element);
+        element.color = inTableColors[inTable.indexOf(key)];
+      } else {
+        element.color = 'red';
+      }
+
       cardsToRender.push(
         <Card
           key={key}
@@ -148,11 +171,6 @@ export class MainPage extends Component {
           clickable
         />,
       );
-      if (!inTable.includes(key)) {
-        return;
-      }
-
-      insideTable.push(element);
     });
 
     return (

@@ -7,15 +7,13 @@
  */
 
 import React from 'react';
-import PropTypes from 'prop-types';
-import {ReactComponent as Logo} from '../Logo/logo.svg';
+import ReactVivus from 'react-vivus';
 import LogoSvg from '../Logo/logo.svg';
 import Icon from '../Icon';
 import Button from '../Button';
-import ReactVivus from 'react-vivus';
 import * as styles from './Topbar.module.scss';
 
-const Topbar = (props) => {
+const Topbar = () => {
   return (
     <nav className={styles.TopBar}>
       <Button small onlyText customClass={[styles.Button]}>
@@ -44,7 +42,5 @@ const Topbar = (props) => {
     </nav>
   );
 };
-
-Topbar.propTypes = {};
 
 export default Topbar;
