@@ -12,7 +12,7 @@ export class MainPage extends Component {
     userCourses: {},
     restrictedItems: [],
     availableColors: [],
-    conflictMap: [],
+    conflictMap: {},
     timetableConfig: {
       days: 6,
       startingHour: 7,
@@ -22,10 +22,7 @@ export class MainPage extends Component {
 
   generateConflictTable = (courseList) => {
     const {timetableConfig} = this.state;
-    const conflictMap = Array.from(
-      Array(timetableConfig.endingHour - timetableConfig.startingHour + 1),
-      () => Array.from(Array(timetableConfig.days), () => []),
-    );
+    const conflictMap = {};
 
     Object.keys(courseList).forEach((courseId) => {
       const course = courseList[courseId];
@@ -34,7 +31,9 @@ export class MainPage extends Component {
         const startsAt = time.startingHour - timetableConfig.startingHour;
 
         for (let i = 0; i < duration; i++) {
-          conflictMap[startsAt + i][time.day].push(course.id);
+          const identifier = `${startsAt + i}-${time.day}`;
+          conflictMap[identifier] = conflictMap[identifier] || [];
+          conflictMap[`${startsAt + i}-${time.day}`].push(course.id);
         }
       });
     });
@@ -76,15 +75,9 @@ export class MainPage extends Component {
   };
 
   updateRestrictionList() {
-    const {
-      allCourses,
-      restrictedItems,
-      userCourses,
-      conflictMap,
-      timetableConfig,
-    } = this.state;
+    const {allCourses, userCourses, conflictMap, timetableConfig} = this.state;
 
-    let newRestrictionList = [...restrictedItems];
+    let newRestrictionList = [];
 
     Object.keys(userCourses).forEach((courseId) => {
       const request = allCourses[courseId];
@@ -93,11 +86,9 @@ export class MainPage extends Component {
         const startsAt = time.startingHour - timetableConfig.startingHour;
 
         for (let i = 0; i < duration; i++) {
+          const identifier = `${startsAt + i}-${time.day}`;
           newRestrictionList = [
-            ...new Set([
-              ...newRestrictionList,
-              ...conflictMap[startsAt + i][time.day],
-            ]),
+            ...new Set([...newRestrictionList, ...conflictMap[identifier]]),
           ];
         }
       });
