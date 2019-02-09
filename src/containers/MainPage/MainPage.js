@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Timetable from '../../components/Timetable';
 import Card from '../../components/Card';
 import {classColors} from '../../utils/constants';
-import {reformatData, hasTimeConflict} from '../../utils/temp';
+import {reformatData} from '../../utils/temp';
 import * as styles from './MainPage.module.scss';
 import sampleData from './sample.json';
 
@@ -11,7 +11,6 @@ export class MainPage extends Component {
     allCourses: {},
     userCourses: {},
     restrictedItems: [],
-    restrictedTimes: [],
     availableColors: [],
     conflictMap: [],
     timetableConfig: {
@@ -39,7 +38,7 @@ export class MainPage extends Component {
         }
       });
     });
-    console.log('conflict', conflictMap);
+
     return conflictMap;
   };
 
@@ -47,7 +46,7 @@ export class MainPage extends Component {
     const {userCourses, restrictedItems} = this.state;
     const newUserCourses = {...userCourses};
 
-    let {availableColors, restrictedTimes} = this.state;
+    let {availableColors} = this.state;
     if (restrictedItems.includes(courseClass.id)) return;
 
     // Deleting from table
@@ -56,10 +55,6 @@ export class MainPage extends Component {
         availableColors.unshift(userCourses[courseClass.id].color);
 
       delete newUserCourses[courseClass.id];
-
-      restrictedTimes = restrictedTimes.filter(
-        (restri) => restri.restrictedBy !== courseClass.id,
-      );
     }
 
     // Adding to Table
@@ -73,18 +68,14 @@ export class MainPage extends Component {
       [...courseClass.timeslots].map(
         (daySlot) => (daySlot.restrictedBy = courseClass.id),
       );
-      restrictedTimes.push(...courseClass.timeslots);
     }
 
-    this.setState(
-      {userCourses: newUserCourses, availableColors, restrictedTimes},
-      () => {
-        this.updateRestrictionList(courseClass.id);
-      },
-    );
+    this.setState({userCourses: newUserCourses, availableColors}, () => {
+      this.updateRestrictionList(courseClass.id);
+    });
   };
 
-  updateRestrictionList(requester) {
+  updateRestrictionList() {
     const {
       allCourses,
       restrictedItems,
@@ -93,10 +84,8 @@ export class MainPage extends Component {
       timetableConfig,
     } = this.state;
 
-    // Todo: change it to object
     let newRestrictionList = [...restrictedItems];
 
-    //console.log(conflictMap);
     Object.keys(userCourses).forEach((courseId) => {
       const request = allCourses[courseId];
       request.timeslots.forEach((time) => {
@@ -117,37 +106,8 @@ export class MainPage extends Component {
     newRestrictionList = newRestrictionList.filter(
       (value) => !(value in userCourses),
     );
-    //console.log(requester, newRestrictionList);
 
     this.setState({restrictedItems: newRestrictionList});
-    /* 
-    const {restrictedTimes, userCourses, allCourses} = this.state;
-
-    const newRestrictedItems = [];
-
-    allCourses.forEach((courseClass) => {
-      if (courseClass.id === requester) return;
-      if (courseClass.id in userCourses) return;
-
-      restrictedTimes.forEach((restrictedTime) => {
-        if (
-          courseClass.timeslots.some((time) => {
-            return hasTimeConflict(
-              time.startingHour,
-              restrictedTime.startingHour,
-              time.endingHour,
-              restrictedTime.endingHour,
-              time.day,
-              restrictedTime.day,
-            );
-          })
-        ) {
-          newRestrictedItems.push(courseClass.id);
-        }
-      });
-    });*/
-
-    //this.setState({restrictedItems: newRestrictedItems});
   }
 
   componentDidMount() {

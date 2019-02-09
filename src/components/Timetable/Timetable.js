@@ -7,7 +7,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import {daysOfWeek, colors} from '../../utils/constants';
+import {daysOfWeek} from '../../utils/constants';
 import Icon from '../Icon';
 import * as styles from './Timetable.module.scss';
 
