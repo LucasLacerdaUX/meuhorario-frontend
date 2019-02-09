@@ -54,3 +54,10 @@ export const reformatData = (sampleData) => {
   });
   return tempState;
 };
+
+export const hasTimeConflict = (start1, start2, end1, end2, day1, day2) => {
+  return (
+    day1 === day2 &&
+    Math.max(start1, start2) - Math.min(end1 - 1, end2 - 1) <= 0
+  );
+};
