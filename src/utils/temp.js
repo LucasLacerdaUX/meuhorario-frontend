@@ -49,7 +49,7 @@ export const reformatData = (sampleData) => {
       newElement.classId = turma.turmaid;
       newElement.semester = element.semester;
       newElement.timeslots = toTimeslotArray(turma.horario);
-      tempState.push(newElement);
+      tempState[newElement.id] = newElement;
     });
   });
   return tempState;

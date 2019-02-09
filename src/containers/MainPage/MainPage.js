@@ -8,11 +8,39 @@ import sampleData from './sample.json';
 
 export class MainPage extends Component {
   state = {
-    allCourses: [],
+    allCourses: {},
     userCourses: {},
     restrictedItems: [],
     restrictedTimes: [],
     availableColors: [],
+    conflictMap: [],
+    timetableConfig: {
+      days: 6,
+      startingHour: 7,
+      endingHour: 23,
+    },
+  };
+
+  generateConflictTable = (courseList) => {
+    const {timetableConfig} = this.state;
+    const conflictMap = Array.from(
+      Array(timetableConfig.endingHour - timetableConfig.startingHour + 1),
+      () => Array.from(Array(timetableConfig.days), () => []),
+    );
+
+    Object.keys(courseList).forEach((courseId) => {
+      const course = courseList[courseId];
+      course.timeslots.forEach((time) => {
+        const duration = time.endingHour - time.startingHour;
+        const startsAt = time.startingHour - timetableConfig.startingHour;
+
+        for (let i = 0; i < duration; i++) {
+          conflictMap[startsAt + i][time.day].push(course.id);
+        }
+      });
+    });
+    console.log('conflict', conflictMap);
+    return conflictMap;
   };
 
   addToTable = (courseClass) => {
@@ -57,6 +85,42 @@ export class MainPage extends Component {
   };
 
   updateRestrictionList(requester) {
+    const {
+      allCourses,
+      restrictedItems,
+      userCourses,
+      conflictMap,
+      timetableConfig,
+    } = this.state;
+
+    // Todo: change it to object
+    let newRestrictionList = [...restrictedItems];
+
+    //console.log(conflictMap);
+    Object.keys(userCourses).forEach((courseId) => {
+      const request = allCourses[courseId];
+      request.timeslots.forEach((time) => {
+        const duration = time.endingHour - time.startingHour;
+        const startsAt = time.startingHour - timetableConfig.startingHour;
+
+        for (let i = 0; i < duration; i++) {
+          newRestrictionList = [
+            ...new Set([
+              ...newRestrictionList,
+              ...conflictMap[startsAt + i][time.day],
+            ]),
+          ];
+        }
+      });
+    });
+
+    newRestrictionList = newRestrictionList.filter(
+      (value) => !(value in userCourses),
+    );
+    //console.log(requester, newRestrictionList);
+
+    this.setState({restrictedItems: newRestrictionList});
+    /* 
     const {restrictedTimes, userCourses, allCourses} = this.state;
 
     const newRestrictedItems = [];
@@ -81,23 +145,30 @@ export class MainPage extends Component {
           newRestrictedItems.push(courseClass.id);
         }
       });
-    });
+    });*/
 
-    this.setState({restrictedItems: newRestrictedItems});
+    //this.setState({restrictedItems: newRestrictedItems});
   }
 
   componentDidMount() {
     const tempState = reformatData(sampleData);
-    this.setState({allCourses: tempState});
+    const conflictMap = this.generateConflictTable(tempState);
+    this.setState({allCourses: tempState, conflictMap});
   }
 
   render() {
-    const {allCourses, restrictedItems, userCourses} = this.state;
+    const {
+      allCourses,
+      restrictedItems,
+      userCourses,
+      timetableConfig,
+    } = this.state;
 
     const insideTable = [];
     const cardsToRender = [];
 
-    allCourses.forEach((courseClass) => {
+    Object.keys(allCourses).forEach((courseId) => {
+      const courseClass = allCourses[courseId];
       if (courseClass.id in userCourses) {
         insideTable.push(courseClass);
         courseClass.color = userCourses[courseClass.id].color;
@@ -132,9 +203,9 @@ export class MainPage extends Component {
 
         <div className={styles.mainTable}>
           <Timetable
-            days={6}
-            startingHour={7}
-            endingHour={23}
+            days={timetableConfig.days}
+            startingHour={timetableConfig.startingHour}
+            endingHour={timetableConfig.endingHour}
             onClick={this.addToTable}
             events={insideTable}
           />
