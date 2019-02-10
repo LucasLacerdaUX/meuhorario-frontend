@@ -58,9 +58,8 @@ const Timetable = (props) => {
             <span className={styles.contentTitle}>
               {event.name.toLowerCase()}
             </span>
-            <span className={styles.contentSubtitle}>
-              Turma {event.classId}
-            </span>
+            <span className={styles.contentShortTitle}>{event.shortName}</span>
+            <span className={styles.contentSubtitle}>T{event.classId}</span>
           </div>
         </td>
       );
@@ -88,7 +87,7 @@ const Timetable = (props) => {
   for (let i = startingHour; i <= endingHour; i++) {
     hourRows.push(
       <tr key={`${i}:00`}>
-        <th scope="row">{i}:00</th>
+        <th scope="row">{i}h</th>
         {timetable[i - startingHour]}
       </tr>,
     );

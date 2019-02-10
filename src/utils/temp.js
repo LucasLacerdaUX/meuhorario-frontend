@@ -34,6 +34,16 @@ const toTimeslotArray = (times) => {
   return newObj;
 };
 
+const generateSmallName = (name) => {
+  const toReplace = ['DO', 'DA', 'DE', 'A', 'AO'];
+
+  return name
+    .split(' ')
+    .filter((elemento) => !toReplace.includes(elemento))
+    .map((i) => i.charAt(0))
+    .join('');
+};
+
 export const reformatData = (sampleData) => {
   const tempState = [];
   sampleData.curriculum.courses.forEach((element) => {
@@ -42,7 +52,7 @@ export const reformatData = (sampleData) => {
       newElement.id = `${element.id}-${turma.turmaid}`;
       newElement.code = element.id;
       newElement.name = element.name;
-      newElement.shortName = '...';
+      newElement.shortName = generateSmallName(element.name);
       newElement.type = element.type;
       newElement.professor = turma.professor;
       newElement.time = turma.horario;

@@ -4,7 +4,7 @@
   flex: 1;
   display: flex;
   overflow: hidden;
-  padding: 0 $spacing-l;
+  padding: 0 $spacing-xs;
 }
 
 .mainTable {
@@ -13,10 +13,55 @@
   overflow-y: scroll;
 }
 .sideBar {
-  flex: 0 20rem;
-  padding: 0 $spacing-l;
+  position: fixed;
+  top: calc(100vh - 4.5rem);
+  left: 0;
+  width: 100%;
+  background: $text-light;
   height: 100%;
-  overflow-y: scroll;
+  overflow: hidden;
+
+  border: $border-width-m solid $sky-light;
+  border-radius: $radius-m;
+  box-shadow: 0 -5px 50px rgba($sky-default, $opacity-5);
+  z-index: 99;
+  transition: top $animation-duration-m ease-out;
+
+  & > div {
+    margin: 0 $spacing-s;
+  }
+
+  .buttonDiv {
+    margin-top: $spacing-s;
+  }
+
+  @media #{$mq-desktop} {
+    position: static;
+    padding: 0 $spacing-m;
+    flex: 0 $size-7-xl;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    overflow-y: scroll;
+
+    & > div {
+      margin: 0;
+    }
+    .buttonDiv {
+      display: none;
+    }
+  }
+
+  @media #{$mq-desktop-big} {
+    position: static;
+    padding: 0 $spacing-l;
+    flex: 0 $size-8-xl;
+  }
+
+  &.show {
+    top: 0rem;
+    overflow-y: scroll;
+  }
 }
 
 // Scrollbar

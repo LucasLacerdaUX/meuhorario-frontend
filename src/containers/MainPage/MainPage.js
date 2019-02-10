@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Button from '../../components/Button';
 import Card from '../../components/Card';
 import Collapse from '../../components/Collapse';
 import Timetable from '../../components/Timetable';
@@ -9,6 +10,8 @@ import {reformatData} from '../../utils/temp';
 import * as styles from './MainPage.module.scss';
 import sampleData from './sample.json';
 
+const classNames = require('classnames');
+
 export class MainPage extends Component {
   state = {
     allCourses: {},
@@ -17,10 +20,11 @@ export class MainPage extends Component {
     availableColors: [],
     conflictMap: {},
     timetableConfig: {
-      days: 6,
+      days: 5,
       startingHour: 7,
       endingHour: 23,
     },
+    sidebarExpanded: false,
   };
 
   generateConflictTable = (courseList) => {
@@ -73,6 +77,12 @@ export class MainPage extends Component {
     });
   };
 
+  expandSidebarMobile = () => {
+    this.setState((prevState) => ({
+      sidebarExpanded: !prevState.sidebarExpanded,
+    }));
+  };
+
   updateConflictList() {
     const {allCourses, userCourses, conflictMap, timetableConfig} = this.state;
 
@@ -109,7 +119,13 @@ export class MainPage extends Component {
   }
 
   render() {
-    const {allCourses, conflictList, timetableConfig, userCourses} = this.state;
+    const {
+      allCourses,
+      conflictList,
+      timetableConfig,
+      userCourses,
+      sidebarExpanded,
+    } = this.state;
 
     const timetableContent = [];
     const semesterCards = [[]];
@@ -151,9 +167,21 @@ export class MainPage extends Component {
       );
     });
 
+    const sideBarClasses = classNames(
+      styles.sideBar,
+      sidebarExpanded && styles.show,
+    );
+
     return (
       <div className={styles.MainPage}>
-        <div className={styles.sideBar}>{cardsToRender}</div>
+        <div className={sideBarClasses}>
+          <div className={styles.buttonDiv}>
+            <Button fullWidth onlyText onClick={this.expandSidebarMobile}>
+              Expand
+            </Button>
+          </div>
+          {cardsToRender}
+        </div>
 
         <div className={styles.mainTable}>
           <Timetable

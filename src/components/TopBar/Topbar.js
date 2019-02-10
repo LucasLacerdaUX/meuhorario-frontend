@@ -7,8 +7,7 @@
  */
 
 import React from 'react';
-import ReactVivus from 'react-vivus';
-import LogoSvg from '../Logo/logo.svg';
+import Logo from '../Logo';
 import Icon from '../Icon';
 import Button from '../Button';
 import * as styles from './Topbar.module.scss';
@@ -19,16 +18,7 @@ const Topbar = () => {
       <Button small onlyText customClass={[styles.Button]}>
         UFPB - Engenharia de Computação
       </Button>
-      <ReactVivus
-        id="foo"
-        option={{
-          file: LogoSvg,
-          duration: 80,
-          animTimingFunction: 'EASE_OUT',
-          type: 'oneByOne',
-        }}
-        style={{width: '220px'}}
-      />
+      <Logo />
 
       <div className={styles.IconList}>
         <Button small onlyIcon>

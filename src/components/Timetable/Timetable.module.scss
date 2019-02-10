@@ -72,9 +72,16 @@
   tbody tr {
     height: $size-2-xl;
   }
+  th {
+    font-size: $font-size-xs;
+    @media #{$mq-desktop} {
+      font-size: $font-size-s;
+    }
+  }
   th[scope='row'] {
     text-align: right;
     width: $size-2-xl;
+    padding-bottom: $spacing-l;
   }
   td {
     background: $sky-light;
@@ -91,6 +98,16 @@
   .contentTitle {
     font-size: $font-size-s;
     text-transform: capitalize;
+    display: none;
+    @media #{$mq-desktop} {
+      display: block;
+    }
+  }
+  .contentShortTitle {
+    display: block;
+    @media #{$mq-desktop} {
+      display: none;
+    }
   }
   .contentSubtitle {
     font-size: $font-size-xs;
