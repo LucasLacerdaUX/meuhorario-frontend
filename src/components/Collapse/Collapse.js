@@ -1,26 +1,28 @@
 /*
  * TODO: On Feb 4, use Hooks to make this expandable by itself
  */
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Button from '../Button';
 import * as styles from './Collapse.module.scss';
 
 const Collapse = (props) => {
-  const {id, title, onClick, expanded, children} = props;
+  const {id, title, children} = props;
+  const [open, setOpen] = useState(false);
+
   return (
     <div className={styles.Collapse}>
       <h3>
         <Button
-          onClick={onClick}
-          ariaExpanded={expanded}
+          onClick={() => setOpen(!open)}
+          ariaExpanded={open}
           ariaControls={id}
           onlyText
         >
           {title}
         </Button>
       </h3>
-      <div id={id} aria-hidden={!expanded}>
+      <div id={id} aria-hidden={!open}>
         {children}
       </div>
     </div>
@@ -30,8 +32,6 @@ const Collapse = (props) => {
 Collapse.propTypes = {
   title: PropTypes.node,
   id: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
-  expanded: PropTypes.bool,
   children: PropTypes.node,
 };
 
