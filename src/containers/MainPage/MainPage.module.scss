@@ -60,6 +60,8 @@
 
   &.show {
     top: 0rem;
+    border: none;
+    border-radius: 0;
     overflow-y: scroll;
   }
 }
@@ -81,5 +83,5 @@
 }
 
 :hover::-webkit-scrollbar-thumb {
-  background: $red-default;
+  background: $sky-dark;
 }
