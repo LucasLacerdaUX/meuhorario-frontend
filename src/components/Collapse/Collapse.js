@@ -7,8 +7,8 @@ import Button from '../Button';
 import * as styles from './Collapse.module.scss';
 
 const Collapse = (props) => {
-  const {id, title, children} = props;
-  const [open, setOpen] = useState(false);
+  const {id, title, autoOpen, children} = props;
+  const [open, setOpen] = useState(autoOpen);
 
   return (
     <div className={styles.Collapse}>
@@ -18,6 +18,8 @@ const Collapse = (props) => {
           ariaExpanded={open}
           ariaControls={id}
           onlyText
+          fullWidth
+          color="grey"
         >
           {title}
         </Button>
@@ -30,9 +32,14 @@ const Collapse = (props) => {
 };
 
 Collapse.propTypes = {
-  title: PropTypes.node,
+  title: PropTypes.node.isRequired,
   id: PropTypes.string.isRequired,
+  autoOpen: PropTypes.bool,
   children: PropTypes.node,
+};
+
+Collapse.defaultProps = {
+  autoOpen: false,
 };
 
 export default Collapse;

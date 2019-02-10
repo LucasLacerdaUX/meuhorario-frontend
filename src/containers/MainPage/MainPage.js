@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
-import Timetable from '../../components/Timetable';
 import Card from '../../components/Card';
+import Collapse from '../../components/Collapse';
+import Timetable from '../../components/Timetable';
+
 import {classColors} from '../../utils/constants';
 import {reformatData} from '../../utils/temp';
+
 import * as styles from './MainPage.module.scss';
 import sampleData from './sample.json';
 
@@ -109,7 +112,7 @@ export class MainPage extends Component {
     const {allCourses, conflictList, timetableConfig, userCourses} = this.state;
 
     const timetableContent = [];
-    const cardsToRender = [];
+    const semesterCards = [[]];
 
     Object.keys(allCourses).forEach((courseId) => {
       const course = allCourses[courseId];
@@ -118,7 +121,8 @@ export class MainPage extends Component {
       }
 
       course.color = course.id in userCourses ? userCourses[course.id] : 'red';
-      cardsToRender.push(
+      semesterCards[course.semester] = semesterCards[course.semester] || [];
+      semesterCards[course.semester].push(
         <Card
           key={course.id}
           id={course.id}
@@ -133,6 +137,17 @@ export class MainPage extends Component {
           disabled={conflictList.includes(course.id)}
           clickable
         />,
+      );
+    });
+
+    const cardsToRender = [];
+    semesterCards.forEach((cardList, index) => {
+      const key = `semester-${index}`;
+      const title = index ? `${index}º PERÍODO` : 'EXTRAS';
+      cardsToRender.push(
+        <Collapse id={key} key={key} autoOpen title={title}>
+          {cardList}
+        </Collapse>,
       );
     });
 
