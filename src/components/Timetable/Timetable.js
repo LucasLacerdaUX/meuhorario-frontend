@@ -41,12 +41,12 @@ const Timetable = (props) => {
 
       timetable[startsAt][timeslot.day] = (
         <td
-          key={`${event.code}-${timeslot.day}-${startsAt}`}
+          key={`${event.id}-${timeslot.day}-${startsAt}`}
           role="gridcell"
           tabIndex="0"
           className={className}
           rowSpan={duration}
-          onClick={() => onClick(event)}
+          onClick={() => onClick(event.id)}
         >
           <Icon
             name="deleteIcon"
@@ -73,6 +73,7 @@ const Timetable = (props) => {
     });
   });
 
+  // Rendering of the Table Headers (Columns)
   const daysColumnHead = [];
   for (let i = 0; i < days; i++) {
     daysColumnHead.push(
@@ -82,6 +83,7 @@ const Timetable = (props) => {
     );
   }
 
+  // Rendering of the Table Headers (Rows)
   const hourRows = [];
   for (let i = startingHour; i <= endingHour; i++) {
     hourRows.push(

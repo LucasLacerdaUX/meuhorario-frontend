@@ -10,7 +10,7 @@ export class MainPage extends Component {
   state = {
     allCourses: {},
     userCourses: {},
-    restrictedItems: [],
+    conflictList: [],
     availableColors: [],
     conflictMap: {},
     timetableConfig: {
@@ -33,7 +33,7 @@ export class MainPage extends Component {
         for (let i = 0; i < duration; i++) {
           const identifier = `${startsAt + i}-${time.day}`;
           conflictMap[identifier] = conflictMap[identifier] || [];
-          conflictMap[`${startsAt + i}-${time.day}`].push(course.id);
+          conflictMap[identifier].push(course.id);
         }
       });
     });
@@ -41,108 +41,96 @@ export class MainPage extends Component {
     return conflictMap;
   };
 
-  addToTable = (courseClass) => {
-    const {userCourses, restrictedItems} = this.state;
-    const newUserCourses = {...userCourses};
+  addOrRemoveClass = (courseId) => {
+    const {userCourses, conflictList} = this.state;
+    if (conflictList.includes(courseId)) return;
 
     let {availableColors} = this.state;
-    if (restrictedItems.includes(courseClass.id)) return;
+    const newUserCourses = {...userCourses};
 
     // Deleting from table
-    if (courseClass.id in userCourses) {
-      if (!availableColors.includes(userCourses[courseClass.id].color))
-        availableColors.unshift(userCourses[courseClass.id].color);
+    if (courseId in userCourses) {
+      if (!availableColors.includes(userCourses[courseId]))
+        availableColors.unshift(userCourses[courseId]);
 
-      delete newUserCourses[courseClass.id];
+      delete newUserCourses[courseId];
     }
 
     // Adding to Table
     else {
-      if (availableColors.length === 0) {
-        availableColors = [...classColors];
-      }
-      newUserCourses[courseClass.id] = {
-        color: availableColors.shift(),
-      };
-      [...courseClass.timeslots].map(
-        (daySlot) => (daySlot.restrictedBy = courseClass.id),
-      );
+      availableColors = availableColors.length
+        ? availableColors
+        : [...classColors];
+
+      newUserCourses[courseId] = availableColors.shift();
     }
 
     this.setState({userCourses: newUserCourses, availableColors}, () => {
-      this.updateRestrictionList(courseClass.id);
+      this.updateConflictList();
     });
   };
 
-  updateRestrictionList() {
+  updateConflictList() {
     const {allCourses, userCourses, conflictMap, timetableConfig} = this.state;
 
-    let newRestrictionList = [];
+    let newConflictList = [];
 
     Object.keys(userCourses).forEach((courseId) => {
-      const request = allCourses[courseId];
-      request.timeslots.forEach((time) => {
+      const courseInTable = allCourses[courseId];
+      courseInTable.timeslots.forEach((time) => {
         const duration = time.endingHour - time.startingHour;
         const startsAt = time.startingHour - timetableConfig.startingHour;
 
         for (let i = 0; i < duration; i++) {
           const identifier = `${startsAt + i}-${time.day}`;
-          newRestrictionList = [
-            ...new Set([...newRestrictionList, ...conflictMap[identifier]]),
+          newConflictList = [
+            ...new Set([...newConflictList, ...conflictMap[identifier]]),
           ];
         }
       });
     });
 
-    newRestrictionList = newRestrictionList.filter(
+    newConflictList = newConflictList.filter(
       (value) => !(value in userCourses),
     );
 
-    this.setState({restrictedItems: newRestrictionList});
+    this.setState({conflictList: newConflictList});
   }
 
   componentDidMount() {
+    // This will be removed when the backend is ready
     const tempState = reformatData(sampleData);
+
     const conflictMap = this.generateConflictTable(tempState);
     this.setState({allCourses: tempState, conflictMap});
   }
 
   render() {
-    const {
-      allCourses,
-      restrictedItems,
-      userCourses,
-      timetableConfig,
-    } = this.state;
+    const {allCourses, conflictList, timetableConfig, userCourses} = this.state;
 
-    const insideTable = [];
+    const timetableContent = [];
     const cardsToRender = [];
 
     Object.keys(allCourses).forEach((courseId) => {
-      const courseClass = allCourses[courseId];
-      if (courseClass.id in userCourses) {
-        insideTable.push(courseClass);
-        courseClass.color = userCourses[courseClass.id].color;
-      } else {
-        courseClass.color = 'red';
+      const course = allCourses[courseId];
+      if (course.id in userCourses) {
+        timetableContent.push(course);
       }
 
+      course.color = course.id in userCourses ? userCourses[course.id] : 'red';
       cardsToRender.push(
         <Card
-          key={courseClass.id}
-          id={courseClass.id}
-          badge={courseClass.time}
-          cardSubtitle={courseClass.professor}
-          complementaryInfo={courseClass.type}
-          cardTitle={courseClass.name}
-          onCardClick={this.addToTable}
-          pressed={courseClass.id in userCourses}
-          clickPayload={courseClass}
-          disabled={
-            restrictedItems.includes(courseClass.id) &&
-            !(courseClass.id in userCourses)
-          }
-          color={courseClass.color}
+          key={course.id}
+          id={course.id}
+          badge={course.time}
+          cardTitle={course.name}
+          cardSubtitle={course.professor}
+          complementaryInfo={course.type}
+          onCardClick={this.addOrRemoveClass}
+          pressed={course.id in userCourses}
+          clickPayload={course.id}
+          color={course.color}
+          disabled={conflictList.includes(course.id)}
           clickable
         />,
       );
@@ -157,8 +145,8 @@ export class MainPage extends Component {
             days={timetableConfig.days}
             startingHour={timetableConfig.startingHour}
             endingHour={timetableConfig.endingHour}
-            onClick={this.addToTable}
-            events={insideTable}
+            onClick={this.addOrRemoveClass}
+            events={timetableContent}
           />
         </div>
       </div>
