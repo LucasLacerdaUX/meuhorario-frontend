@@ -4,10 +4,11 @@ import Timetable from '.';
 
 const aulas = [
   {
-    code: 'GDSC02574',
-    name: 'Cálculo Vetorial e Geometria Analítica',
-    shortName: 'CVGA',
-    color: 'red',
+    id: 'GDSC02574',
+    classId: '2',
+    name: 'Cálculo I',
+    shortName: 'CALC I',
+    color: 'yellow',
     timeslots: [
       {day: 0, startingHour: 8, endingHour: 10},
       {day: 2, startingHour: 10, endingHour: 12},
@@ -15,17 +16,38 @@ const aulas = [
     ],
   },
   {
-    code: 'GDSC02573',
-    name: 'Cálculo Vetorial e Geometria Analítica',
-    shortName: 'CALC 1',
+    id: 'GDSC02573',
+    classId: '2',
+    name: 'Cálculo II',
+    shortName: 'CALC II',
     color: 'blue',
     timeslots: [
       {day: 1, startingHour: 12, endingHour: 16},
       {day: 2, startingHour: 8, endingHour: 10},
     ],
   },
+  {
+    id: 'GDSC02575',
+    classId: '3',
+    name: 'Calculo III',
+    shortName: 'CALC III',
+    timeslots: [{day: 3, startingHour: 10, endingHour: 12}],
+  },
+  {
+    id: 'GDSC02576',
+    classId: '5',
+    name: 'Cálculo IV',
+    shortName: 'CALC IV',
+    color: 'blue',
+    timeslots: [
+      {day: 2, startingHour: 4, endingHour: 5},
+      {day: 3, startingHour: 12, endingHour: 12},
+      {day: 2, startingHour: 24, endingHour: 25},
+      {day: 8, startingHour: 20, endingHour: 21},
+    ],
+  },
 ];
 
 storiesOf('Timetable', module).add('test', () => (
-  <Timetable days={6} startingHour={7} endingHour={20} aulas={aulas} />
+  <Timetable days={6} startingHour={7} endingHour={23} events={aulas} />
 ));

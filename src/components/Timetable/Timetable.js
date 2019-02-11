@@ -1,15 +1,8 @@
-/*
- *
- * TODO:
- * Accessibility improvements (study to see what is possible)
- *
- */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import {daysOfWeek} from '../../utils/constants';
 import Icon from '../Icon';
-import * as styles from './Timetable.module.scss';
+import './Timetable.scss';
 
 const classNames = require('classnames');
 
@@ -35,12 +28,11 @@ const Timetable = (props) => {
       if (duration < 1) return;
       if (timeslot.day >= days) return;
 
-      const className = classNames(
-        event.color ? styles[event.color] : styles.red,
-      );
+      const className = classNames(event.color ? event.color : 'red');
 
       timetable[startsAt][timeslot.day] = (
         <td
+          data-id={event.id}
           key={`${event.id}-${timeslot.day}-${startsAt}`}
           role="gridcell"
           tabIndex="0"
@@ -51,15 +43,13 @@ const Timetable = (props) => {
           <Icon
             name="deleteIcon"
             accessibilityLabel="Remove class from table"
-            customClass={[styles.deleteIcon]}
+            customClass={['deleteIcon']}
             color="white"
           />
-          <div className={styles.classContent}>
-            <span className={styles.contentTitle}>
-              {event.name.toLowerCase()}
-            </span>
-            <span className={styles.contentShortTitle}>{event.shortName}</span>
-            <span className={styles.contentSubtitle}>T{event.classId}</span>
+          <div className="classContent">
+            <span className="contentTitle">{event.name.toLowerCase()}</span>
+            <span className="contentShortTitle">{event.shortName}</span>
+            <span className="contentSubtitle">T{event.classId}</span>
           </div>
         </td>
       );
@@ -94,7 +84,7 @@ const Timetable = (props) => {
   }
 
   return (
-    <table role="grid" className={styles.Timetable}>
+    <table role="grid" className="Timetable">
       <thead>
         <tr>
           <th scope="col" />

@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '../Button';
-import * as styles from './Toast.module.scss';
+import './Toast.scss';
 
 const Toast = (props) => {
   const {children, buttonLabel, buttonColor, onButtonClick} = props;
   return (
-    <div className={styles.Toast} role="alert">
+    <div className="Toast" role="alert">
       <span>{children}</span>
       <Button color={buttonColor} darkBG small onlyText onClick={onButtonClick}>
         {buttonLabel.toUpperCase()}

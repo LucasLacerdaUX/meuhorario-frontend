@@ -10,17 +10,17 @@ import React from 'react';
 import Logo from '../Logo';
 import Icon from '../Icon';
 import Button from '../Button';
-import * as styles from './Topbar.module.scss';
+import './Topbar.scss';
 
 const Topbar = () => {
   return (
-    <nav className={styles.TopBar}>
-      <Button small onlyText customClass={[styles.Button]}>
+    <nav className="TopBar">
+      <Button small onlyText customClass={['Button']}>
         UFPB - Engenharia de Computação
       </Button>
       <Logo />
 
-      <div className={styles.IconList}>
+      <div className="IconList">
         <Button small onlyIcon>
           <Icon name="bookmark" />
         </Button>

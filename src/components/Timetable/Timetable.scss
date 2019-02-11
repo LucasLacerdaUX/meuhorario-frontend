@@ -88,47 +88,46 @@
     border-radius: $radius-m;
     width: 100px;
   }
-}
-
-.classContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .contentTitle {
-    font-size: $font-size-s;
-    text-transform: capitalize;
-    display: none;
-    @media #{$mq-desktop} {
-      display: block;
-    }
+  td.red {
+    @include color-td($red-default, $text-light);
   }
-  .contentShortTitle {
-    display: block;
-    @media #{$mq-desktop} {
+  td.blue {
+    @include color-td($blue-default, $text-light);
+  }
+  td.green {
+    @include color-td($green-default, $text-dark);
+  }
+  td.yellow {
+    @include color-td($yellow-default, $text-dark);
+  }
+  td.grey {
+    @include color-td($grey-default, $text-light);
+  }
+  td.sky {
+    @include color-td($sky-default, $text-dark);
+  }
+
+  .classContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .contentTitle {
+      font-size: $font-size-s;
+      text-transform: capitalize;
       display: none;
+      @media #{$mq-desktop} {
+        display: block;
+      }
+    }
+    .contentShortTitle {
+      display: block;
+      @media #{$mq-desktop} {
+        display: none;
+      }
+    }
+    .contentSubtitle {
+      font-size: $font-size-xs;
     }
   }
-  .contentSubtitle {
-    font-size: $font-size-xs;
-  }
-}
-
-td.red {
-  @include color-td($red-default, $text-light);
-}
-td.blue {
-  @include color-td($blue-default, $text-light);
-}
-td.green {
-  @include color-td($green-default, $text-dark);
-}
-td.yellow {
-  @include color-td($yellow-default, $text-dark);
-}
-td.grey {
-  @include color-td($grey-default, $text-light);
-}
-td.sky {
-  @include color-td($sky-default, $text-dark);
 }
