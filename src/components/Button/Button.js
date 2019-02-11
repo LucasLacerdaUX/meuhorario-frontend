@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as styles from './Button.module.scss';
+import './Button.scss';
 
 const classNames = require('classnames');
 
@@ -26,14 +26,15 @@ const Button = (props) => {
   } = props;
 
   const className = classNames(
-    small && styles.small,
-    large && styles.large,
-    color ? styles[color] : styles.red,
-    outline && styles.outline,
-    onlyText && styles.onlyText,
-    onlyIcon && [styles.onlyText, styles.onlyIcon],
-    darkBG && styles.darkBG,
-    fullWidth && styles.fullWidth,
+    'Button',
+    small && 'small',
+    large && 'large',
+    color ? color : 'red',
+    outline && 'outline',
+    onlyText && 'onlyText',
+    onlyIcon && ['onlyText', 'onlyIcon'],
+    darkBG && 'darkBG',
+    fullWidth && 'fullWidth',
     customClass,
   );
 
@@ -72,7 +73,10 @@ Button.propTypes = {
   darkBG: PropTypes.bool,
   children: PropTypes.node,
   fullWidth: PropTypes.bool,
-  customClass: PropTypes.arrayOf(PropTypes.string),
+  customClass: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.string),
+    PropTypes.string,
+  ]),
 };
 
 export default Button;

@@ -5,7 +5,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Badge from '../Badge';
-import * as styles from './Card.module.scss';
+import './Card.scss';
 
 const classNames = require('classnames');
 
@@ -28,11 +28,11 @@ const Card = (props) => {
   } = props;
 
   const className = classNames(
-    styles.Card,
-    pressed && styles.pressed,
-    color ? styles[color] : styles.red,
-    clickable && styles.clickable,
-    disabled && styles.disabled,
+    'Card',
+    pressed && 'pressed',
+    color ? color : 'red',
+    clickable && 'clickable',
+    disabled && 'disabled',
     customClass,
   );
 
@@ -48,32 +48,30 @@ const Card = (props) => {
 
   return (
     <div id={id} className={className} {...clickableProps}>
-      <div className={styles.cardBody}>
-        <div className={styles.cardBodyText}>
+      <div className="cardBody">
+        <div className="cardBodyText">
           {badge && (
-            <div className={styles.cardBadge}>
+            <div className="cardBadge">
               <Badge
                 color={color}
                 outline={badgeOutline}
-                customClass={[styles.pressedBadge]}
+                customClass={['pressedBadge']}
               >
                 {badge}
               </Badge>
             </div>
           )}
-          <div className={styles.cardTitle}>
+          <div className="cardTitle">
             {cardTitle && <h3>{cardTitle}</h3>}
             {cardSubtitle && (
-              <span className={styles.cardSubtitle}>{cardSubtitle}</span>
+              <span className="cardSubtitle">{cardSubtitle}</span>
             )}
           </div>
           {complementaryInfo && (
-            <span className={styles.complementaryInfo}>
-              {complementaryInfo}
-            </span>
+            <span className="complementaryInfo">{complementaryInfo}</span>
           )}
         </div>
-        {icon && <div className={styles.cardBodyIcon}>{icon}</div>}
+        {icon && <div className="cardBodyIcon">{icon}</div>}
       </div>
     </div>
   );
@@ -97,11 +95,13 @@ Card.propTypes = {
   pressed: PropTypes.bool,
   icon: PropTypes.node,
   disabled: PropTypes.bool,
-  customClass: PropTypes.arrayOf(PropTypes.string),
+  customClass: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.string),
+    PropTypes.string,
+  ]),
 };
 
 Card.defaultProps = {
-  color: 'red',
   badgeOutline: false,
   onCardClick: null,
 };

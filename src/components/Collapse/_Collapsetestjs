@@ -1,0 +1,35 @@
+/*
+* Hooks are not supported yet on Enzyme
+*/
+
+import React from 'react';
+import {shallow, mount} from 'enzyme';
+import Collapse from '.';
+
+describe('Collapse', () => {
+  let component;
+  beforeEach(() => {
+    component = shallow(
+      <Collapse id="collapseTest" title="Expand Section">
+        Collapsed Content
+      </Collapse>,
+    );
+  });
+  it('should render correctly', () => {
+    expect(component.find('.Collapse').length).toEqual(1);
+  });
+  it('should render a button', () => {
+    expect(component.find('.Button').length).toEqual(1);
+  });
+  it('should render a title', () => {
+    expect(component.find('.Button').text()).toEqual('Expand Section');
+  });
+  it('should automatically expand when autoOpen', () => {
+    component = shallow(
+      <Collapse id="collapseTest" title="Expand Section" autoOpen>
+        Collapsed Content
+      </Collapse>,
+    );
+    expect(component.text()).toContain('Collapsed Content');
+  });
+});

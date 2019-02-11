@@ -1,0 +1,57 @@
+@import '../../style/shared.scss';
+
+@mixin badge($color, $text-color: $color) {
+  background: rgba($color, $opacity-1);
+  color: $text-color;
+  border: $border-width-m solid transparent;
+
+  &.outline {
+    background: none;
+    border-color: $color;
+    color: $color;
+  }
+}
+
+.Badge {
+  font-size: $font-size-xs;
+  padding: $spacing-2-xs $spacing-xs;
+  font-weight: bold;
+  border-radius: $radius-l;
+  width: fit-content;
+
+  &.red {
+    @include badge($red-default, $red-darker);
+  }
+
+  &.green {
+    @include badge($green-dark, $green-darker);
+    &.darkBG {
+      @include badge($green-default, $green-lighter);
+    }
+  }
+
+  &.blue {
+    @include badge($blue-default, $blue-darker);
+  }
+
+  &.yellow {
+    @include badge($yellow-dark, $yellow-dark);
+    &.darkBG {
+      @include badge($yellow-default);
+    }
+  }
+
+  &.grey {
+    @include badge($grey-dark, $grey-darker);
+    &.darkBG {
+      @include badge($grey-light);
+    }
+  }
+
+  &.sky {
+    @include badge($sky-dark, $sky-darker);
+    &.darkBG {
+      @include badge($sky-default);
+    }
+  }
+}

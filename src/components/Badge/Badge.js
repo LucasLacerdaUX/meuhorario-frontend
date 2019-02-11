@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as styles from './Badge.module.scss';
+import './Badge.scss';
 
 const classNames = require('classnames');
 
@@ -8,10 +8,10 @@ const Badge = (props) => {
   const {color, children, darkBG, outline, customClass} = props;
 
   const className = classNames(
-    styles.Badge,
-    color ? styles[color] : styles.red,
-    darkBG && styles.darkBG,
-    outline && styles.outline,
+    'Badge',
+    color ? color : 'red',
+    darkBG && 'darkBG',
+    outline && 'outline',
     customClass,
   );
 
@@ -20,7 +20,10 @@ const Badge = (props) => {
 
 Badge.propTypes = {
   color: PropTypes.oneOf(['red', 'green', 'blue', 'yellow', 'grey', 'sky']),
-  customClass: PropTypes.arrayOf(PropTypes.string),
+  customClass: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.string),
+    PropTypes.string,
+  ]),
   children: PropTypes.node,
   darkBG: PropTypes.bool,
   outline: PropTypes.bool,

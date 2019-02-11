@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as styles from './Input.module.scss';
+import './Input.scss';
 
 const classNames = require('classnames');
 
@@ -19,25 +19,22 @@ const Input = (props) => {
     ...otherProps
   } = props;
 
-  const className = classNames(isInvalid && styles.invalid, customClass);
+  const className = classNames(isInvalid && 'invalid', customClass);
 
-  let valueProps = {
-    value: inputValue,
-  };
-  if (inputValue === undefined) valueProps = {};
   return (
-    <div className={styles.Input}>
+    <div className="Input">
       <input
         className={className}
         type={inputType}
         name={inputName}
         id={inputName}
         placeholder={inputPlaceholder}
-        {...valueProps}
+        value={inputValue}
         onChange={changeText}
         onBlur={changeFocus}
         aria-labelledby={`${inputName}-label`}
         aria-describedby={`${inputName}-hint`}
+        aria-invalid={isInvalid}
         {...otherProps}
       />
       <label id={`${inputName}-label`} htmlFor={inputName}>
@@ -75,7 +72,10 @@ Input.propTypes = {
   changeFocus: PropTypes.func,
   isInvalid: PropTypes.bool,
   accessibilityLabel: PropTypes.string.isRequired,
-  customClass: PropTypes.arrayOf(PropTypes.string),
+  customClass: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.string),
+    PropTypes.string,
+  ]),
 };
 
 Input.defaultProps = {

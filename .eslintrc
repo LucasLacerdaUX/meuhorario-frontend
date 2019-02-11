@@ -2,6 +2,7 @@
   "extends": ["plugin:shopify/react", "plugin:shopify/prettier"],
   "env": {
     "browser": true,
+    "jest": true,
     "node": true
   },
   "plugins": ["react-hooks"],

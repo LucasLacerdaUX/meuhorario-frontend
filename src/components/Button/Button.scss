@@ -1,0 +1,121 @@
+@import '../../style/shared.scss';
+
+@mixin recolor-button(
+  $main-color,
+  $active-color,
+  $text-hover-color,
+  $outline-color: $main-color
+) {
+  color: $text-hover-color;
+  background: $main-color;
+  border: $border-width-m solid $main-color;
+
+  &.outline {
+    color: $outline-color;
+    border-color: $outline-color;
+    background: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $text-hover-color;
+    border-color: $main-color;
+    background: $main-color;
+    box-shadow: $shadow-m rgba($main-color, $opacity-5);
+  }
+  &:active {
+    background: $active-color;
+    border-color: $active-color;
+    box-shadow: $shadow-s rgba($active-color, $opacity-2);
+  }
+
+  &.onlyText {
+    color: $outline-color;
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      color: $outline-color;
+      border-color: transparent;
+      background: rgba($main-color, $opacity-1);
+    }
+    &:active {
+      background: $blue-dark;
+      background: rgba($main-color, $opacity-2);
+      border-color: transparent;
+    }
+  }
+}
+
+.Button {
+  border: none;
+  cursor: pointer;
+  padding: $spacing-s;
+  font-size: $font-size-m;
+  font-weight: bold;
+  border-radius: $radius-m;
+  transition: $animation-duration-s ease-out;
+  outline: none;
+
+  &.onlyIcon {
+    border-radius: $radius-circle;
+    height: $min-touch-target;
+    width: $min-touch-target;
+  }
+  &.small {
+    font-size: $font-size-s;
+    padding: $spacing-xs;
+  }
+
+  &.large {
+    font-size: $font-size-xl;
+    padding: $spacing-m;
+  }
+
+  &.fullWidth {
+    width: 100%;
+  }
+
+  &.red {
+    @include recolor-button($red-default, $red-darker, $text-light);
+  }
+
+  &.green {
+    @include recolor-button(
+      $green-default,
+      $green-darker,
+      $text-dark,
+      $green-dark
+    );
+
+    &.darkBG {
+      @include recolor-button($green-default, $green-darker, $text-dark);
+    }
+  }
+
+  &.blue {
+    @include recolor-button($blue-default, $blue-darker, $text-light);
+  }
+
+  &.yellow {
+    @include recolor-button(
+      $yellow-light,
+      $yellow-dark,
+      $text-dark,
+      $yellow-dark
+    );
+    &.darkBG {
+      @include recolor-button($yellow-light, $yellow-dark, $text-dark);
+    }
+  }
+
+  &.sky {
+    @include recolor-button($sky-dark, $sky-darker, $text-light);
+  }
+
+  &.grey {
+    @include recolor-button($grey-dark, $grey-darker, $text-light);
+  }
+}
