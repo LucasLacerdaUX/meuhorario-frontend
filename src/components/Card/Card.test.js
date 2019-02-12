@@ -34,7 +34,7 @@ describe('Card', () => {
     const mockClick = jest.fn();
     const testPayload = 'payload';
     const component = mount(
-      <Card clickable onCardClick={mockClick} clickPayload={testPayload} />,
+      <Card clickable onClick={mockClick} clickPayload={testPayload} />,
     );
     component
       .find('.Card')
@@ -48,7 +48,7 @@ describe('Card', () => {
     const mockClick = jest.fn();
     const testPayload = 'payload';
     const component = mount(
-      <Card clickable onCardClick={mockClick} clickPayload={testPayload} />,
+      <Card clickable onClick={mockClick} clickPayload={testPayload} />,
     );
     component
       .find('.Card')

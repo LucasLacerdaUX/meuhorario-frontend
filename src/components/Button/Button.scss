@@ -59,11 +59,6 @@
   transition: $animation-duration-s ease-out;
   outline: none;
 
-  &.onlyIcon {
-    border-radius: $radius-circle;
-    height: $min-touch-target;
-    width: $min-touch-target;
-  }
   &.small {
     font-size: $font-size-s;
     padding: $spacing-xs;
@@ -117,5 +112,10 @@
 
   &.grey {
     @include recolor-button($grey-dark, $grey-darker, $text-light);
+  }
+  &.onlyIcon {
+    border-radius: $radius-circle;
+    height: $min-touch-target;
+    width: $min-touch-target !important;
   }
 }

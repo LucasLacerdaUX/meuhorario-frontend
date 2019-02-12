@@ -4,45 +4,46 @@ import './Input.scss';
 
 const classNames = require('classnames');
 
+/** A form input component that can be of several text-like types. */
 const Input = (props) => {
   const {
-    inputName,
-    inputType,
-    inputPlaceholder,
-    inputDesc,
-    inputValue,
-    changeText,
-    changeFocus,
-    isInvalid,
+    name,
+    type,
+    placeholder,
+    accessibilityDesc,
+    value,
+    onChange,
+    onBlur,
+    invalid,
     accessibilityLabel,
     customClass,
     ...otherProps
   } = props;
 
-  const className = classNames(isInvalid && 'invalid', customClass);
+  const className = classNames(invalid && 'invalid', customClass);
 
   return (
     <div className="Input">
       <input
         className={className}
-        type={inputType}
-        name={inputName}
-        id={inputName}
-        placeholder={inputPlaceholder}
-        value={inputValue}
-        onChange={changeText}
-        onBlur={changeFocus}
-        aria-labelledby={`${inputName}-label`}
-        aria-describedby={`${inputName}-hint`}
-        aria-invalid={isInvalid}
+        type={type}
+        name={name}
+        id={name}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+        onBlur={onBlur}
+        aria-labelledby={`${name}-label`}
+        aria-describedby={`${name}-hint`}
+        aria-invalid={invalid}
         {...otherProps}
       />
-      <label id={`${inputName}-label`} htmlFor={inputName}>
+      <label id={`${name}-label`} htmlFor={name}>
         {accessibilityLabel}
       </label>
-      {inputDesc && (
-        <span className="visually-hidden" id={`${inputName}-hint`}>
-          {inputDesc}
+      {accessibilityDesc && (
+        <span className="visually-hidden" id={`${name}-hint`}>
+          {accessibilityDesc}
         </span>
       )}
     </div>
@@ -50,8 +51,10 @@ const Input = (props) => {
 };
 
 Input.propTypes = {
-  inputName: PropTypes.string.isRequired,
-  inputType: PropTypes.oneOf([
+  /** The name of the input */
+  name: PropTypes.string.isRequired,
+  /** The type of the input */
+  type: PropTypes.oneOf([
     'text',
     'password',
     'email',
@@ -65,13 +68,21 @@ Input.propTypes = {
     'datetime',
     'datetime-local',
   ]),
-  inputPlaceholder: PropTypes.string,
-  inputDesc: PropTypes.string,
-  inputValue: PropTypes.string,
-  changeText: PropTypes.func,
-  changeFocus: PropTypes.func,
-  isInvalid: PropTypes.bool,
+  /** The HTML placeholder for the input */
+  placeholder: PropTypes.string,
+  /** The label for the input */
   accessibilityLabel: PropTypes.string.isRequired,
+  /** A detailed description for the input for accessibility purposes */
+  accessibilityDesc: PropTypes.string,
+  /** The input value */
+  value: PropTypes.string,
+  /** The function executed when the text on input changes */
+  onChange: PropTypes.func,
+  /** The function executed when the input focus change */
+  onBlur: PropTypes.func,
+  /** Is the input content invalid? */
+  invalid: PropTypes.bool,
+  /** A custom class or an array of custom classes the component can have */
   customClass: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.string,
@@ -79,12 +90,8 @@ Input.propTypes = {
 };
 
 Input.defaultProps = {
-  inputType: 'text',
-  inputPlaceholder: '',
-  inputDesc: '',
-  isInvalid: false,
-  changeText: null,
-  changeFocus: null,
+  type: 'text',
+  invalid: false,
 };
 
 export default Input;

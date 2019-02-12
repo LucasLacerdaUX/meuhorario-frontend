@@ -48,6 +48,14 @@ const aulas = [
   },
 ];
 
-storiesOf('Timetable', module).add('test', () => (
-  <Timetable days={6} startingHour={7} endingHour={23} events={aulas} />
-));
+storiesOf('Timetable', module)
+  .add('empty', () => <Timetable />)
+  .add('with events', () => (
+    <Timetable days={6} startingHour={7} endingHour={23} events={aulas} />
+  ))
+  .add('with custom days count', () => (
+    <Timetable days={2} startingHour={7} endingHour={23} events={aulas} />
+  ))
+  .add('with custom timerange', () => (
+    <Timetable days={6} startingHour={8} endingHour={16} events={aulas} />
+  ));

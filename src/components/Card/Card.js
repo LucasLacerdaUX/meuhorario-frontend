@@ -9,6 +9,7 @@ import './Card.scss';
 
 const classNames = require('classnames');
 
+/** A card component. Can contain a title, a subtitle, a descriptive text to show complementary info and an icon. Can be clickable or not, and if clickable, can be set to pressed/non-pressed states. */
 const Card = (props) => {
   const {
     id,
@@ -21,7 +22,7 @@ const Card = (props) => {
     icon,
     pressed,
     clickable,
-    onCardClick,
+    onClick,
     clickPayload,
     customClass,
     disabled,
@@ -30,7 +31,7 @@ const Card = (props) => {
   const className = classNames(
     'Card',
     pressed && 'pressed',
-    color ? color : 'red',
+    color,
     clickable && 'clickable',
     disabled && 'disabled',
     customClass,
@@ -39,8 +40,8 @@ const Card = (props) => {
   let clickableProps = {
     role: 'button',
     tabIndex: '0',
-    onClick: () => onCardClick(clickPayload),
-    onKeyPress: () => onCardClick(clickPayload),
+    onClick: () => onClick(clickPayload),
+    onKeyPress: () => onClick(clickPayload),
   };
 
   if (pressed) clickableProps['aria-pressed'] = true;
@@ -78,23 +79,37 @@ const Card = (props) => {
 };
 
 Card.propTypes = {
+  /** The id of the card */
   id: PropTypes.string,
+  /** The text inside of the card badge */
   badge: PropTypes.string,
+  /** The color accent of the card */
   color: PropTypes.oneOf(['red', 'green', 'blue', 'yellow', 'grey', 'sky']),
+  /** Should the badge have an outline and a transparent background? */
   badgeOutline: PropTypes.bool,
+  /** The card title (optional) */
   cardTitle: PropTypes.string,
+  /** The card subtitle (optional) */
   cardSubtitle: PropTypes.string,
+  /** The card complementary info (optional) */
   complementaryInfo: PropTypes.string,
-  onCardClick: PropTypes.func,
+  /** Should the card be clickable? */
+  clickable: PropTypes.bool,
+  /** The function executed on card click if the card is clickable */
+  onClick: PropTypes.func,
+  /** The payload inside the card click function */
   clickPayload: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.string,
     PropTypes.number,
   ]),
-  clickable: PropTypes.bool,
+  /** Is the card pressed (toggled)? */
   pressed: PropTypes.bool,
+  /** Action Icon on the right side of a card */
   icon: PropTypes.node,
+  /** Is the card disabled? */
   disabled: PropTypes.bool,
+  /** A custom class or an array of custom classes the component can have */
   customClass: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.string,
@@ -102,6 +117,7 @@ Card.propTypes = {
 };
 
 Card.defaultProps = {
+  color: 'red',
   badgeOutline: false,
   onCardClick: null,
 };

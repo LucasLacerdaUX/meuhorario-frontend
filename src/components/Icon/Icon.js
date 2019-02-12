@@ -6,13 +6,14 @@ import './Icon.scss';
 
 const classNames = require('classnames');
 
+/** A component used to show Icons from the library. */
 const Icon = (props) => {
   const {name, color, size, pointer, accessibilityLabel, customClass} = props;
   const IconToRender = iconList[name];
   const className = classNames(
     'Icon',
-    color ? color : 'black',
-    size ? size : 'small',
+    color,
+    size,
     pointer && 'pointer',
     customClass,
   );
@@ -20,18 +21,34 @@ const Icon = (props) => {
   return (
     <>
       <IconToRender className={className} />
-      <span className="visually-hidden">{accessibilityLabel}</span>
+      {accessibilityLabel && (
+        <span className="visually-hidden">{accessibilityLabel}</span>
+      )}
     </>
   );
 };
 
 Icon.propTypes = {
-  name: PropTypes.oneOf(icons),
+  /** The icon name (as in the library) */
+  name: PropTypes.oneOf(icons).isRequired,
+  /** Label for accessibility purposes. Should ALWAYS be present when the Icon component is used without any surrounding text. */
   accessibilityLabel: PropTypes.string,
+  /** The color of the icon */
   color: PropTypes.oneOf(colors),
+  /** Should the icon have a pointer cursor when hovered? */
   pointer: PropTypes.bool,
+  /** The size of the icon (small, medium, large) */
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  customClass: PropTypes.arrayOf(PropTypes.string),
+  /** A custom class or an array of custom classes the component can have */
+  customClass: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.string),
+    PropTypes.string,
+  ]),
+};
+
+Icon.defaultProps = {
+  color: 'black',
+  size: 'small',
 };
 
 export default Icon;

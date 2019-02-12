@@ -79,17 +79,17 @@ describe('Timetable', () => {
     expect(component.find('th[scope="row"]').length).toEqual(17);
   });
 
-  it('should render 7 days at max', () => {
+  it('should render 8 days at max', () => {
     component = shallow(
       <Timetable
         days={15}
-        startingHour={7}
+        startingHour={8}
         endingHour={23}
         onClick={mockClick}
         events={aulas}
       />,
     );
-    expect(component.find('th[scope="col"]').length).toEqual(7);
+    expect(component.find('th[scope="col"]').length).toEqual(8);
   });
 
   it('should perform an action with event ID on click', () => {
@@ -114,5 +114,10 @@ describe('Timetable', () => {
       'CALC III',
     );
     expect(component.find('[data-id="GDSC02575"]').text()).toContain('T3');
+  });
+
+  it('should render an empty Timetable when there are no events', () => {
+    component = shallow(<Timetable />);
+    expect(component.find('td[data-id]').length).toEqual(0);
   });
 });

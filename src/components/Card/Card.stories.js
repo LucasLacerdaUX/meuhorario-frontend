@@ -7,12 +7,10 @@ import Card from '.';
 storiesOf('Card', module)
   .add('main card', () => (
     <Card
-      color="sky"
       badge="Test"
       cardTitle="Action Card Title"
       cardSubtitle="This is the subtitle"
       complementaryInfo="INFO HERE"
-      pressed
     />
   ))
   .add('action card', () => (

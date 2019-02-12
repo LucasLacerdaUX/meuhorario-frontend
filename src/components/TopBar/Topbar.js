@@ -12,6 +12,7 @@ import Icon from '../Icon';
 import Button from '../Button';
 import './Topbar.scss';
 
+/** The Topbar component */
 const Topbar = () => {
   return (
     <nav className="TopBar">

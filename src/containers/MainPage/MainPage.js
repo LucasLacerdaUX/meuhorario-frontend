@@ -146,8 +146,8 @@ export class MainPage extends Component {
           cardTitle={course.name}
           cardSubtitle={course.professor}
           complementaryInfo={course.type}
-          onCardClick={this.addOrRemoveClass}
           pressed={course.id in userCourses}
+          onClick={this.addOrRemoveClass}
           clickPayload={course.id}
           color={course.color}
           disabled={conflictList.includes(course.id)}

@@ -10,17 +10,17 @@ describe('Input', () => {
   beforeAll(() => {
     component = mount(
       <Input
-        inputName="password"
-        inputType="text"
-        inputPlaceholder="Enter your password"
-        inputDesc="Your password should not be empty"
+        name="password"
+        type="text"
+        placeholder="Enter your password"
+        accessibilityDesc="Your password should not be empty"
         accessibilityLabel="Password"
         customClass="customInput"
-        inputValue="Test"
+        value="Test"
         onChange={mockChange}
         onBlur={mockBlur}
         maxLength="40"
-        isInvalid
+        invalid
       />,
     );
   });
