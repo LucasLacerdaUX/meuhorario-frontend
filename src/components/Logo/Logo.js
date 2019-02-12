@@ -5,7 +5,7 @@ import './Logo.scss';
 
 const Logo = () => (
   <ReactVivus
-    id="foo"
+    id="Logo"
     className="Logo"
     option={{
       file: LogoSvg,

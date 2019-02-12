@@ -22,7 +22,7 @@ const Collapse = (props) => {
         </Button>
       </h3>
       <div id={id} aria-hidden={!open}>
-        {children}
+        {open && children}
       </div>
     </div>
   );
