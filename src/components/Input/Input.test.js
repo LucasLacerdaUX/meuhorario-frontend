@@ -118,6 +118,6 @@ describe('Input', () => {
         .attributes.getNamedItem('aria-invalid').value,
     ).toEqual('true');
 
-    expect(component.find('input').hasClass('invalid')).toEqual(true);
+    expect(component.find('input').hasClass('isInvalid')).toEqual(true);
   });
 });

@@ -8,13 +8,13 @@ const classNames = require('classnames');
 
 /** A component used to show Icons from the library. */
 const Icon = (props) => {
-  const {name, color, size, pointer, accessibilityLabel, customClass} = props;
+  const {name, color, size, clickable, accessibilityLabel, customClass} = props;
   const IconToRender = iconList[name];
   const className = classNames(
     'Icon',
     color,
     size,
-    pointer && 'pointer',
+    clickable && 'isClickable',
     customClass,
   );
 
@@ -36,7 +36,7 @@ Icon.propTypes = {
   /** The color of the icon */
   color: PropTypes.oneOf(colors),
   /** Should the icon have a pointer cursor when hovered? */
-  pointer: PropTypes.bool,
+  clickable: PropTypes.bool,
   /** The size of the icon (small, medium, large) */
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   /** A custom class or an array of custom classes the component can have */

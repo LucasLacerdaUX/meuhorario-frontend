@@ -1,21 +1,21 @@
 @import '../../style/shared.scss';
 
 @mixin card-color($main-color, $text-color) {
-  .complementaryInfo {
+  .ComplementaryInfo {
     color: $main-color;
   }
 
-  &.pressed {
+  &.isPressed {
     background: $main-color;
     color: $text-color;
     border-color: $main-color;
 
-    .pressedBadge {
+    .isPressedBadge {
       color: $text-color;
       border-color: $text-color;
     }
 
-    .complementaryInfo {
+    .ComplementaryInfo {
       color: rgba($text-color, $opacity-8);
     }
 
@@ -33,7 +33,7 @@
   margin: $spacing-m 0;
   transition: $animation-duration-s ease-out;
 
-  &.clickable {
+  &.isClickable {
     cursor: pointer;
     &:hover,
     &:focus {
@@ -41,7 +41,7 @@
     }
   }
 
-  &.disabled {
+  &.isDisabled {
     opacity: 0.4;
     pointer-events: none;
   }
@@ -80,25 +80,25 @@
     font-size: $font-size-s;
   }
 
-  .cardBadge {
+  .CardBadge {
     margin-bottom: $spacing-m;
   }
 
-  .cardSubtitle {
+  .CardSubtitle {
     font-size: $font-size-xs;
   }
 
-  .cardBody {
+  .CardBody {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .cardBodyText {
+  .CardBodyText {
     flex: 1;
   }
 
-  .complementaryInfo {
+  .ComplementaryInfo {
     display: block;
     font-size: $font-size-s;
     margin-top: $spacing-m;

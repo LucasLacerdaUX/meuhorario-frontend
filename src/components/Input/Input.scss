@@ -19,7 +19,7 @@
       }
     }
 
-    &.invalid {
+    &.isInvalid {
       border-color: $red-default;
       color: $red-default;
       & + label {

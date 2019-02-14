@@ -78,14 +78,19 @@ describe('Card', () => {
     expect(component.text()).toContain('icon');
   });
 
+  it('should be clickable when passed', () => {
+    const component = shallow(<Card clickable />);
+    expect(component.find('.Card').hasClass('isClickable')).toEqual(true);
+  });
+
   it('should be pressed when passed', () => {
     const component = shallow(<Card pressed />);
-    expect(component.find('.Card').hasClass('pressed')).toEqual(true);
+    expect(component.find('.Card').hasClass('isPressed')).toEqual(true);
   });
 
   it('should be disabled when passed', () => {
     const component = shallow(<Card disabled />);
-    expect(component.find('.Card').hasClass('disabled')).toEqual(true);
+    expect(component.find('.Card').hasClass('isDisabled')).toEqual(true);
   });
 
   it('should have aria-pressed when pressed', () => {

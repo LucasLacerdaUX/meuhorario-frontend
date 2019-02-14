@@ -10,13 +10,14 @@
   overflow: hidden;
   animation: animation-color $animation-duration-m forwards;
 
-  .deleteIcon {
+  .DeleteIcon {
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, 100%, 0);
     position: absolute;
     z-index: 2;
     opacity: 0;
+    fill: $text-color;
     transition: all $animation-duration-m ease-out;
   }
 
@@ -30,7 +31,7 @@
     box-shadow: $shadow-l rgba($main-color, $opacity-8);
     z-index: 1;
 
-    .deleteIcon {
+    .DeleteIcon {
       opacity: 1;
       transform: translate3d(-50%, -50%, 0);
     }
@@ -107,12 +108,12 @@
     @include color-td($sky-default, $text-dark);
   }
 
-  .classContent {
+  .Event {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    .contentTitle {
+    .EventName {
       font-size: $font-size-s;
       text-transform: capitalize;
       display: none;
@@ -120,13 +121,13 @@
         display: block;
       }
     }
-    .contentShortTitle {
+    .EventShortname {
       display: block;
       @media #{$mq-desktop} {
         display: none;
       }
     }
-    .contentSubtitle {
+    .EventDesc {
       font-size: $font-size-xs;
     }
   }

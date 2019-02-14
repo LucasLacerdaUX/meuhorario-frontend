@@ -45,13 +45,12 @@ const Timetable = (props) => {
             <Icon
               name="deleteIcon"
               accessibilityLabel="Remove class from table"
-              customClass={['deleteIcon']}
-              color="white"
+              customClass={['DeleteIcon']}
             />
-            <div className="classContent">
-              <span className="contentTitle">{event.name.toLowerCase()}</span>
-              <span className="contentShortTitle">{event.shortName}</span>
-              <span className="contentSubtitle">T{event.classId}</span>
+            <div className="Event">
+              <span className="EventName">{event.name.toLowerCase()}</span>
+              <span className="EventShortname">{event.shortName}</span>
+              <span className="EventDesc">T2</span>
             </div>
           </td>
         );

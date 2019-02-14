@@ -161,7 +161,7 @@ export class MainPage extends Component {
       const key = `semester-${index}`;
       const title = index ? `${index}º PERÍODO` : 'EXTRAS';
       cardsToRender.push(
-        <Collapse id={key} key={key} autoOpen title={title}>
+        <Collapse id={key} key={key} title={title}>
           {cardList}
         </Collapse>,
       );
@@ -174,16 +174,16 @@ export class MainPage extends Component {
 
     return (
       <div className={styles.MainPage}>
-        <div className={sideBarClasses}>
+        <aside className={sideBarClasses}>
           <div className={styles.buttonDiv}>
             <Button fullWidth onlyText onClick={this.expandSidebarMobile}>
               Expand
             </Button>
           </div>
           {cardsToRender}
-        </div>
+        </aside>
 
-        <div className={styles.mainTable}>
+        <main className={styles.mainTable}>
           <Timetable
             days={timetableConfig.days}
             startingHour={timetableConfig.startingHour}
@@ -191,7 +191,7 @@ export class MainPage extends Component {
             onClick={this.addOrRemoveClass}
             events={timetableContent}
           />
-        </div>
+        </main>
       </div>
     );
   }

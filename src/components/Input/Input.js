@@ -20,7 +20,7 @@ const Input = (props) => {
     ...otherProps
   } = props;
 
-  const className = classNames(invalid && 'invalid', customClass);
+  const className = classNames(invalid && 'isInvalid', customClass);
 
   return (
     <div className="Input">

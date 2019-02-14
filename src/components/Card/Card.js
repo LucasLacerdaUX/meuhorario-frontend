@@ -30,10 +30,10 @@ const Card = (props) => {
 
   const className = classNames(
     'Card',
-    pressed && 'pressed',
+    pressed && 'isPressed',
     color,
-    clickable && 'clickable',
-    disabled && 'disabled',
+    clickable && 'isClickable',
+    disabled && 'isDisabled',
     customClass,
   );
 
@@ -49,30 +49,30 @@ const Card = (props) => {
 
   return (
     <div id={id} className={className} {...clickableProps}>
-      <div className="cardBody">
-        <div className="cardBodyText">
+      <div className="CardBody">
+        <div className="CardBodyText">
           {badge && (
-            <div className="cardBadge">
+            <div className="CardBadge">
               <Badge
                 color={color}
                 outline={badgeOutline}
-                customClass={['pressedBadge']}
+                customClass={['isPressedBadge']}
               >
                 {badge}
               </Badge>
             </div>
           )}
-          <div className="cardTitle">
+          <div className="CardTitle">
             {cardTitle && <h3>{cardTitle}</h3>}
             {cardSubtitle && (
-              <span className="cardSubtitle">{cardSubtitle}</span>
+              <span className="CardSubtitle">{cardSubtitle}</span>
             )}
           </div>
           {complementaryInfo && (
-            <span className="complementaryInfo">{complementaryInfo}</span>
+            <span className="ComplementaryInfo">{complementaryInfo}</span>
           )}
         </div>
-        {icon && <div className="cardBodyIcon">{icon}</div>}
+        {icon && <div className="CardBodyIcon">{icon}</div>}
       </div>
     </div>
   );

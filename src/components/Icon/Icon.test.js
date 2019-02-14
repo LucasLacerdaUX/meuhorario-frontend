@@ -19,8 +19,8 @@ describe('Icon', () => {
   });
 
   it('should set the cursor to pointer when passed', () => {
-    const component = shallow(<Icon name="bookmark" pointer />);
-    expect(component.find('.Icon').hasClass('pointer')).toEqual(true);
+    const component = shallow(<Icon name="bookmark" clickable />);
+    expect(component.find('.Icon').hasClass('isClickable')).toEqual(true);
   });
 
   it('should render the accessibilityLabel correctly', () => {
