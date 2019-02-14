@@ -50,7 +50,7 @@ const Timetable = (props) => {
             <div className="Event">
               <span className="EventName">{event.name.toLowerCase()}</span>
               <span className="EventShortname">{event.shortName}</span>
-              <span className="EventDesc">T2</span>
+              <span className="EventDesc">T{event.classId}</span>
             </div>
           </td>
         );
