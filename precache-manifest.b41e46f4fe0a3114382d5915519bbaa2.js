@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/meuhorario-frontend/static/media/delete.73f3fdc7.svg"
   },
   {
-    "revision": "edb2d806e25f8bb02ed5",
-    "url": "/meuhorario-frontend/static/css/main.80eb0870.chunk.css"
+    "revision": "705e26a209901ea85770",
+    "url": "/meuhorario-frontend/static/css/main.59473aa5.chunk.css"
   },
   {
-    "revision": "5e8678eea842d89492be",
-    "url": "/meuhorario-frontend/static/js/1.5e8678ee.chunk.js"
+    "revision": "598967c13a80c85507f1",
+    "url": "/meuhorario-frontend/static/js/1.598967c1.chunk.js"
   },
   {
     "revision": "081556680d5b1d3fc88f",
@@ -32,8 +32,8 @@ self.__precacheManifest = [
     "url": "/meuhorario-frontend/static/media/link.72ce94d3.svg"
   },
   {
-    "revision": "edb2d806e25f8bb02ed5",
-    "url": "/meuhorario-frontend/static/js/main.edb2d806.chunk.js"
+    "revision": "705e26a209901ea85770",
+    "url": "/meuhorario-frontend/static/js/main.705e26a2.chunk.js"
   },
   {
     "revision": "bba6fa9f0e1c4336e0cc80badf809699",
@@ -60,7 +60,7 @@ self.__precacheManifest = [
     "url": "/meuhorario-frontend/static/media/twitter.fdd6e724.svg"
   },
   {
-    "revision": "9bc9823f32659ae9cd2dd6aa74baf567",
+    "revision": "dd8059b7c5ab676780a63295f46d4903",
     "url": "/meuhorario-frontend/index.html"
   }
 ];
