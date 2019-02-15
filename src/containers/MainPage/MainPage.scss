@@ -7,12 +7,12 @@
   padding: 0 $spacing-xs;
 }
 
-.mainTable {
+.MainTable {
   flex: 1;
   height: 100%;
   overflow-y: scroll;
 }
-.sideBar {
+.SideBar {
   position: fixed;
   top: calc(100vh - 4.5rem);
   left: 0;
@@ -31,7 +31,7 @@
     margin: 0 $spacing-s;
   }
 
-  .buttonDiv {
+  .SideBarButton {
     margin-top: $spacing-s;
   }
 
@@ -47,7 +47,7 @@
     & > div {
       margin: 0;
     }
-    .buttonDiv {
+    .SideBarButton {
       display: none;
     }
   }

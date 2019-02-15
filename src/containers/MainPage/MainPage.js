@@ -5,9 +5,8 @@ import Collapse from '../../components/Collapse';
 import Timetable from '../../components/Timetable';
 
 import {classColors} from '../../utils/constants';
-import {reformatData} from '../../utils/temp';
 
-import * as styles from './MainPage.module.scss';
+import './MainPage.scss';
 import sampleData from './sample.json';
 
 const classNames = require('classnames');
@@ -111,11 +110,8 @@ export class MainPage extends Component {
   }
 
   componentDidMount() {
-    // This will be removed when the backend is ready
-    const tempState = reformatData(sampleData);
-
-    const conflictMap = this.generateConflictTable(tempState);
-    this.setState({allCourses: tempState, conflictMap});
+    const conflictMap = this.generateConflictTable(sampleData);
+    this.setState({allCourses: sampleData, conflictMap});
   }
 
   render() {
@@ -167,15 +163,12 @@ export class MainPage extends Component {
       );
     });
 
-    const sideBarClasses = classNames(
-      styles.sideBar,
-      sidebarExpanded && styles.show,
-    );
+    const sideBarClasses = classNames('SideBar', sidebarExpanded && 'show');
 
     return (
-      <div className={styles.MainPage}>
+      <div className="MainPage">
         <aside className={sideBarClasses}>
-          <div className={styles.buttonDiv}>
+          <div className="SideBarButton">
             <Button fullWidth onlyText onClick={this.expandSidebarMobile}>
               Expand
             </Button>
@@ -183,7 +176,7 @@ export class MainPage extends Component {
           {cardsToRender}
         </aside>
 
-        <main className={styles.mainTable}>
+        <main className="MainTable">
           <Timetable
             days={timetableConfig.days}
             startingHour={timetableConfig.startingHour}

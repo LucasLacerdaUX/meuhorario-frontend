@@ -1,2118 +1,936 @@
 {
-  "curriculum": {
-    "id": "492016",
-    "codigo": "1626865",
-    "name": "ENGENHARIA DE COMPUTAÇÃO - João Pessoa - Presencial - MT - BACHARELADO",
-    "faculty": "CENTRO DE INFORMÁTICA (CI) (11.00.64)",
-    "minch": "240",
-    "maxch": "480",
-    "semesters": 10,
-    "courses": [
-      {
-        "id": "1107181",
-        "name": "BANCO DE DADOS II",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1107184",
-        "name": "ESPECIFICACAO DE REQUISITOS DE SOFTWARE",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "1107184",
-            "turmaid": "01",
-            "nome": " ESPECIFICACAO DE REQUISITOS DE SOFTWARE",
-            "semester": "2018.2",
-            "professor": "DANIELLE ROUSY DIAS DA SILVA",
-            "horario": "24M23",
-            "local": "CI 101 (CI)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1107189",
-        "name": "INTERAÇÃO  HOMEM  MAQUINA",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1107199",
-        "name": "LINGUAGENS FORMAIS E AUTOMATOS",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1107200",
-        "name": "LOGICA APLICADA A COMPUTACAO",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1107202",
-        "name": "METODOS DE PROJETO DE SOFTWARE",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "1107202",
-            "turmaid": "01",
-            "nome": " METODOS DE PROJETO DE SOFTWARE",
-            "semester": "2018.2",
-            "professor": "RAONI KULESZA",
-            "horario": "35T45",
-            "local": "CI 106 (CI)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1107203",
-        "name": "METODOS FORMAIS PARA DESENVOLVIMENTO  DE SOFTWARE",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1107212",
-        "name": "TEORIA DA COMPUTACAO",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1107253",
-        "name": "TÓPICOS ESPECIAIS EM ENGENHARIA DE COMPUTAÇÃO I",
-        "category": "Complementar Flexiva",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1107254",
-        "name": "TÓPICOS ESPECIAIS EM ENGENHARIA DE COMPUTAÇÃO II",
-        "category": "Complementar Flexiva",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1107255",
-        "name": "TÓPICOS ESPECIAIS EM ENGENHARIA  DE COMPUTAÇÃO III",
-        "category": "Complementar Flexiva",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1202140",
-        "name": "CONTABILIDADE GERAL I",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1401134",
-        "name": "INTRODUCAO A SOCIOLOGIA",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1402240",
-        "name": "INTRODUCAO A FILOSOFIA",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1403153",
-        "name": "PORTUGUÊS INSTRUMENTAL",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "1403153",
-            "turmaid": "01",
-            "nome": " PORTUGUÊS INSTRUMENTAL",
-            "semester": "2018.2",
-            "professor": "MARIA DE FATIMA ALMEIDA",
-            "horario": "3T1234",
-            "local": "CCHLA 414 BLOCO I CENTRAL DE AULAS (CCHLA)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1403747",
-        "name": "LIBRAS  LÍNGUA BRASILEIRA DE SINAIS",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1404138",
-        "name": "LINGUA INGLESA I",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "75h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "1404138",
-            "turmaid": "01",
-            "nome": " LINGUA INGLESA I",
-            "semester": "2018.2",
-            "professor": "GREGÓRIO PEREIRA DE VASCONCELOS",
-            "horario": "35N34 6N1",
-            "local": "CAA 106 (PRG)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-          "1404325"
-        ]
-      },
-      {
-        "id": "1405108",
-        "name": "INTRODUCAO A PSICOLOGIA",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1609247",
-        "name": "EDUCACAO FISICA",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "30h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1703103",
-        "name": "CIENCIAS DO AMBIENTE",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "45h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "5101002",
-        "name": "GERÊNCIA DE PROJETOS",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "5101007",
-        "name": "INTELIGÊNCIA  COMPUTACIONAL",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "5101013",
-        "name": "TÓPICOS ESPECIAIS EM ENGENHARIA  DE COMPUTAÇÃO IV",
-        "category": "Complementar Flexiva",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "5101017",
-        "name": "ARQUITETURA AVANÇADA DE COMPUTADORES",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "5102008",
-        "name": "CÁLCULO DAS PROBABILIDADES II",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "5102011",
-        "name": "ALGORITMOS  DISTRIBUÍDOS",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "90h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDCOC0079",
-        "name": "LÓGICA APLICADA À COMPUTAÇÃO",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDCOC0081",
-        "name": "TEORIA DA COMPUTAÇÃO",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDLS0024",
-        "name": "LIBRAS",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0033",
-        "name": "INSTRUMENTAÇÃO",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0047",
-        "name": "INTERAÇÃO HOMEM MÁQUINA",
-        "category": "Optativa",
-        "semester": 0,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDSCO0047",
-            "turmaid": "01",
-            "nome": " INTERAÇÃO HOMEM MÁQUINA",
-            "semester": "2018.2",
-            "professor": "VALDECIR BECKER",
-            "horario": "35T23",
-            "local": "CI 104 (CI)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1103118",
-        "name": "CÁLCULO VETORIAL E GEOMETRIA ANALÍTICA",
-        "category": "Obrigatória",
-        "semester": 1,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "1103118",
-            "turmaid": "16",
-            "nome": " CÁLCULO VETORIAL E GEOMETRIA ANALÍTICA",
-            "semester": "2018.2",
-            "professor": "LENIMAR NUNES DE ANDRADE",
-            "horario": "35T23",
-            "local": "CI 304 (CI)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1103177",
-        "name": "CÁLCULO DIFERENCIAL E INTEGRAL I",
-        "category": "Obrigatória",
-        "semester": 1,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "1103177",
-            "turmaid": "12",
-            "nome": " CÁLCULO DIFERENCIAL E INTEGRAL I",
-            "semester": "2018.2",
-            "professor": "GABRIELA ALBUQUERQUE WANDERLEY",
-            "horario": "24M23",
-            "local": "CI T05 - Auditório (CI)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1107201",
-        "name": "METODOLOGIA DO TRABALHO CIENTIFICO",
-        "category": "Complementar Obrigatória",
-        "semester": 1,
-        "workload": "45h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "1107201",
-            "turmaid": "01",
-            "nome": " METODOLOGIA DO TRABALHO CIENTIFICO",
-            "semester": "2018.2",
-            "professor": "GUSTAVO HENRIQUE MATOS BEZERRA MOTTA",
-            "horario": "6M345",
-            "local": "CI 304 (CI)"
-          },
-          {
-            "id": "1107201",
-            "turmaid": "04",
-            "nome": " METODOLOGIA DO TRABALHO CIENTIFICO",
-            "semester": "2018.2",
-            "professor": "THAIS GAUDENCIO DO REGO",
-            "horario": "6M345",
-            "local": "CI 101 (CI)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1107248",
-        "name": "INTROD À ENGENHARIA DE COMPUTAÇÃO",
-        "category": "Obrigatória",
-        "semester": 1,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "1107248",
-            "turmaid": "01",
-            "nome": " INTROD À ENGENHARIA DE COMPUTAÇÃO",
-            "semester": "2018.2",
-            "professor": "ANAND SUBRAMANIAN",
-            "horario": "35M45",
-            "local": "CI 103 (CI)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDINF0101",
-        "name": "LABORATÓRIO DE INTRODUÇÃO A PROGRAMAÇÃO",
-        "category": "Obrigatória",
-        "semester": 1,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDINF0101",
-            "turmaid": "02",
-            "nome": " LABORATÓRIO DE INTRODUÇÃO A PROGRAMAÇÃO",
-            "semester": "2018.2",
-            "professor": "LINCOLN DAVID NERY E SILVA",
-            "horario": "24T23",
-            "local": "CI T07 (CI)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDINF0107",
-        "name": "INTRODUÇÃO A PROGRAMAÇÃO PARA ENGENHARIA DE COMPUTAÇÃO",
-        "category": "Obrigatória",
-        "semester": 1,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDINF0107",
-            "turmaid": "01",
-            "nome": " INTRODUÇÃO A PROGRAMAÇÃO PARA ENGENHARIA DE COMPUTAÇÃO",
-            "semester": "2018.2",
-            "professor": "LINCOLN DAVID NERY E SILVA",
-            "horario": "24M45",
-            "local": "CI 101 (CI)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0021",
-        "name": "CIRCUITOS LOGICOS I",
-        "category": "Obrigatória",
-        "semester": 1,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1103178",
-        "name": "CALCULO DIFERENCIAL E INTEGRAL II",
-        "category": "Obrigatória",
-        "semester": 2,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "1103178",
-            "turmaid": "13",
-            "nome": " CALCULO DIFERENCIAL E INTEGRAL II",
-            "semester": "2018.2",
-            "professor": "CLEMERSON OLIVEIRA DA SILVA MENEZES",
-            "horario": "24M45",
-            "local": "CI 304 (CI)"
-          },
-          {
-            "id": "1103178",
-            "turmaid": "14",
-            "nome": " CALCULO DIFERENCIAL E INTEGRAL II",
-            "semester": "2018.2",
-            "professor": "EVELINA SHAMAROVA",
-            "horario": "24T45",
-            "local": "CI 304 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "1103177",
-          "1103118"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1103179",
-        "name": "INTRODUCAO A ALGEBRA LINEAR",
-        "category": "Obrigatória",
-        "semester": 2,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "1103179",
-            "turmaid": "12",
-            "nome": " INTRODUCAO A ALGEBRA LINEAR",
-            "semester": "2018.2",
-            "professor": "CLEMERSON OLIVEIRA DA SILVA MENEZES",
-            "horario": "35M45",
-            "local": "CI SB 01 (CI)"
-          },
-          {
-            "id": "1103179",
-            "turmaid": "13",
-            "nome": " INTRODUCAO A ALGEBRA LINEAR",
-            "semester": "2018.2",
-            "professor": "EDSON DE FIGUEIREDO LIMA JUNIOR",
-            "horario": "35T45",
-            "local": "CI T07 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "1103118"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDINF0102",
-        "name": "LABORATORIO DE LINGUAGEM DE PROGRAMAÇÃO I",
-        "category": "Obrigatória",
-        "semester": 2,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDINF0102",
-            "turmaid": "01",
-            "nome": " LABORATORIO DE LINGUAGEM DE PROGRAMAÇÃO I",
-            "semester": "2018.2",
-            "professor": "DERZU OMAIA",
-            "horario": "24T23",
-            "local": "CI 101 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "0107",
-          "0101"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDINF0108",
-        "name": "LINGUAGEM DE PROGRAMAÇÃO I",
-        "category": "Obrigatória",
-        "semester": 2,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDINF0108",
-            "turmaid": "01",
-            "nome": " LINGUAGEM DE PROGRAMAÇÃO I",
-            "semester": "2018.2",
-            "professor": "TIAGO MARITAN UGULINO DE ARAUJO",
-            "horario": "35M45",
-            "local": "CI 101 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "0107",
-          "1107136",
-          "0101"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0022",
-        "name": "CIRCUITOS LOGICOS II",
-        "category": "Obrigatória",
-        "semester": 2,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDSCO0022",
-            "turmaid": "01",
-            "nome": " CIRCUITOS LOGICOS II",
-            "semester": "2018.2",
-            "professor": "EUDISLEY GOMES DOS ANJOS",
-            "horario": "35T23",
-            "local": "CI 102 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "0021"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0023",
-        "name": "ELETRICIDADE E CIRCUITOS PARA COMPUTAÇÃO I",
-        "category": "Obrigatória",
-        "semester": 2,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDSCO0023",
-            "turmaid": "01",
-            "nome": " ELETRICIDADE E CIRCUITOS PARA COMPUTAÇÃO I",
-            "semester": "2018.2",
-            "professor": "MARDSON FREITAS DE AMORIM",
-            "horario": "35M23",
-            "local": "CI 105 (CI)"
-          },
-          {
-            "id": "GDSCO0023",
-            "turmaid": "02",
-            "nome": " ELETRICIDADE E CIRCUITOS PARA COMPUTAÇÃO I",
-            "semester": "2018.2",
-            "professor": "RUY ALBERTO PISANI ALTAFIM e CAMILA MARA VITAL BARROS",
-            "horario": "35M45",
-            "local": "CI 102 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "1103177",
-          "1107248"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0025",
-        "name": "MATERIAIS PARA MICRO E NANO TECNOLOGIA",
-        "category": "Obrigatória",
-        "semester": 2,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDSCO0025",
-            "turmaid": "01",
-            "nome": " MATERIAIS PARA MICRO E NANO TECNOLOGIA",
-            "semester": "2018.2",
-            "professor": "AURISTELA CARLA DE MIRANDA",
-            "horario": "24M45",
-            "local": "CI SB 01 (CI)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1101171",
-        "name": "FISICA APLICADA A COMPUTACAO I",
-        "category": "Obrigatória",
-        "semester": 3,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "1101171",
-            "turmaid": "03",
-            "nome": " FISICA APLICADA A COMPUTACAO I",
-            "semester": "2018.2",
-            "professor": "A DEFINIR",
-            "horario": "24M45",
-            "local": "CTDR C106 (CTDR)"
-          }
-        ],
-        "prerequisites": [
-          "1103177"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1103232",
-        "name": "CALCULO DIF  E INTEGRAL III",
-        "category": "Obrigatória",
-        "semester": 3,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "1103232",
-            "turmaid": "10",
-            "nome": " CALCULO DIF  E INTEGRAL III",
-            "semester": "2018.2",
-            "professor": "EDSON DE FIGUEIREDO LIMA JUNIOR",
-            "horario": "24T45",
-            "local": "CI SB 01 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "1103178"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1107206",
-        "name": "PESQUISA APLICADA A COMPUTACAO",
-        "category": "Complementar Obrigatória",
-        "semester": 3,
-        "workload": "45h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "1107206",
-            "turmaid": "02",
-            "nome": " PESQUISA APLICADA A COMPUTACAO",
-            "semester": "2018.2",
-            "professor": "JOSILENE AIRES MOREIRA",
-            "horario": "5T234",
-            "local": "CI 311 (CI)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1108136",
-        "name": "CALCULO DAS PROBABILIDADES I",
-        "category": "Obrigatória",
-        "semester": 3,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-          "1103177"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0024",
-        "name": "ELETRICIDADE E CIRCUITOS PARA COMPUTAÇÃO II",
-        "category": "Obrigatória",
-        "semester": 3,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDSCO0024",
-            "turmaid": "01",
-            "nome": " ELETRICIDADE E CIRCUITOS PARA COMPUTAÇÃO II",
-            "semester": "2018.2",
-            "professor": "CAMILA MARA VITAL BARROS",
-            "horario": "24M23",
-            "local": "CI 102 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "0023"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0046",
-        "name": "FÍSICA EXPERIMENTAL PARA COMPUTAÇÃO",
-        "category": "Obrigatória",
-        "semester": 3,
-        "workload": "30h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDSCO0046",
-            "turmaid": "01",
-            "nome": " FÍSICA EXPERIMENTAL PARA COMPUTAÇÃO",
-            "semester": "2018.2",
-            "professor": "HUGO LEONARDO DAVI DE SOUZA CAVALCANTE",
-            "horario": "3T23",
-            "local": "CI 311 (CI)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1103180",
-        "name": "SERIES E EQUACOES DIF ORDINARIAS",
-        "category": "Obrigatória",
-        "semester": 4,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "1103180",
-            "turmaid": "09",
-            "nome": " SERIES E EQUACOES DIF ORDINARIAS",
-            "semester": "2018.2",
-            "professor": "ALEXANDRE DE BUSTAMANTE SIMAS",
-            "horario": "35M23",
-            "local": "CI 304 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "1103178",
-          "1103179"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1107148",
-        "name": "LINGUAGEM DE PROGRAMAÇÃO II",
-        "category": "Obrigatória",
-        "semester": 4,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "1107148",
-            "turmaid": "02",
-            "nome": " LINGUAGEM DE PROGRAMAÇÃO II",
-            "semester": "2018.2",
-            "professor": "CARLOS EDUARDO COELHO FREIRE BATISTA",
-            "horario": "24M45",
-            "local": "CI T07 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "0108",
-          "0102",
-          "1107147"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1107186",
-        "name": "ESTRUTURA DE DADOS",
-        "category": "Obrigatória",
-        "semester": 4,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "1107186",
-            "turmaid": "02",
-            "nome": " ESTRUTURA DE DADOS",
-            "semester": "2018.2",
-            "professor": "CHRISTIAN AZAMBUJA PAGOT",
-            "horario": "24T23",
-            "local": "CI 102 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "0108",
-          "1107147"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0026",
-        "name": "ELETRONICA APLICADA I",
-        "category": "Obrigatória",
-        "semester": 4,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDSCO0026",
-            "turmaid": "02",
-            "nome": " ELETRONICA APLICADA I",
-            "semester": "2018.2",
-            "professor": "EWERTON MONTEIRO SALVADOR",
-            "horario": "35T23",
-            "local": "CI 108 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "0024"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0035",
-        "name": "ARQUITETURA DE COMPUTADORES",
-        "category": "Obrigatória",
-        "semester": 4,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDSCO0035",
-            "turmaid": "02",
-            "nome": " ARQUITETURA DE COMPUTADORES",
-            "semester": "2018.2",
-            "professor": "EWERTON MONTEIRO SALVADOR",
-            "horario": "35M45",
-            "local": "CI T05 - Auditório (CI)"
-          }
-        ],
-        "prerequisites": [
-          "0022",
-          "1107182"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0059",
-        "name": "MECÂNICA PARA ENGENHARIA DA COMPUTAÇÃO",
-        "category": "Obrigatória",
-        "semester": 4,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDSCO0059",
-            "turmaid": "01",
-            "nome": " MECÂNICA PARA ENGENHARIA DA COMPUTAÇÃO",
-            "semester": "2018.2",
-            "professor": "HUGO LEONARDO DAVI DE SOUZA CAVALCANTE",
-            "horario": "24T45",
-            "local": "CI 311 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "1101171"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0034",
-        "name": "ARQUITETURA AVANÇADA DE COMPUTADORES",
-        "category": "Optativa",
-        "semester": 5,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-          "0035",
-          "0109"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1107180",
-        "name": "BANCO DE DADOS I",
-        "category": "Obrigatória",
-        "semester": 5,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "1107180",
-            "turmaid": "01",
-            "nome": " BANCO DE DADOS I",
-            "semester": "2018.2",
-            "professor": "ALAN KELON OLIVEIRA DE MORAES",
-            "horario": "35M23",
-            "local": "CI T07 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "1107186"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDCOC0072",
-        "name": "CALCULO NUMERICO",
-        "category": "Obrigatória",
-        "semester": 5,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDCOC0072",
-            "turmaid": "06",
-            "nome": " CALCULO NUMERICO",
-            "semester": "2018.2",
-            "professor": "GUSTAVO CHARLES PEIXOTO DE OLIVEIRA",
-            "horario": "35N12",
-            "local": "CAA 106 (PRG)"
-          },
-          {
-            "id": "GDCOC0072",
-            "turmaid": "07",
-            "nome": " CALCULO NUMERICO",
-            "semester": "2018.2",
-            "professor": "GUSTAVO CHARLES PEIXOTO DE OLIVEIRA",
-            "horario": "35M45",
-            "local": "SALA DI 05 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "1103180",
-          "0107",
-          "0101"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDCOC0076",
-        "name": "ANÁLISE E PROJETO DE ALGORITMOS",
-        "category": "Obrigatória",
-        "semester": 5,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDCOC0076",
-            "turmaid": "02",
-            "nome": " ANÁLISE E PROJETO DE ALGORITMOS",
-            "semester": "2018.2",
-            "professor": "BRUNO PETRATO BRUCK",
-            "horario": "35T45",
-            "local": "CI SB 01 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "1107186"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0027",
-        "name": "ELETRONICA APLICADA II",
-        "category": "Obrigatória",
-        "semester": 5,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDSCO0027",
-            "turmaid": "01",
-            "nome": " ELETRONICA APLICADA II",
-            "semester": "2018.2",
-            "professor": "HUGO LEONARDO DAVI DE SOUZA CAVALCANTE",
-            "horario": "24M45",
-            "local": "CI 106 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "0026"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0052",
-        "name": "INTRODUÇÃO À MECÂNICA DOS FLUÍDOS",
-        "category": "Obrigatória",
-        "semester": 5,
-        "workload": "30h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDSCO0052",
-            "turmaid": "01",
-            "nome": " INTRODUÇÃO À MECÂNICA DOS FLUÍDOS",
-            "semester": "2018.2",
-            "professor": "JOSE MIGUEL AROZTEGUI MASSERA",
-            "horario": "4M23",
-            "local": "CI 104 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "0104",
-          "0059"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0053",
-        "name": "INTRODUÇÃO À MICROELETRÔNICA",
-        "category": "Obrigatória",
-        "semester": 5,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDSCO0053",
-            "turmaid": "01",
-            "nome": " INTRODUÇÃO À MICROELETRÔNICA",
-            "semester": "2018.2",
-            "professor": "ANTONIO CARLOS CAVALCANTI",
-            "horario": "35T23",
-            "local": "CI 101 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "0023",
-          "0022"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "5101003",
-        "name": "MICROCONTROLADORES",
-        "category": "Obrigatória",
-        "semester": 6,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "5101003",
-            "turmaid": "01",
-            "nome": " MICROCONTROLADORES",
-            "semester": "2018.2",
-            "professor": "MARDSON FREITAS DE AMORIM",
-            "horario": "35T45",
-            "local": "CI 105 (CI)"
-          },
-          {
-            "id": "5101003",
-            "turmaid": "02",
-            "nome": " MICROCONTROLADORES",
-            "semester": "2018.2",
-            "professor": "MARDSON FREITAS DE AMORIM",
-            "horario": "35M45",
-            "local": "CI 310 - LABEC2 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "0109",
-          "0035",
-          "1107108"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0040",
-        "name": "CONCEPÇÃO ESTRUTURADA DE CIRCUITOS INTEGRADOS",
-        "category": "Obrigatória",
-        "semester": 6,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDSCO0040",
-            "turmaid": "01",
-            "nome": " CONCEPÇÃO ESTRUTURADA DE CIRCUITOS INTEGRADOS",
-            "semester": "2018.2",
-            "professor": "ANTONIO CARLOS CAVALCANTI",
-            "horario": "35M45",
-            "local": "CI 105 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "0109",
-          "0035",
-          "1107108"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0062",
-        "name": "REDES DE COMPUTADORES I",
-        "category": "Obrigatória",
-        "semester": 6,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDSCO0062",
-            "turmaid": "01",
-            "nome": " REDES DE COMPUTADORES I",
-            "semester": "2018.2",
-            "professor": "GIORGIA DE OLIVEIRA MATTOS",
-            "horario": "24M23",
-            "local": "CI 304 (CI)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0064",
-        "name": "SINAIS E SISTEMAS DINÂMICOS",
-        "category": "Obrigatória",
-        "semester": 6,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDSCO0064",
-            "turmaid": "01",
-            "nome": " SINAIS E SISTEMAS DINÂMICOS",
-            "semester": "2018.2",
-            "professor": "DERZU OMAIA",
-            "horario": "24M45",
-            "local": "CI 311 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "1103180"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0068",
-        "name": "SISTEMAS OPERACIONAIS I",
-        "category": "Obrigatória",
-        "semester": 6,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDSCO0068",
-            "turmaid": "01",
-            "nome": " SISTEMAS OPERACIONAIS I",
-            "semester": "2018.2",
-            "professor": "GUIDO LEMOS DE SOUZA FILHO",
-            "horario": "35T23",
-            "local": "CI SB 01 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "1107148"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0081",
-        "name": "SISTEMAS EMBARCADOS I",
-        "category": "Obrigatória",
-        "semester": 6,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "5101001",
-        "name": "AVALIAÇÃO E DESEMPENHO DE SISTEMAS OPERACIONAIS",
-        "category": "Obrigatória",
-        "semester": 7,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "5101001",
-            "turmaid": "01",
-            "nome": " AVALIAÇÃO E DESEMPENHO DE SISTEMAS OPERACIONAIS",
-            "semester": "2018.2",
-            "professor": "IGUATEMI EDUARDO DA FONSECA",
-            "horario": "24M23",
-            "local": "CI 311 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "1107207",
-          "0062"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "5102007",
-        "name": "PESQUISA OPERACIONAL",
-        "category": "Obrigatória",
-        "semester": 7,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "5102007",
-            "turmaid": "01",
-            "nome": " PESQUISA OPERACIONAL",
-            "semester": "2018.2",
-            "professor": "KELY DIANA VILLACORTA VILLACORTA",
-            "horario": "35T23",
-            "local": "CI 307 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "1103179"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0032",
-        "name": "REDES SEM FIO",
-        "category": "Obrigatória",
-        "semester": 7,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDSCO0032",
-            "turmaid": "01",
-            "nome": " REDES SEM FIO",
-            "semester": "2018.2",
-            "professor": "FERNANDO MENEZES MATOS",
-            "horario": "35T45",
-            "local": "CI 104 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "1107207",
-          "0062"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0051",
-        "name": "INTRODUÇÃO À COMPUTAÇÃO GRÁFICA",
-        "category": "Obrigatória",
-        "semester": 7,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDSCO0051",
-            "turmaid": "02",
-            "nome": " INTRODUÇÃO À COMPUTAÇÃO GRÁFICA",
-            "semester": "2018.2",
-            "professor": "LILIANE DOS SANTOS MACHADO",
-            "horario": "24T23",
-            "local": "CI 103 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "1103179",
-          "1107186"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0055",
-        "name": "INTRODUÇÃO AO PROCESSAMENTO DIGITAL DE IMAGENS",
-        "category": "Obrigatória",
-        "semester": 7,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDSCO0055",
-            "turmaid": "01",
-            "nome": " INTRODUÇÃO AO PROCESSAMENTO DIGITAL DE IMAGENS",
-            "semester": "2018.2",
-            "professor": "LEONARDO VIDAL BATISTA",
-            "horario": "24M45",
-            "local": "CI 102 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "1108136"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0065",
-        "name": "SISTEMAS E CONTROLE DE AUTOMAÇÃO",
-        "category": "Obrigatória",
-        "semester": 7,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-          "0110"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1107128",
-        "name": "ENGENHARIA DE SOFTWARE",
-        "category": "Obrigatória",
-        "semester": 8,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "1107128",
-            "turmaid": "02",
-            "nome": " ENGENHARIA DE SOFTWARE",
-            "semester": "2018.2",
-            "professor": "ALAN KELON OLIVEIRA DE MORAES",
-            "horario": "24M45",
-            "local": "CI 107 (CI)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1107191",
-        "name": "INTRODUCAO A INTELIGENCIA ARTIFICIAL",
-        "category": "Obrigatória",
-        "semester": 8,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "1107191",
-            "turmaid": "03",
-            "nome": " INTRODUCAO A INTELIGENCIA ARTIFICIAL",
-            "semester": "2018.2",
-            "professor": "NATASHA CORREIA QUEIROZ LINO",
-            "horario": "24T23",
-            "local": "CI 104 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "1107186"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0028",
-        "name": "ROBOTICA",
-        "category": "Obrigatória",
-        "semester": 8,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDSCO0028",
-            "turmaid": "02",
-            "nome": " ROBOTICA",
-            "semester": "2018.2",
-            "professor": "VITOR MENEGHETTI UGULINO DE ARAUJO",
-            "horario": "24T45",
-            "local": "CI 105 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "5102010",
-          "0065"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0054",
-        "name": "INTRODUÇÃO À TEORIA DA INFORMAÇÃO",
-        "category": "Obrigatória",
-        "semester": 8,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDSCO0054",
-            "turmaid": "01",
-            "nome": " INTRODUÇÃO À TEORIA DA INFORMAÇÃO",
-            "semester": "2018.2",
-            "professor": "DERZU OMAIA",
-            "horario": "35M45",
-            "local": "CI 104 (CI)"
-          }
-        ],
-        "prerequisites": [
-          "1103179"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1201126",
-        "name": "ECONOMIA I",
-        "category": "Obrigatória",
-        "semester": 9,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "1201126",
-            "turmaid": "07",
-            "nome": " ECONOMIA I",
-            "semester": "2018.2",
-            "professor": "FERNANDA BRAGA TAVARES",
-            "horario": "35N12",
-            "local": "CAD 105 (PRG) / CAD 102 (PRG)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-          "1201180"
-        ]
-      },
-      {
-        "id": "1204172",
-        "name": "ADM PARA ENGENHARIA",
-        "category": "Obrigatória",
-        "semester": 9,
-        "workload": "45h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "1204172",
-            "turmaid": "02",
-            "nome": " ADM PARA ENGENHARIA",
-            "semester": "2018.2",
-            "professor": "MIGUEL MAURICIO ISONI",
-            "horario": "2T456",
-            "local": "CAG 106 (PRG)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDINF0106",
-        "name": "COMPUTADORES E SOCIEDADE",
-        "category": "Complementar Obrigatória",
-        "semester": 9,
-        "workload": "60h aula 0h lab.",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDINF0106",
-            "turmaid": "01",
-            "nome": " COMPUTADORES E SOCIEDADE",
-            "semester": "2018.2",
-            "professor": "ED PORTO BEZERRA",
-            "horario": "2M2345",
-            "local": "CI 308 (CI)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0029",
-        "name": "TRABALHO DE CONCLUSÃO DE CURSO I",
-        "category": "Complementar Obrigatória",
-        "semester": 9,
-        "workload": "30h aula 0h lab.",
-        "type": "TRABALHO DE CONCLUSÃO DE CURSO",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0030",
-        "name": "TRABALHO DE CONCLUSÃO DE CURSO II",
-        "category": "Complementar Obrigatória",
-        "semester": 10,
-        "workload": "30h aula 0h lab.",
-        "type": "TRABALHO DE CONCLUSÃO DE CURSO",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-          "0029"
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0031",
-        "name": "ESTAGIO SUPERVISIONADO",
-        "category": "Obrigatória",
-        "semester": 10,
-        "workload": "300h aula 0h lab.",
-        "type": "ESTÁGIO",
-        "turmas": [
-
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "5102006",
-        "name": " CÁLCULO  DAS PROBABILIDADES I",
-        "category": "EXTRA",
-        "semester": 0,
-        "workload": "60h",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "5102006",
-            "turmaid": "01",
-            "nome": " CÁLCULO  DAS PROBABILIDADES I",
-            "semester": "2018.2",
-            "professor": "ANDREA VANESSA ROCHA",
-            "horario": "35M45",
-            "local": "SALA DI 02 (CI)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0043",
-        "name": " CONSTRUÇÃO DE COMPILADORES I",
-        "category": "EXTRA",
-        "semester": 0,
-        "workload": "60h",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDSCO0043",
-            "turmaid": "01",
-            "nome": " CONSTRUÇÃO DE COMPILADORES I",
-            "semester": "2018.2",
-            "professor": "CLAUIRTON DE ALBUQUERQUE SIEBRA",
-            "horario": "24M45",
-            "local": "CI 103 (CI)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDCOC0078",
-        "name": " LINGUAGENS FORMAIS E AUTÔMATOS",
-        "category": "EXTRA",
-        "semester": 0,
-        "workload": "60h",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDCOC0078",
-            "turmaid": "01",
-            "nome": " LINGUAGENS FORMAIS E AUTÔMATOS",
-            "semester": "2018.2",
-            "professor": "ANDREI DE ARAUJO FORMIGA",
-            "horario": "35T23",
-            "local": "SALA DI 02 (CI)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1107205",
-        "name": " PARADIGMAS DE LING DE PROGRAMAÇÃO",
-        "category": "EXTRA",
-        "semester": 0,
-        "workload": "60h",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "1107205",
-            "turmaid": "01",
-            "nome": " PARADIGMAS DE LING DE PROGRAMAÇÃO",
-            "semester": "2018.2",
-            "professor": "GUSTAVO HENRIQUE MATOS BEZERRA MOTTA",
-            "horario": "35M45",
-            "local": "CI 311 (CI)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "1107170",
-        "name": " TOPICOS ESPEC EM COMPUTACAO",
-        "category": "EXTRA",
-        "semester": 0,
-        "workload": "60h",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "1107170",
-            "turmaid": "03",
-            "nome": " TOPICOS ESPEC EM COMPUTACAO",
-            "semester": "2018.2",
-            "professor": "JAIRO ROCHA DE FARIA",
-            "horario": "6T2345",
-            "local": "CI 104 (CI)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      },
-      {
-        "id": "GDSCO0075",
-        "name": " TÓPICOS ESPECIAIS EM PROCESSAMENTO DIGITAL DE IMAGENS",
-        "category": "EXTRA",
-        "semester": 0,
-        "workload": "60h",
-        "type": "DISCIPLINA",
-        "turmas": [
-          {
-            "id": "GDSCO0075",
-            "turmaid": "01",
-            "nome": " TÓPICOS ESPECIAIS EM PROCESSAMENTO DIGITAL DE IMAGENS",
-            "semester": "2018.2",
-            "professor": "LEONARDO VIDAL BATISTA",
-            "horario": "35T23",
-            "local": "CI T05 - Auditório (CI)"
-          }
-        ],
-        "prerequisites": [
-
-        ],
-        "equivalences": [
-
-        ]
-      }
+  "1107184-01": {
+    "id": "1107184-01",
+    "code": "1107184",
+    "name": "ESPECIFICACAO DE REQUISITOS DE SOFTWARE",
+    "shortName": "ERS",
+    "type": "DISCIPLINA",
+    "professor": "DANIELLE ROUSY DIAS DA SILVA",
+    "time": "24M23",
+    "classId": "01",
+    "semester": 0,
+    "timeslots": [
+      {"day": 0, "startingHour": 8, "endingHour": 10},
+      {"day": 2, "startingHour": 8, "endingHour": 10}
+    ]
+  },
+  "1107202-01": {
+    "id": "1107202-01",
+    "code": "1107202",
+    "name": "METODOS DE PROJETO DE SOFTWARE",
+    "shortName": "MPS",
+    "type": "DISCIPLINA",
+    "professor": "RAONI KULESZA",
+    "time": "35T45",
+    "classId": "01",
+    "semester": 0,
+    "timeslots": [
+      {"day": 1, "startingHour": 16, "endingHour": 18},
+      {"day": 3, "startingHour": 16, "endingHour": 18}
+    ]
+  },
+  "1403153-01": {
+    "id": "1403153-01",
+    "code": "1403153",
+    "name": "PORTUGUÊS INSTRUMENTAL",
+    "shortName": "PI",
+    "type": "DISCIPLINA",
+    "professor": "MARIA DE FATIMA ALMEIDA",
+    "time": "3T1234",
+    "classId": "01",
+    "semester": 0,
+    "timeslots": [{"day": 1, "startingHour": 13, "endingHour": 17}]
+  },
+  "1404138-01": {
+    "id": "1404138-01",
+    "code": "1404138",
+    "name": "LINGUA INGLESA I",
+    "shortName": "LII",
+    "type": "DISCIPLINA",
+    "professor": "GREGÓRIO PEREIRA DE VASCONCELOS",
+    "time": "35N34 6N1",
+    "classId": "01",
+    "semester": 0,
+    "timeslots": [
+      {"day": 1, "startingHour": 21, "endingHour": 23},
+      {"day": 3, "startingHour": 21, "endingHour": 23},
+      {"day": 4, "startingHour": 19, "endingHour": 20}
+    ]
+  },
+  "GDSCO0047-01": {
+    "id": "GDSCO0047-01",
+    "code": "GDSCO0047",
+    "name": "INTERAÇÃO HOMEM MÁQUINA",
+    "shortName": "IHM",
+    "type": "DISCIPLINA",
+    "professor": "VALDECIR BECKER",
+    "time": "35T23",
+    "classId": "01",
+    "semester": 0,
+    "timeslots": [
+      {"day": 1, "startingHour": 14, "endingHour": 16},
+      {"day": 3, "startingHour": 14, "endingHour": 16}
+    ]
+  },
+  "1103118-16": {
+    "id": "1103118-16",
+    "code": "1103118",
+    "name": "CÁLCULO VETORIAL E GEOMETRIA ANALÍTICA",
+    "shortName": "CVEGA",
+    "type": "DISCIPLINA",
+    "professor": "LENIMAR NUNES DE ANDRADE",
+    "time": "35T23",
+    "classId": "16",
+    "semester": 1,
+    "timeslots": [
+      {"day": 1, "startingHour": 14, "endingHour": 16},
+      {"day": 3, "startingHour": 14, "endingHour": 16}
+    ]
+  },
+  "1103177-12": {
+    "id": "1103177-12",
+    "code": "1103177",
+    "name": "CÁLCULO DIFERENCIAL E INTEGRAL I",
+    "shortName": "CDEII",
+    "type": "DISCIPLINA",
+    "professor": "GABRIELA ALBUQUERQUE WANDERLEY",
+    "time": "24M23",
+    "classId": "12",
+    "semester": 1,
+    "timeslots": [
+      {"day": 0, "startingHour": 8, "endingHour": 10},
+      {"day": 2, "startingHour": 8, "endingHour": 10}
+    ]
+  },
+  "1107201-01": {
+    "id": "1107201-01",
+    "code": "1107201",
+    "name": "METODOLOGIA DO TRABALHO CIENTIFICO",
+    "shortName": "MTC",
+    "type": "DISCIPLINA",
+    "professor": "GUSTAVO HENRIQUE MATOS BEZERRA MOTTA",
+    "time": "6M345",
+    "classId": "01",
+    "semester": 1,
+    "timeslots": [{"day": 4, "startingHour": 9, "endingHour": 12}]
+  },
+  "1107201-04": {
+    "id": "1107201-04",
+    "code": "1107201",
+    "name": "METODOLOGIA DO TRABALHO CIENTIFICO",
+    "shortName": "MTC",
+    "type": "DISCIPLINA",
+    "professor": "THAIS GAUDENCIO DO REGO",
+    "time": "6M345",
+    "classId": "04",
+    "semester": 1,
+    "timeslots": [{"day": 4, "startingHour": 9, "endingHour": 12}]
+  },
+  "1107248-01": {
+    "id": "1107248-01",
+    "code": "1107248",
+    "name": "INTROD À ENGENHARIA DE COMPUTAÇÃO",
+    "shortName": "IÀEC",
+    "type": "DISCIPLINA",
+    "professor": "ANAND SUBRAMANIAN",
+    "time": "35M45",
+    "classId": "01",
+    "semester": 1,
+    "timeslots": [
+      {"day": 1, "startingHour": 10, "endingHour": 12},
+      {"day": 3, "startingHour": 10, "endingHour": 12}
+    ]
+  },
+  "GDINF0101-02": {
+    "id": "GDINF0101-02",
+    "code": "GDINF0101",
+    "name": "LABORATÓRIO DE INTRODUÇÃO A PROGRAMAÇÃO",
+    "shortName": "LIP",
+    "type": "DISCIPLINA",
+    "professor": "LINCOLN DAVID NERY E SILVA",
+    "time": "24T23",
+    "classId": "02",
+    "semester": 1,
+    "timeslots": [
+      {"day": 0, "startingHour": 14, "endingHour": 16},
+      {"day": 2, "startingHour": 14, "endingHour": 16}
+    ]
+  },
+  "GDINF0107-01": {
+    "id": "GDINF0107-01",
+    "code": "GDINF0107",
+    "name": "INTRODUÇÃO A PROGRAMAÇÃO PARA ENGENHARIA DE COMPUTAÇÃO",
+    "shortName": "IPPEC",
+    "type": "DISCIPLINA",
+    "professor": "LINCOLN DAVID NERY E SILVA",
+    "time": "24M45",
+    "classId": "01",
+    "semester": 1,
+    "timeslots": [
+      {"day": 0, "startingHour": 10, "endingHour": 12},
+      {"day": 2, "startingHour": 10, "endingHour": 12}
+    ]
+  },
+  "1103178-13": {
+    "id": "1103178-13",
+    "code": "1103178",
+    "name": "CALCULO DIFERENCIAL E INTEGRAL II",
+    "shortName": "CDEII",
+    "type": "DISCIPLINA",
+    "professor": "CLEMERSON OLIVEIRA DA SILVA MENEZES",
+    "time": "24M45",
+    "classId": "13",
+    "semester": 2,
+    "timeslots": [
+      {"day": 0, "startingHour": 10, "endingHour": 12},
+      {"day": 2, "startingHour": 10, "endingHour": 12}
+    ]
+  },
+  "1103178-14": {
+    "id": "1103178-14",
+    "code": "1103178",
+    "name": "CALCULO DIFERENCIAL E INTEGRAL II",
+    "shortName": "CDEII",
+    "type": "DISCIPLINA",
+    "professor": "EVELINA SHAMAROVA",
+    "time": "24T45",
+    "classId": "14",
+    "semester": 2,
+    "timeslots": [
+      {"day": 0, "startingHour": 16, "endingHour": 18},
+      {"day": 2, "startingHour": 16, "endingHour": 18}
+    ]
+  },
+  "1103179-12": {
+    "id": "1103179-12",
+    "code": "1103179",
+    "name": "INTRODUCAO A ALGEBRA LINEAR",
+    "shortName": "IAL",
+    "type": "DISCIPLINA",
+    "professor": "CLEMERSON OLIVEIRA DA SILVA MENEZES",
+    "time": "35M45",
+    "classId": "12",
+    "semester": 2,
+    "timeslots": [
+      {"day": 1, "startingHour": 10, "endingHour": 12},
+      {"day": 3, "startingHour": 10, "endingHour": 12}
+    ]
+  },
+  "1103179-13": {
+    "id": "1103179-13",
+    "code": "1103179",
+    "name": "INTRODUCAO A ALGEBRA LINEAR",
+    "shortName": "IAL",
+    "type": "DISCIPLINA",
+    "professor": "EDSON DE FIGUEIREDO LIMA JUNIOR",
+    "time": "35T45",
+    "classId": "13",
+    "semester": 2,
+    "timeslots": [
+      {"day": 1, "startingHour": 16, "endingHour": 18},
+      {"day": 3, "startingHour": 16, "endingHour": 18}
+    ]
+  },
+  "GDINF0102-01": {
+    "id": "GDINF0102-01",
+    "code": "GDINF0102",
+    "name": "LABORATORIO DE LINGUAGEM DE PROGRAMAÇÃO I",
+    "shortName": "LLPI",
+    "type": "DISCIPLINA",
+    "professor": "DERZU OMAIA",
+    "time": "24T23",
+    "classId": "01",
+    "semester": 2,
+    "timeslots": [
+      {"day": 0, "startingHour": 14, "endingHour": 16},
+      {"day": 2, "startingHour": 14, "endingHour": 16}
+    ]
+  },
+  "GDINF0108-01": {
+    "id": "GDINF0108-01",
+    "code": "GDINF0108",
+    "name": "LINGUAGEM DE PROGRAMAÇÃO I",
+    "shortName": "LPI",
+    "type": "DISCIPLINA",
+    "professor": "TIAGO MARITAN UGULINO DE ARAUJO",
+    "time": "35M45",
+    "classId": "01",
+    "semester": 2,
+    "timeslots": [
+      {"day": 1, "startingHour": 10, "endingHour": 12},
+      {"day": 3, "startingHour": 10, "endingHour": 12}
+    ]
+  },
+  "GDSCO0022-01": {
+    "id": "GDSCO0022-01",
+    "code": "GDSCO0022",
+    "name": "CIRCUITOS LOGICOS II",
+    "shortName": "CLI",
+    "type": "DISCIPLINA",
+    "professor": "EUDISLEY GOMES DOS ANJOS",
+    "time": "35T23",
+    "classId": "01",
+    "semester": 2,
+    "timeslots": [
+      {"day": 1, "startingHour": 14, "endingHour": 16},
+      {"day": 3, "startingHour": 14, "endingHour": 16}
+    ]
+  },
+  "GDSCO0023-01": {
+    "id": "GDSCO0023-01",
+    "code": "GDSCO0023",
+    "name": "ELETRICIDADE E CIRCUITOS PARA COMPUTAÇÃO I",
+    "shortName": "EECPCI",
+    "type": "DISCIPLINA",
+    "professor": "MARDSON FREITAS DE AMORIM",
+    "time": "35M23",
+    "classId": "01",
+    "semester": 2,
+    "timeslots": [
+      {"day": 1, "startingHour": 8, "endingHour": 10},
+      {"day": 3, "startingHour": 8, "endingHour": 10}
+    ]
+  },
+  "GDSCO0023-02": {
+    "id": "GDSCO0023-02",
+    "code": "GDSCO0023",
+    "name": "ELETRICIDADE E CIRCUITOS PARA COMPUTAÇÃO I",
+    "shortName": "EECPCI",
+    "type": "DISCIPLINA",
+    "professor": "RUY ALBERTO PISANI ALTAFIM e CAMILA MARA VITAL BARROS",
+    "time": "35M45",
+    "classId": "02",
+    "semester": 2,
+    "timeslots": [
+      {"day": 1, "startingHour": 10, "endingHour": 12},
+      {"day": 3, "startingHour": 10, "endingHour": 12}
+    ]
+  },
+  "GDSCO0025-01": {
+    "id": "GDSCO0025-01",
+    "code": "GDSCO0025",
+    "name": "MATERIAIS PARA MICRO E NANO TECNOLOGIA",
+    "shortName": "MPMENT",
+    "type": "DISCIPLINA",
+    "professor": "AURISTELA CARLA DE MIRANDA",
+    "time": "24M45",
+    "classId": "01",
+    "semester": 2,
+    "timeslots": [
+      {"day": 0, "startingHour": 10, "endingHour": 12},
+      {"day": 2, "startingHour": 10, "endingHour": 12}
+    ]
+  },
+  "1101171-03": {
+    "id": "1101171-03",
+    "code": "1101171",
+    "name": "FISICA APLICADA A COMPUTACAO I",
+    "shortName": "FACI",
+    "type": "DISCIPLINA",
+    "professor": "A DEFINIR",
+    "time": "24M45",
+    "classId": "03",
+    "semester": 3,
+    "timeslots": [
+      {"day": 0, "startingHour": 10, "endingHour": 12},
+      {"day": 2, "startingHour": 10, "endingHour": 12}
+    ]
+  },
+  "1103232-10": {
+    "id": "1103232-10",
+    "code": "1103232",
+    "name": "CALCULO DIF  E INTEGRAL III",
+    "shortName": "CDEII",
+    "type": "DISCIPLINA",
+    "professor": "EDSON DE FIGUEIREDO LIMA JUNIOR",
+    "time": "24T45",
+    "classId": "10",
+    "semester": 3,
+    "timeslots": [
+      {"day": 0, "startingHour": 16, "endingHour": 18},
+      {"day": 2, "startingHour": 16, "endingHour": 18}
+    ]
+  },
+  "1107206-02": {
+    "id": "1107206-02",
+    "code": "1107206",
+    "name": "PESQUISA APLICADA A COMPUTACAO",
+    "shortName": "PAC",
+    "type": "DISCIPLINA",
+    "professor": "JOSILENE AIRES MOREIRA",
+    "time": "5T234",
+    "classId": "02",
+    "semester": 3,
+    "timeslots": [{"day": 3, "startingHour": 14, "endingHour": 17}]
+  },
+  "GDSCO0024-01": {
+    "id": "GDSCO0024-01",
+    "code": "GDSCO0024",
+    "name": "ELETRICIDADE E CIRCUITOS PARA COMPUTAÇÃO II",
+    "shortName": "EECPCI",
+    "type": "DISCIPLINA",
+    "professor": "CAMILA MARA VITAL BARROS",
+    "time": "24M23",
+    "classId": "01",
+    "semester": 3,
+    "timeslots": [
+      {"day": 0, "startingHour": 8, "endingHour": 10},
+      {"day": 2, "startingHour": 8, "endingHour": 10}
+    ]
+  },
+  "GDSCO0046-01": {
+    "id": "GDSCO0046-01",
+    "code": "GDSCO0046",
+    "name": "FÍSICA EXPERIMENTAL PARA COMPUTAÇÃO",
+    "shortName": "FEPC",
+    "type": "DISCIPLINA",
+    "professor": "HUGO LEONARDO DAVI DE SOUZA CAVALCANTE",
+    "time": "3T23",
+    "classId": "01",
+    "semester": 3,
+    "timeslots": [{"day": 1, "startingHour": 14, "endingHour": 16}]
+  },
+  "1103180-09": {
+    "id": "1103180-09",
+    "code": "1103180",
+    "name": "SERIES E EQUACOES DIF ORDINARIAS",
+    "shortName": "SEEDO",
+    "type": "DISCIPLINA",
+    "professor": "ALEXANDRE DE BUSTAMANTE SIMAS",
+    "time": "35M23",
+    "classId": "09",
+    "semester": 4,
+    "timeslots": [
+      {"day": 1, "startingHour": 8, "endingHour": 10},
+      {"day": 3, "startingHour": 8, "endingHour": 10}
+    ]
+  },
+  "1107148-02": {
+    "id": "1107148-02",
+    "code": "1107148",
+    "name": "LINGUAGEM DE PROGRAMAÇÃO II",
+    "shortName": "LPI",
+    "type": "DISCIPLINA",
+    "professor": "CARLOS EDUARDO COELHO FREIRE BATISTA",
+    "time": "24M45",
+    "classId": "02",
+    "semester": 4,
+    "timeslots": [
+      {"day": 0, "startingHour": 10, "endingHour": 12},
+      {"day": 2, "startingHour": 10, "endingHour": 12}
+    ]
+  },
+  "1107186-02": {
+    "id": "1107186-02",
+    "code": "1107186",
+    "name": "ESTRUTURA DE DADOS",
+    "shortName": "ED",
+    "type": "DISCIPLINA",
+    "professor": "CHRISTIAN AZAMBUJA PAGOT",
+    "time": "24T23",
+    "classId": "02",
+    "semester": 4,
+    "timeslots": [
+      {"day": 0, "startingHour": 14, "endingHour": 16},
+      {"day": 2, "startingHour": 14, "endingHour": 16}
+    ]
+  },
+  "GDSCO0026-02": {
+    "id": "GDSCO0026-02",
+    "code": "GDSCO0026",
+    "name": "ELETRONICA APLICADA I",
+    "shortName": "EAI",
+    "type": "DISCIPLINA",
+    "professor": "EWERTON MONTEIRO SALVADOR",
+    "time": "35T23",
+    "classId": "02",
+    "semester": 4,
+    "timeslots": [
+      {"day": 1, "startingHour": 14, "endingHour": 16},
+      {"day": 3, "startingHour": 14, "endingHour": 16}
+    ]
+  },
+  "GDSCO0035-02": {
+    "id": "GDSCO0035-02",
+    "code": "GDSCO0035",
+    "name": "ARQUITETURA DE COMPUTADORES",
+    "shortName": "AC",
+    "type": "DISCIPLINA",
+    "professor": "EWERTON MONTEIRO SALVADOR",
+    "time": "35M45",
+    "classId": "02",
+    "semester": 4,
+    "timeslots": [
+      {"day": 1, "startingHour": 10, "endingHour": 12},
+      {"day": 3, "startingHour": 10, "endingHour": 12}
+    ]
+  },
+  "GDSCO0059-01": {
+    "id": "GDSCO0059-01",
+    "code": "GDSCO0059",
+    "name": "MECÂNICA PARA ENGENHARIA DA COMPUTAÇÃO",
+    "shortName": "MPEC",
+    "type": "DISCIPLINA",
+    "professor": "HUGO LEONARDO DAVI DE SOUZA CAVALCANTE",
+    "time": "24T45",
+    "classId": "01",
+    "semester": 4,
+    "timeslots": [
+      {"day": 0, "startingHour": 16, "endingHour": 18},
+      {"day": 2, "startingHour": 16, "endingHour": 18}
+    ]
+  },
+  "1107180-01": {
+    "id": "1107180-01",
+    "code": "1107180",
+    "name": "BANCO DE DADOS I",
+    "shortName": "BDI",
+    "type": "DISCIPLINA",
+    "professor": "ALAN KELON OLIVEIRA DE MORAES",
+    "time": "35M23",
+    "classId": "01",
+    "semester": 5,
+    "timeslots": [
+      {"day": 1, "startingHour": 8, "endingHour": 10},
+      {"day": 3, "startingHour": 8, "endingHour": 10}
+    ]
+  },
+  "GDCOC0072-06": {
+    "id": "GDCOC0072-06",
+    "code": "GDCOC0072",
+    "name": "CALCULO NUMERICO",
+    "shortName": "CN",
+    "type": "DISCIPLINA",
+    "professor": "GUSTAVO CHARLES PEIXOTO DE OLIVEIRA",
+    "time": "35N12",
+    "classId": "06",
+    "semester": 5,
+    "timeslots": [
+      {"day": 1, "startingHour": 19, "endingHour": 21},
+      {"day": 3, "startingHour": 19, "endingHour": 21}
+    ]
+  },
+  "GDCOC0072-07": {
+    "id": "GDCOC0072-07",
+    "code": "GDCOC0072",
+    "name": "CALCULO NUMERICO",
+    "shortName": "CN",
+    "type": "DISCIPLINA",
+    "professor": "GUSTAVO CHARLES PEIXOTO DE OLIVEIRA",
+    "time": "35M45",
+    "classId": "07",
+    "semester": 5,
+    "timeslots": [
+      {"day": 1, "startingHour": 10, "endingHour": 12},
+      {"day": 3, "startingHour": 10, "endingHour": 12}
+    ]
+  },
+  "GDCOC0076-02": {
+    "id": "GDCOC0076-02",
+    "code": "GDCOC0076",
+    "name": "ANÁLISE E PROJETO DE ALGORITMOS",
+    "shortName": "AEPA",
+    "type": "DISCIPLINA",
+    "professor": "BRUNO PETRATO BRUCK",
+    "time": "35T45",
+    "classId": "02",
+    "semester": 5,
+    "timeslots": [
+      {"day": 1, "startingHour": 16, "endingHour": 18},
+      {"day": 3, "startingHour": 16, "endingHour": 18}
+    ]
+  },
+  "GDSCO0027-01": {
+    "id": "GDSCO0027-01",
+    "code": "GDSCO0027",
+    "name": "ELETRONICA APLICADA II",
+    "shortName": "EAI",
+    "type": "DISCIPLINA",
+    "professor": "HUGO LEONARDO DAVI DE SOUZA CAVALCANTE",
+    "time": "24M45",
+    "classId": "01",
+    "semester": 5,
+    "timeslots": [
+      {"day": 0, "startingHour": 10, "endingHour": 12},
+      {"day": 2, "startingHour": 10, "endingHour": 12}
+    ]
+  },
+  "GDSCO0052-01": {
+    "id": "GDSCO0052-01",
+    "code": "GDSCO0052",
+    "name": "INTRODUÇÃO À MECÂNICA DOS FLUÍDOS",
+    "shortName": "IÀMDF",
+    "type": "DISCIPLINA",
+    "professor": "JOSE MIGUEL AROZTEGUI MASSERA",
+    "time": "4M23",
+    "classId": "01",
+    "semester": 5,
+    "timeslots": [{"day": 2, "startingHour": 8, "endingHour": 10}]
+  },
+  "GDSCO0053-01": {
+    "id": "GDSCO0053-01",
+    "code": "GDSCO0053",
+    "name": "INTRODUÇÃO À MICROELETRÔNICA",
+    "shortName": "IÀM",
+    "type": "DISCIPLINA",
+    "professor": "ANTONIO CARLOS CAVALCANTI",
+    "time": "35T23",
+    "classId": "01",
+    "semester": 5,
+    "timeslots": [
+      {"day": 1, "startingHour": 14, "endingHour": 16},
+      {"day": 3, "startingHour": 14, "endingHour": 16}
+    ]
+  },
+  "5101003-01": {
+    "id": "5101003-01",
+    "code": "5101003",
+    "name": "MICROCONTROLADORES",
+    "shortName": "M",
+    "type": "DISCIPLINA",
+    "professor": "MARDSON FREITAS DE AMORIM",
+    "time": "35T45",
+    "classId": "01",
+    "semester": 6,
+    "timeslots": [
+      {"day": 1, "startingHour": 16, "endingHour": 18},
+      {"day": 3, "startingHour": 16, "endingHour": 18}
+    ]
+  },
+  "5101003-02": {
+    "id": "5101003-02",
+    "code": "5101003",
+    "name": "MICROCONTROLADORES",
+    "shortName": "M",
+    "type": "DISCIPLINA",
+    "professor": "MARDSON FREITAS DE AMORIM",
+    "time": "35M45",
+    "classId": "02",
+    "semester": 6,
+    "timeslots": [
+      {"day": 1, "startingHour": 10, "endingHour": 12},
+      {"day": 3, "startingHour": 10, "endingHour": 12}
+    ]
+  },
+  "GDSCO0040-01": {
+    "id": "GDSCO0040-01",
+    "code": "GDSCO0040",
+    "name": "CONCEPÇÃO ESTRUTURADA DE CIRCUITOS INTEGRADOS",
+    "shortName": "CECI",
+    "type": "DISCIPLINA",
+    "professor": "ANTONIO CARLOS CAVALCANTI",
+    "time": "35M45",
+    "classId": "01",
+    "semester": 6,
+    "timeslots": [
+      {"day": 1, "startingHour": 10, "endingHour": 12},
+      {"day": 3, "startingHour": 10, "endingHour": 12}
+    ]
+  },
+  "GDSCO0062-01": {
+    "id": "GDSCO0062-01",
+    "code": "GDSCO0062",
+    "name": "REDES DE COMPUTADORES I",
+    "shortName": "RCI",
+    "type": "DISCIPLINA",
+    "professor": "GIORGIA DE OLIVEIRA MATTOS",
+    "time": "24M23",
+    "classId": "01",
+    "semester": 6,
+    "timeslots": [
+      {"day": 0, "startingHour": 8, "endingHour": 10},
+      {"day": 2, "startingHour": 8, "endingHour": 10}
+    ]
+  },
+  "GDSCO0064-01": {
+    "id": "GDSCO0064-01",
+    "code": "GDSCO0064",
+    "name": "SINAIS E SISTEMAS DINÂMICOS",
+    "shortName": "SESD",
+    "type": "DISCIPLINA",
+    "professor": "DERZU OMAIA",
+    "time": "24M45",
+    "classId": "01",
+    "semester": 6,
+    "timeslots": [
+      {"day": 0, "startingHour": 10, "endingHour": 12},
+      {"day": 2, "startingHour": 10, "endingHour": 12}
+    ]
+  },
+  "GDSCO0068-01": {
+    "id": "GDSCO0068-01",
+    "code": "GDSCO0068",
+    "name": "SISTEMAS OPERACIONAIS I",
+    "shortName": "SOI",
+    "type": "DISCIPLINA",
+    "professor": "GUIDO LEMOS DE SOUZA FILHO",
+    "time": "35T23",
+    "classId": "01",
+    "semester": 6,
+    "timeslots": [
+      {"day": 1, "startingHour": 14, "endingHour": 16},
+      {"day": 3, "startingHour": 14, "endingHour": 16}
+    ]
+  },
+  "5101001-01": {
+    "id": "5101001-01",
+    "code": "5101001",
+    "name": "AVALIAÇÃO E DESEMPENHO DE SISTEMAS OPERACIONAIS",
+    "shortName": "AEDSO",
+    "type": "DISCIPLINA",
+    "professor": "IGUATEMI EDUARDO DA FONSECA",
+    "time": "24M23",
+    "classId": "01",
+    "semester": 7,
+    "timeslots": [
+      {"day": 0, "startingHour": 8, "endingHour": 10},
+      {"day": 2, "startingHour": 8, "endingHour": 10}
+    ]
+  },
+  "5102007-01": {
+    "id": "5102007-01",
+    "code": "5102007",
+    "name": "PESQUISA OPERACIONAL",
+    "shortName": "PO",
+    "type": "DISCIPLINA",
+    "professor": "KELY DIANA VILLACORTA VILLACORTA",
+    "time": "35T23",
+    "classId": "01",
+    "semester": 7,
+    "timeslots": [
+      {"day": 1, "startingHour": 14, "endingHour": 16},
+      {"day": 3, "startingHour": 14, "endingHour": 16}
+    ]
+  },
+  "GDSCO0032-01": {
+    "id": "GDSCO0032-01",
+    "code": "GDSCO0032",
+    "name": "REDES SEM FIO",
+    "shortName": "RSF",
+    "type": "DISCIPLINA",
+    "professor": "FERNANDO MENEZES MATOS",
+    "time": "35T45",
+    "classId": "01",
+    "semester": 7,
+    "timeslots": [
+      {"day": 1, "startingHour": 16, "endingHour": 18},
+      {"day": 3, "startingHour": 16, "endingHour": 18}
+    ]
+  },
+  "GDSCO0051-02": {
+    "id": "GDSCO0051-02",
+    "code": "GDSCO0051",
+    "name": "INTRODUÇÃO À COMPUTAÇÃO GRÁFICA",
+    "shortName": "IÀCG",
+    "type": "DISCIPLINA",
+    "professor": "LILIANE DOS SANTOS MACHADO",
+    "time": "24T23",
+    "classId": "02",
+    "semester": 7,
+    "timeslots": [
+      {"day": 0, "startingHour": 14, "endingHour": 16},
+      {"day": 2, "startingHour": 14, "endingHour": 16}
+    ]
+  },
+  "GDSCO0055-01": {
+    "id": "GDSCO0055-01",
+    "code": "GDSCO0055",
+    "name": "INTRODUÇÃO AO PROCESSAMENTO DIGITAL DE IMAGENS",
+    "shortName": "IPDI",
+    "type": "DISCIPLINA",
+    "professor": "LEONARDO VIDAL BATISTA",
+    "time": "24M45",
+    "classId": "01",
+    "semester": 7,
+    "timeslots": [
+      {"day": 0, "startingHour": 10, "endingHour": 12},
+      {"day": 2, "startingHour": 10, "endingHour": 12}
+    ]
+  },
+  "1107128-02": {
+    "id": "1107128-02",
+    "code": "1107128",
+    "name": "ENGENHARIA DE SOFTWARE",
+    "shortName": "ES",
+    "type": "DISCIPLINA",
+    "professor": "ALAN KELON OLIVEIRA DE MORAES",
+    "time": "24M45",
+    "classId": "02",
+    "semester": 8,
+    "timeslots": [
+      {"day": 0, "startingHour": 10, "endingHour": 12},
+      {"day": 2, "startingHour": 10, "endingHour": 12}
+    ]
+  },
+  "1107191-03": {
+    "id": "1107191-03",
+    "code": "1107191",
+    "name": "INTRODUCAO A INTELIGENCIA ARTIFICIAL",
+    "shortName": "IIA",
+    "type": "DISCIPLINA",
+    "professor": "NATASHA CORREIA QUEIROZ LINO",
+    "time": "24T23",
+    "classId": "03",
+    "semester": 8,
+    "timeslots": [
+      {"day": 0, "startingHour": 14, "endingHour": 16},
+      {"day": 2, "startingHour": 14, "endingHour": 16}
+    ]
+  },
+  "GDSCO0028-02": {
+    "id": "GDSCO0028-02",
+    "code": "GDSCO0028",
+    "name": "ROBOTICA",
+    "shortName": "R",
+    "type": "DISCIPLINA",
+    "professor": "VITOR MENEGHETTI UGULINO DE ARAUJO",
+    "time": "24T45",
+    "classId": "02",
+    "semester": 8,
+    "timeslots": [
+      {"day": 0, "startingHour": 16, "endingHour": 18},
+      {"day": 2, "startingHour": 16, "endingHour": 18}
+    ]
+  },
+  "GDSCO0054-01": {
+    "id": "GDSCO0054-01",
+    "code": "GDSCO0054",
+    "name": "INTRODUÇÃO À TEORIA DA INFORMAÇÃO",
+    "shortName": "IÀTI",
+    "type": "DISCIPLINA",
+    "professor": "DERZU OMAIA",
+    "time": "35M45",
+    "classId": "01",
+    "semester": 8,
+    "timeslots": [
+      {"day": 1, "startingHour": 10, "endingHour": 12},
+      {"day": 3, "startingHour": 10, "endingHour": 12}
+    ]
+  },
+  "1201126-07": {
+    "id": "1201126-07",
+    "code": "1201126",
+    "name": "ECONOMIA I",
+    "shortName": "EI",
+    "type": "DISCIPLINA",
+    "professor": "FERNANDA BRAGA TAVARES",
+    "time": "35N12",
+    "classId": "07",
+    "semester": 9,
+    "timeslots": [
+      {"day": 1, "startingHour": 19, "endingHour": 21},
+      {"day": 3, "startingHour": 19, "endingHour": 21}
+    ]
+  },
+  "1204172-02": {
+    "id": "1204172-02",
+    "code": "1204172",
+    "name": "ADM PARA ENGENHARIA",
+    "shortName": "APE",
+    "type": "DISCIPLINA",
+    "professor": "MIGUEL MAURICIO ISONI",
+    "time": "2T456",
+    "classId": "02",
+    "semester": 9,
+    "timeslots": [{"day": 0, "startingHour": 16, "endingHour": 19}]
+  },
+  "GDINF0106-01": {
+    "id": "GDINF0106-01",
+    "code": "GDINF0106",
+    "name": "COMPUTADORES E SOCIEDADE",
+    "shortName": "CES",
+    "type": "DISCIPLINA",
+    "professor": "ED PORTO BEZERRA",
+    "time": "2M2345",
+    "classId": "01",
+    "semester": 9,
+    "timeslots": [{"day": 0, "startingHour": 8, "endingHour": 12}]
+  },
+  "5102006-01": {
+    "id": "5102006-01",
+    "code": "5102006",
+    "name": " CÁLCULO  DAS PROBABILIDADES I",
+    "shortName": "CDPI",
+    "type": "DISCIPLINA",
+    "professor": "ANDREA VANESSA ROCHA",
+    "time": "35M45",
+    "classId": "01",
+    "semester": 0,
+    "timeslots": [
+      {"day": 1, "startingHour": 10, "endingHour": 12},
+      {"day": 3, "startingHour": 10, "endingHour": 12}
+    ]
+  },
+  "GDSCO0043-01": {
+    "id": "GDSCO0043-01",
+    "code": "GDSCO0043",
+    "name": " CONSTRUÇÃO DE COMPILADORES I",
+    "shortName": "CCI",
+    "type": "DISCIPLINA",
+    "professor": "CLAUIRTON DE ALBUQUERQUE SIEBRA",
+    "time": "24M45",
+    "classId": "01",
+    "semester": 0,
+    "timeslots": [
+      {"day": 0, "startingHour": 10, "endingHour": 12},
+      {"day": 2, "startingHour": 10, "endingHour": 12}
+    ]
+  },
+  "GDCOC0078-01": {
+    "id": "GDCOC0078-01",
+    "code": "GDCOC0078",
+    "name": " LINGUAGENS FORMAIS E AUTÔMATOS",
+    "shortName": "LFEA",
+    "type": "DISCIPLINA",
+    "professor": "ANDREI DE ARAUJO FORMIGA",
+    "time": "35T23",
+    "classId": "01",
+    "semester": 0,
+    "timeslots": [
+      {"day": 1, "startingHour": 14, "endingHour": 16},
+      {"day": 3, "startingHour": 14, "endingHour": 16}
+    ]
+  },
+  "1107205-01": {
+    "id": "1107205-01",
+    "code": "1107205",
+    "name": " PARADIGMAS DE LING DE PROGRAMAÇÃO",
+    "shortName": "PLP",
+    "type": "DISCIPLINA",
+    "professor": "GUSTAVO HENRIQUE MATOS BEZERRA MOTTA",
+    "time": "35M45",
+    "classId": "01",
+    "semester": 0,
+    "timeslots": [
+      {"day": 1, "startingHour": 10, "endingHour": 12},
+      {"day": 3, "startingHour": 10, "endingHour": 12}
+    ]
+  },
+  "1107170-03": {
+    "id": "1107170-03",
+    "code": "1107170",
+    "name": " TOPICOS ESPEC EM COMPUTACAO",
+    "shortName": "TEEC",
+    "type": "DISCIPLINA",
+    "professor": "JAIRO ROCHA DE FARIA",
+    "time": "6T2345",
+    "classId": "03",
+    "semester": 0,
+    "timeslots": [{"day": 4, "startingHour": 14, "endingHour": 18}]
+  },
+  "GDSCO0075-01": {
+    "id": "GDSCO0075-01",
+    "code": "GDSCO0075",
+    "name": " TÓPICOS ESPECIAIS EM PROCESSAMENTO DIGITAL DE IMAGENS",
+    "shortName": "TEEPDI",
+    "type": "DISCIPLINA",
+    "professor": "LEONARDO VIDAL BATISTA",
+    "time": "35T23",
+    "classId": "01",
+    "semester": 0,
+    "timeslots": [
+      {"day": 1, "startingHour": 14, "endingHour": 16},
+      {"day": 3, "startingHour": 14, "endingHour": 16}
     ]
   }
 }
