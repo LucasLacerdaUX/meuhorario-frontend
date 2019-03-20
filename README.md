@@ -1,68 +1,47 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+<img src="http://lacerda.design/img/projects/cover-meuhorario2.png"/>
+</p>
 
-## Available Scripts
+# MeuHorário v2 (Front-End)
 
-In the project directory, you can run:
+MeuHorario is a tool built to help UFPB students plan their course schedules.
 
-### `npm start`
+This project is still in early stages of development. [Read more about MeuHorário here](http://lacerda.design/meuhorario2.html).
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 1. <a name='Demo'></a> Demo
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+[View Demo](https://lucaslacerdaux.github.io/meuhorario-frontend/)
 
-### `npm test`
+## 2. <a name='Requirements'></a> Requirements
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Node.js](https://nodejs.org/en/)
+- [NPM](https://www.npmjs.com/)
 
-### `npm run build`
+## 3. <a name='Installing'></a> Installing
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. First, clone this repo using [Git](https://git-scm.com/) or download the [zip](https://github.com/LucasLacerdaUX/meuhorario-frontend/archive/master.zip)
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+```bash
+git clone hhttps://github.com/LucasLacerdaUX/meuhorario-frontend.git
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navigate to the project root folder and use this **npm** command to install the dependencies
 
-### `npm run eject`
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Start NPM to run the project on localhost:1234.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Technology Stack
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- [React.js](https://reactjs.org), using [create-react-app](https://facebook.github.io/create-react-app)
+- [ApolloClient](https://www.apollographql.com/docs/react/)
+- [StoryBook](https://storybook.js.org)
+- [Jest](https://jestjs.io/) + [Enzyme](https://airbnb.io/enzyme/)
+- [SCSS](https://sass-lang.com/)
+- [ESLint](https://eslint.org/) w/ [Shopify style guide](https://www.npmjs.com/package/eslint-plugin-shopify) + [Prettier](https://github.com/prettier/prettier)
