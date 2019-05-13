@@ -27,4 +27,4 @@ export const icons = [
   'messenger',
   'twitter',
 ];
-export const daysOfWeek = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
+export const daysOfWeek = ['SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SAB', 'DOM'];

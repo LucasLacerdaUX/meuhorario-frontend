@@ -97,6 +97,7 @@ describe('Timetable', () => {
       .find('[data-id="GDSC02574"]')
       .at(0)
       .simulate('click');
+
     expect(mockClick).toBeCalledWith('GDSC02574');
   });
 

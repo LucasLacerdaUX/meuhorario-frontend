@@ -15,22 +15,29 @@ import './Topbar.scss';
 /** The Topbar component */
 const Topbar = () => {
   return (
-    <nav className="TopBar">
+    <header className="TopBar">
       <Button small onlyText customClass={['Button']}>
         UFPB - Engenharia de Computação
       </Button>
       <Logo />
 
       <div className="IconList">
-        <Button small onlyIcon>
-          <Icon name="bookmark" />
-        </Button>
-
-        <Button small onlyIcon>
-          <Icon name="share" />
-        </Button>
+        <nav>
+          <ul>
+            <li>
+              <Button small onlyIcon accessibilityLabel="Saved Tables">
+                <Icon name="bookmark" />
+              </Button>
+            </li>
+            <li>
+              <Button small onlyIcon accessibilityLabel="Share">
+                <Icon name="share" />
+              </Button>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 };
 

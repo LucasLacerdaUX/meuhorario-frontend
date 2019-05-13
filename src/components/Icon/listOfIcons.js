@@ -5,7 +5,7 @@ export {ReactComponent as deleteIcon} from './svg/delete.svg';
 export {ReactComponent as addCourse} from './svg/add-course.svg';
 export {ReactComponent as share} from './svg/share.svg';
 export {ReactComponent as search} from './svg/search.svg';
-
+export {ReactComponent as arrowDown} from './svg/arrow-down.svg';
 export {ReactComponent as messenger} from './svg/messenger.svg';
 export {ReactComponent as facebook} from './svg/facebook.svg';
 export {ReactComponent as twitter} from './svg/twitter.svg';

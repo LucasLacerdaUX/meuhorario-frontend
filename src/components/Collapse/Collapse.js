@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Button from '../Button';
+import Icon from '../Icon';
 import './Collapse.scss';
 
 /** A component that can show/hide it's content when clicking on a toggle state button. */
@@ -10,7 +11,7 @@ const Collapse = (props) => {
 
   return (
     <div className="Collapse">
-      <h3>
+      <h2>
         <Button
           onClick={() => setOpen(!open)}
           ariaExpanded={open}
@@ -20,8 +21,9 @@ const Collapse = (props) => {
           color="grey"
         >
           {title}
+          <Icon name="arrowDown" size="small" />
         </Button>
-      </h3>
+      </h2>
       <div id={id} aria-hidden={!open}>
         {open && children}
       </div>

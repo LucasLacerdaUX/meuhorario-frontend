@@ -30,27 +30,36 @@ const Timetable = (props) => {
         if (duration < 1) return;
         if (timeslot.day >= days) return;
 
-        const className = classNames(event.color ? event.color : 'red');
+        const className = classNames(
+          'Event',
+          event.color ? event.color : 'red',
+        );
 
         timetable[startsAt][timeslot.day] = (
           <td
-            data-id={event.id}
             key={`${event.id}-${timeslot.day}-${startsAt}`}
-            role="gridcell"
-            tabIndex="0"
-            className={className}
             rowSpan={duration}
-            onClick={() => onClick(event.id)}
           >
-            <Icon
-              name="deleteIcon"
-              accessibilityLabel="Remove class from table"
-              customClass={['DeleteIcon']}
-            />
-            <div className="Event">
+            <div
+              role="button"
+              data-id={event.id}
+              onClick={() => onClick(event.id)}
+              onKeyDown={(evt) => {
+                if (evt.which === 13 || evt.which === 32) onClick(event.id);
+              }}
+              className={className}
+              tabIndex="0"
+            >
               <span className="EventName">{event.name.toLowerCase()}</span>
-              <span className="EventShortname">{event.shortName}</span>
+              <span className="EventShortname">
+                <acronym title={event.name}>{event.shortName}</acronym>
+              </span>
               <span className="EventDesc">T{event.classId}</span>
+              <Icon
+                name="deleteIcon"
+                accessibilityLabel="Click to remove class from table"
+                customClass={['DeleteIcon']}
+              />
             </div>
           </td>
         );
@@ -86,7 +95,7 @@ const Timetable = (props) => {
   }
 
   return (
-    <table role="grid" className="Timetable">
+    <table className="Timetable">
       <thead>
         <tr>
           <th scope="col" />

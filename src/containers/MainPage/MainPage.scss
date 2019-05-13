@@ -27,6 +27,11 @@
   z-index: 99;
   transition: top $animation-duration-m ease-out;
 
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
   & > div {
     margin: 0 $spacing-s;
   }

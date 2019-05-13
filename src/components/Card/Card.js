@@ -45,6 +45,7 @@ const Card = (props) => {
   };
 
   if (pressed) clickableProps['aria-pressed'] = true;
+  if (disabled) clickableProps['aria-disabled'] = true;
   if (!clickable) clickableProps = {};
 
   return (

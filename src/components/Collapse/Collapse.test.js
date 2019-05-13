@@ -22,7 +22,7 @@ describe('Collapse', () => {
     expect(component.find('.Button').length).toEqual(1);
   });
   it('should render a title', () => {
-    expect(component.find('.Button').text()).toEqual('Expand Section');
+    expect(component.find('.Button').text()).toContain('Expand Section');
   });
 
   it('should have [aria-hidden=true by default]', () => {

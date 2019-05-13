@@ -8,4 +8,22 @@
   [aria-hidden='false'] {
     display: block;
   }
+
+  .Button {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 800;
+  }
+
+  .Icon {
+    transition: $animation-duration-s transform ease-out;
+  }
+
+  .Button[aria-expanded='true'] {
+    .Icon {
+      transform: rotate(-180deg);
+    }
+  }
 }

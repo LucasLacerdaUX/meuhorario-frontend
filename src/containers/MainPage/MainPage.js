@@ -37,7 +37,7 @@ export class MainPage extends Component {
         const startsAt = time.startingHour - timetableConfig.startingHour;
 
         for (let i = 0; i < duration; i++) {
-          const identifier = `${startsAt + i}-${time.day}`;
+          const identifier = `${time.day}-${startsAt + i}`;
           conflictMap[identifier] = conflictMap[identifier] || [];
           conflictMap[identifier].push(course.id);
         }
@@ -94,7 +94,7 @@ export class MainPage extends Component {
         const startsAt = time.startingHour - timetableConfig.startingHour;
 
         for (let i = 0; i < duration; i++) {
-          const identifier = `${startsAt + i}-${time.day}`;
+          const identifier = `${time.day}-${startsAt + i}`;
           newConflictList = [
             ...new Set([...newConflictList, ...conflictMap[identifier]]),
           ];
@@ -135,20 +135,21 @@ export class MainPage extends Component {
       course.color = course.id in userCourses ? userCourses[course.id] : 'red';
       semesterCards[course.semester] = semesterCards[course.semester] || [];
       semesterCards[course.semester].push(
-        <Card
-          key={course.id}
-          id={course.id}
-          badge={course.time}
-          cardTitle={course.name}
-          cardSubtitle={course.professor}
-          complementaryInfo={course.type}
-          pressed={course.id in userCourses}
-          onClick={this.addOrRemoveClass}
-          clickPayload={course.id}
-          color={course.color}
-          disabled={conflictList.includes(course.id)}
-          clickable
-        />,
+        <li key={course.id}>
+          <Card
+            id={course.id}
+            badge={course.time}
+            cardTitle={course.name}
+            cardSubtitle={course.professor}
+            complementaryInfo={course.type}
+            pressed={course.id in userCourses}
+            onClick={this.addOrRemoveClass}
+            clickPayload={course.id}
+            color={course.color}
+            disabled={conflictList.includes(course.id)}
+            clickable
+          />
+        </li>,
       );
     });
 
@@ -158,7 +159,7 @@ export class MainPage extends Component {
       const title = index ? `${index}º PERÍODO` : 'EXTRAS';
       cardsToRender.push(
         <Collapse id={key} key={key} title={title}>
-          {cardList}
+          <ul>{cardList}</ul>
         </Collapse>,
       );
     });
@@ -167,6 +168,7 @@ export class MainPage extends Component {
 
     return (
       <div className="MainPage">
+        <h1 className="visually-hidden">Meu Horario</h1>
         <aside className={sideBarClasses}>
           <div className="SideBarButton">
             <Button fullWidth onlyText onClick={this.expandSidebarMobile}>

@@ -18,16 +18,26 @@
     left: 50%;
     transform: translateX(-50%);
   }
-  .IconList {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    width: $size-6-xl;
+
+  nav {
+    ul {
+      padding-left: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+    }
   }
+
   .Button {
     width: $size-6-xl;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+  }
+
+  .IconList {
+    width: $size-6-xl;
+    display: flex;
+    justify-content: flex-end;
   }
 }

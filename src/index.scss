@@ -24,20 +24,13 @@ div {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-body {
+body,
+* {
   font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif !important;
 }
 
 ::-webkit-scrollbar-thumb {
   background: white;
   border-radius: 10px;
-}
-
-@supports (font-variation-settings: normal) {
-  body {
-    font-family: 'Inter UI var alt', -apple-system, BlinkMacSystemFont,
-      'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue',
-      sans-serif;
-  }
 }
