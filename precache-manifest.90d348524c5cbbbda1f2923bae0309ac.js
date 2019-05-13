@@ -4,20 +4,20 @@ self.__precacheManifest = [
     "url": "/meuhorario-frontend/static/media/delete.73f3fdc7.svg"
   },
   {
-    "revision": "705e26a209901ea85770",
-    "url": "/meuhorario-frontend/static/css/main.59473aa5.chunk.css"
+    "revision": "00c2699495b2f4c25c55",
+    "url": "/meuhorario-frontend/static/css/main.23ce8f3b.chunk.css"
   },
   {
-    "revision": "598967c13a80c85507f1",
-    "url": "/meuhorario-frontend/static/js/1.598967c1.chunk.js"
+    "revision": "a03076d488d923cb30a6",
+    "url": "/meuhorario-frontend/static/js/1.a03076d4.chunk.js"
   },
   {
     "revision": "081556680d5b1d3fc88f",
     "url": "/meuhorario-frontend/static/js/runtime~main.08155668.js"
   },
   {
-    "revision": "286246415e2863bafd33da37eeef1961",
-    "url": "/meuhorario-frontend/static/media/logo.28624641.svg"
+    "revision": "6da8b438e42b82073578a4b460807983",
+    "url": "/meuhorario-frontend/static/media/logo.6da8b438.svg"
   },
   {
     "revision": "41d90406ffe689ab9c295211df8b3b7f",
@@ -32,8 +32,8 @@ self.__precacheManifest = [
     "url": "/meuhorario-frontend/static/media/link.72ce94d3.svg"
   },
   {
-    "revision": "705e26a209901ea85770",
-    "url": "/meuhorario-frontend/static/js/main.705e26a2.chunk.js"
+    "revision": "00c2699495b2f4c25c55",
+    "url": "/meuhorario-frontend/static/js/main.00c26994.chunk.js"
   },
   {
     "revision": "bba6fa9f0e1c4336e0cc80badf809699",
@@ -48,6 +48,10 @@ self.__precacheManifest = [
     "url": "/meuhorario-frontend/static/media/search.fea1ab47.svg"
   },
   {
+    "revision": "a43e98f2b6b952282880745ec2a858b3",
+    "url": "/meuhorario-frontend/static/media/arrow-down.a43e98f2.svg"
+  },
+  {
     "revision": "f5b0e3156f2793c87bd296b351ac85e9",
     "url": "/meuhorario-frontend/static/media/messenger.f5b0e315.svg"
   },
@@ -60,7 +64,7 @@ self.__precacheManifest = [
     "url": "/meuhorario-frontend/static/media/twitter.fdd6e724.svg"
   },
   {
-    "revision": "dd8059b7c5ab676780a63295f46d4903",
+    "revision": "a84f451fd93775212db3aa56d8891032",
     "url": "/meuhorario-frontend/index.html"
   }
 ];
