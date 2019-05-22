@@ -19,11 +19,13 @@
     opacity: 0;
     fill: $text-color;
     transition: all $animation-duration-m ease-out;
+    pointer-events: none;
   }
 
   &::after {
     content: ' ';
     transition: background $animation-duration-m ease-out;
+    pointer-events: none;
   }
 
   &:hover,

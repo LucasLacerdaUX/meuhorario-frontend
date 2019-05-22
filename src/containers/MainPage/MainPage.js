@@ -4,12 +4,12 @@ import Card from '../../components/Card';
 import Collapse from '../../components/Collapse';
 import Timetable from '../../components/Timetable';
 import TopBar from '../../components/TopBar';
+import SidePanel from '../../components/SidePanel';
 
 import {classColors} from '../../utils/constants';
 
 import './MainPage.scss';
 import sampleData from './sample.json';
-import SidePanel from '../../components/SidePanel';
 
 const classNames = require('classnames');
 
