@@ -56,6 +56,7 @@
     "eslint-plugin-shopify": "^26.1.2",
     "gh-pages": "^2.0.1",
     "prettier": "^1.16.1",
+    "react-focus-on": "^2.0.2",
     "react-vivus": "0.0.2",
     "vivus": "^0.4.4"
   }

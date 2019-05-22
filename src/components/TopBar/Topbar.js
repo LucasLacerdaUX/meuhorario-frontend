@@ -13,10 +13,10 @@ import Button from '../Button';
 import './Topbar.scss';
 
 /** The Topbar component */
-const Topbar = () => {
+const Topbar = ({onProgramClick}) => {
   return (
     <header className="TopBar">
-      <Button small onlyText customClass={['Button']}>
+      <Button small onlyText customClass={['Button']} onClick={onProgramClick}>
         UFPB - Engenharia de Computação
       </Button>
       <Logo />

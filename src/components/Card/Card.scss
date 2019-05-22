@@ -37,13 +37,17 @@
     cursor: pointer;
     &:hover,
     &:focus {
-      box-shadow: $shadow-m rgba($sky-default, $opacity-5);
+      box-shadow: $shadow-l rgba($sky-default, $opacity-5);
     }
   }
 
   &.isDisabled {
     opacity: 0.4;
     pointer-events: none;
+
+    &:focus {
+      box-shadow: $shadow-l rgba($sky-dark, $opacity-5);
+    }
   }
 
   &.red {

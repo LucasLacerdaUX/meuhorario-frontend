@@ -24,7 +24,7 @@
   border: $border-width-m solid $sky-light;
   border-radius: $radius-m;
   box-shadow: 0 -5px 50px rgba($sky-default, $opacity-5);
-  z-index: 99;
+  z-index: 1;
   transition: top $animation-duration-m ease-out;
 
   ul {

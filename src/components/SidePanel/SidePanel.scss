@@ -1,0 +1,39 @@
+@import '../../style/shared.scss';
+
+.Overlay {
+  background: rgba($grey-dark, $opacity-8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  z-index: 2;
+}
+
+.SidePanel {
+  background: $sky-lighter;
+  width: 400px;
+  max-width: 95%;
+  padding: $spacing-xl;
+  position: fixed;
+  height: 100%;
+
+  &.isRightAligned {
+    right: 0;
+  }
+}
+
+.SideHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.SideTitle {
+  display: flex;
+  align-items: center;
+  .Icon {
+    margin-right: $spacing-s;
+  }
+}

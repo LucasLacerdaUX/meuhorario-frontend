@@ -3,11 +3,13 @@ import Button from '../../components/Button';
 import Card from '../../components/Card';
 import Collapse from '../../components/Collapse';
 import Timetable from '../../components/Timetable';
+import TopBar from '../../components/TopBar';
 
 import {classColors} from '../../utils/constants';
 
 import './MainPage.scss';
 import sampleData from './sample.json';
+import SidePanel from '../../components/SidePanel';
 
 const classNames = require('classnames');
 
@@ -24,6 +26,7 @@ export class MainPage extends Component {
       endingHour: 23,
     },
     sidebarExpanded: false,
+    sidepanelOpen: false,
   };
 
   generateConflictTable = (courseList) => {
@@ -82,6 +85,12 @@ export class MainPage extends Component {
     }));
   };
 
+  toggleSidePanel = () => {
+    this.setState((prevState) => ({
+      sidepanelOpen: !prevState.sidepanelOpen,
+    }));
+  };
+
   updateConflictList() {
     const {allCourses, userCourses, conflictMap, timetableConfig} = this.state;
 
@@ -121,6 +130,7 @@ export class MainPage extends Component {
       timetableConfig,
       userCourses,
       sidebarExpanded,
+      sidepanelOpen,
     } = this.state;
 
     const timetableContent = [];
@@ -167,27 +177,39 @@ export class MainPage extends Component {
     const sideBarClasses = classNames('SideBar', sidebarExpanded && 'show');
 
     return (
-      <div className="MainPage">
-        <h1 className="visually-hidden">Meu Horario</h1>
-        <aside className={sideBarClasses}>
-          <div className="SideBarButton">
-            <Button fullWidth onlyText onClick={this.expandSidebarMobile}>
-              Expand
-            </Button>
-          </div>
-          {cardsToRender}
-        </aside>
+      <>
+        <TopBar onProgramClick={this.toggleSidePanel} />
+        <div className="MainPage">
+          <h1 className="visually-hidden">Meu Horario</h1>
+          <aside className={sideBarClasses}>
+            <div className="SideBarButton">
+              <Button fullWidth onlyText onClick={this.expandSidebarMobile}>
+                Expand
+              </Button>
+            </div>
+            {cardsToRender}
+          </aside>
 
-        <main className="MainTable">
-          <Timetable
-            days={timetableConfig.days}
-            startingHour={timetableConfig.startingHour}
-            endingHour={timetableConfig.endingHour}
-            onClick={this.addOrRemoveClass}
-            events={timetableContent}
-          />
-        </main>
-      </div>
+          <SidePanel
+            icon="text"
+            title="Alterar Curso"
+            accessibilityLabel="Escolha um curso da lista."
+            isOpen={sidepanelOpen}
+            close={this.toggleSidePanel}
+          >
+            {cardsToRender}
+          </SidePanel>
+          <main className="MainTable">
+            <Timetable
+              days={timetableConfig.days}
+              startingHour={timetableConfig.startingHour}
+              endingHour={timetableConfig.endingHour}
+              onClick={this.addOrRemoveClass}
+              events={timetableContent}
+            />
+          </main>
+        </div>
+      </>
     );
   }
 }
