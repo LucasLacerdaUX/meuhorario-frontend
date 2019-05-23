@@ -1,0 +1,24 @@
+@import '../../style/shared.scss';
+
+.CreditCounter {
+  text-align: right;
+  padding: $spacing-m;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .Credits {
+    color: $red-default;
+    font-size: $font-size-2-xl;
+    font-weight: 800;
+    border-radius: $radius-m;
+    padding: $spacing-xs;
+    &.isValid {
+      background: rgba($green-lighter, $opacity-5);
+      color: $green-dark;
+    }
+  }
+  p {
+    margin: 0;
+  }
+}

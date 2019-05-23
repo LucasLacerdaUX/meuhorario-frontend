@@ -5,11 +5,12 @@ import Collapse from '../../components/Collapse';
 import Timetable from '../../components/Timetable';
 import TopBar from '../../components/TopBar';
 import SidePanel from '../../components/SidePanel';
-
+import CreditCounter from '../../components/CreditCounter';
+import {reformatData} from '../../utils/temp';
 import {classColors} from '../../utils/constants';
 
 import './MainPage.scss';
-import sampleData from './sample.json';
+import sampleData from './_sample.json';
 
 const classNames = require('classnames');
 
@@ -20,6 +21,14 @@ export class MainPage extends Component {
     conflictList: [],
     availableColors: [],
     conflictMap: {},
+    currentProgram: {
+      id: '1626865',
+      name: 'ENGENHARIA DE COMPUTAÇÃO/CI - João Pessoa',
+      faculty: 'CENTRO DE INFORMÁTICA (CI) (11.00.64)',
+      minch: 240,
+      maxch: 480,
+      semesters: 10,
+    },
     timetableConfig: {
       days: 5,
       startingHour: 7,
@@ -27,6 +36,7 @@ export class MainPage extends Component {
     },
     sidebarExpanded: false,
     sidepanelOpen: false,
+    totalWorkload: 0,
   };
 
   generateConflictTable = (courseList) => {
@@ -51,10 +61,10 @@ export class MainPage extends Component {
   };
 
   addOrRemoveClass = (courseId) => {
-    const {userCourses, conflictList} = this.state;
+    const {allCourses, userCourses, conflictList} = this.state;
     if (conflictList.includes(courseId)) return;
 
-    let {availableColors} = this.state;
+    let {availableColors, totalWorkload} = this.state;
     const newUserCourses = {...userCourses};
 
     // Deleting from table
@@ -63,6 +73,7 @@ export class MainPage extends Component {
         availableColors.unshift(userCourses[courseId]);
 
       delete newUserCourses[courseId];
+      totalWorkload -= allCourses[courseId].workload;
     }
 
     // Adding to Table
@@ -72,11 +83,15 @@ export class MainPage extends Component {
         : [...classColors];
 
       newUserCourses[courseId] = availableColors.shift();
+      totalWorkload += allCourses[courseId].workload;
     }
 
-    this.setState({userCourses: newUserCourses, availableColors}, () => {
-      this.updateConflictList();
-    });
+    this.setState(
+      {userCourses: newUserCourses, availableColors, totalWorkload},
+      () => {
+        this.updateConflictList();
+      },
+    );
   };
 
   expandSidebarMobile = () => {
@@ -119,8 +134,9 @@ export class MainPage extends Component {
   }
 
   componentDidMount() {
-    const conflictMap = this.generateConflictTable(sampleData);
-    this.setState({allCourses: sampleData, conflictMap});
+    const courseData = reformatData(sampleData);
+    const conflictMap = this.generateConflictTable(courseData);
+    this.setState({allCourses: courseData, conflictMap});
   }
 
   render() {
@@ -131,6 +147,8 @@ export class MainPage extends Component {
       userCourses,
       sidebarExpanded,
       sidepanelOpen,
+      totalWorkload,
+      currentProgram,
     } = this.state;
 
     const timetableContent = [];
@@ -200,6 +218,11 @@ export class MainPage extends Component {
             {cardsToRender}
           </SidePanel>
           <main className="MainTable">
+            <CreditCounter
+              currentHours={totalWorkload}
+              minHours={currentProgram.minch}
+              maxHours={currentProgram.maxch}
+            />
             <Timetable
               days={timetableConfig.days}
               startingHour={timetableConfig.startingHour}
