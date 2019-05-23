@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://lucaslacerdaux.github.io/meuhorario-frontend/",
   "dependencies": {
+    "@reach/tooltip": "^0.2.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.9.1",
     "node-sass": "^4.11.0",

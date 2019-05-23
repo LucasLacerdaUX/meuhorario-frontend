@@ -7,6 +7,7 @@
  */
 
 import React from 'react';
+//import Tooltip from '../Tooltip/Tooltip';
 import Logo from '../Logo';
 import Icon from '../Icon';
 import Button from '../Button';
@@ -16,7 +17,14 @@ import './Topbar.scss';
 const Topbar = ({onProgramClick}) => {
   return (
     <header className="TopBar">
-      <Button small onlyText customClass={['Button']} onClick={onProgramClick}>
+      <Button
+        small
+        onlyText
+        customClass={['Button']}
+        onClick={onProgramClick}
+        accessibilityLabel="Alterar Curso"
+        tooltip
+      >
         UFPB - Engenharia de Computação
       </Button>
       <Logo />
@@ -25,12 +33,12 @@ const Topbar = ({onProgramClick}) => {
         <nav>
           <ul>
             <li>
-              <Button small onlyIcon accessibilityLabel="Saved Tables">
+              <Button small onlyIcon accessibilityLabel="Saved Tables" tooltip>
                 <Icon name="bookmark" />
               </Button>
             </li>
             <li>
-              <Button small onlyIcon accessibilityLabel="Share">
+              <Button small onlyIcon accessibilityLabel="Share" tooltip>
                 <Icon name="share" />
               </Button>
             </li>

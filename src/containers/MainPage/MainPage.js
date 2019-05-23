@@ -61,10 +61,12 @@ export class MainPage extends Component {
   };
 
   addOrRemoveClass = (courseId) => {
-    const {allCourses, userCourses, conflictList} = this.state;
+    const {allCourses, userCourses, conflictList, currentProgram} = this.state;
+
     if (conflictList.includes(courseId)) return;
 
     let {availableColors, totalWorkload} = this.state;
+
     const newUserCourses = {...userCourses};
 
     // Deleting from table
@@ -78,6 +80,9 @@ export class MainPage extends Component {
 
     // Adding to Table
     else {
+      // TODO: ALERT THAT MAX CH HAS BEEN REACHED
+      if (allCourses[courseId].workload + totalWorkload > currentProgram.maxch)
+        return;
       availableColors = availableColors.length
         ? availableColors
         : [...classColors];
@@ -207,7 +212,6 @@ export class MainPage extends Component {
             </div>
             {cardsToRender}
           </aside>
-
           <SidePanel
             icon="text"
             title="Alterar Curso"

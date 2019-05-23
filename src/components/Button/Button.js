@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Tooltip from '../Tooltip/Tooltip';
 import './Button.scss';
-
 const classNames = require('classnames');
 
 /** A simple Button component that can be used with or without the role of form submitting. It has three styles (default, outline and only text) and three sizes (small, default and large). */
@@ -24,6 +24,7 @@ const Button = (props) => {
     fullWidth,
     customClass,
     children,
+    tooltip,
   } = props;
 
   const className = classNames(
@@ -40,8 +41,7 @@ const Button = (props) => {
   );
 
   const buttonType = submit ? 'submit' : 'button';
-
-  return (
+  const buttonContent = (
     <button
       id={id}
       type={buttonType}
@@ -54,6 +54,11 @@ const Button = (props) => {
     >
       {children}
     </button>
+  );
+  return tooltip ? (
+    <Tooltip label={accessibilityLabel}>{buttonContent}</Tooltip>
+  ) : (
+    buttonContent
   );
 };
 
@@ -90,6 +95,8 @@ Button.propTypes = {
   children: PropTypes.node,
   /** Should the button occupy 100% of the parent's width? */
   fullWidth: PropTypes.bool,
+  /** Should the button render a tooltip? */
+  tooltip: PropTypes.bool,
   /** A custom class or an array of custom classes the component can have */
   customClass: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.string),
